@@ -8,6 +8,7 @@
 \usepackage{framed}
 \usepackage{indentfirst}
 \usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
 \usepackage{listings}
 \usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,url,array}
 \usepackage{multicol,multirow}
@@ -43,11 +44,11 @@
 %
 \chapter{Func\c tii convexe pe intervale}
 
-Studiul funcțiilor convexe ale unei variabile reale oferă o imagine excelentă a frumuseții și fascinației matematicii avansate. Cititorul va găsi aici o mare varietate de rezultate bazate pe argumente simple și intuitive care au aplicații remarcabile. În același timp, ele oferă punctul de plecare al generalizări profunde în stabilirea mai multor variabile, care vor fi discutate în capitolele următoare.
+\section{Definitii. Proprietati}
 
-\section{Functii convexe la prima vedere}
+Studiul funcțiilor convexe de o variabila reala, oferă o imagine excelentă a frumuseții și fascinației matematicii avansate. Vom găsi aici o mare varietate de rezultate bazate pe argumente simple și intuitive care au aplicații remarcabile.
 
-De-a lungul acestei cărți, litera I va indica un interval nedegenerat (care este, un interval care conține o infinitate de puncte).
+In continuare vom nota cu I un interval nedegenerat din \(\mathbb{R}\).
 
 \subsection{Definitie}
 
@@ -56,28 +57,31 @@ O functie \(f: I \rightarrow \mathbb{R}\) se numeste convexa daca,
 f \left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \left ( 1 - \lambda  \right ) f_{\left ( x \right )} + \lambda f_{\left ( y \right )} 	\label{eq:1.1} \tag{1.1}
 \end{displaymath}
 
-pentru toate punctele \(x\) si \(y\) din \(I\), si toate \(\lambda \in \left [ 0,1 \right ]\). Aceasta se numeste strict convexa daca inegalitate \ref{eq:1.1} este valabila ori de cate ori x si y sunt puncte distrincte si \(\lambda \in \left ( 0,1 \right )\). Daca \(-f\)  este convexa (respective stric convexa), atunci spunem ca f  este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca f este functie afina. 
+pentru orice \(x\) si \(y\) din \(I\), si orice \(\lambda \in \left [ 0,1 \right ]\). Functia \(f\) se numeste strict convexa daca inegalitate (1.1) este valabila cu inegalitate stricta pentru orice x si y din I, si orice  \(\lambda \in \left ( 0,1 \right )\) . Daca \(-f\) este convexa (respective stric convexa), atunci spunem ca \(f\) este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca \(f\) este functie afina. 
 
 
-Functiile afine sunt tocmai functiile de forma \(mx + n\), pentru constante potrivite m si n. Una poate demonstra usor faptul ca urmatoarele trei functii sunt convexe (desi nu sunt strict convexe): partea pozitiva \(x^{+} = max \left \{ x,0 \right \}\), partea negative \(x^{-} = max \left \{ -x,0 \right \}\), si valoarea absoluta \(\left | x \right | = max \left \{ -x,x \right \}\). Impreuna cu functiile afine ele ofera elemente de baza ale intregii clase de functii convexe pe intervale. 
+Functiile afine sunt tocmai functiile de forma \(mx + n\),  \(m\) si \(n\) constante reale.
+Se poate demonstra usor faptul ca urmatoarele trei functii sunt convexe (desi nu sunt strict convexe):
+\begin{enumerate}
+  \item partea pozitiva \(x^{+} = max \left \{ x,0 \right \}\),
+  \item partea negative \(x^{-} = max \left \{ -x,0 \right \}\), 
+  \item modulul \(\left | x \right | = max \left \{ -x,x \right \}\),
+  \item functia patratica \(x^{2}\)  este strict convexa pe \(\mathbb{R}\),
+  \item functia radacina patrata \(\sqrt{x}\) este strict concava pe \(\mathbb{R}_{+}\). 
+\end{enumerate}
 
-\textbf{Lema 191 si 192} 
-Calculele simple arata ca functia patratica \(x^{2}\) este strict convexa pe \(\mathbb{R}\) si ca functia radacina patrata \(\sqrt{x}\) este strict concava pe \(\mathbb{R}_{+}\). In multe cazuri de inetres convexitatea este stabilita prin intermediul celei de a doua derivate.
-
-\textbf{Corolar 148}
 Alte criterii de convexitate legate de teoria de baza a functiilor convexe vor fi prezentate in cele ce urmeaza. 
-Convexitatea unei functii \(f : I\rightarrow \mathbb{R}\), inseamna geometric ca, punctele de pe graficului lui \(f_{\left [ u,v \right ]}\) sunt sub (sau pe) coarda care uneste capetele \(\left ( u , f_{\left ( u \right )} \right )\)  si \(\left ( v , f_{\left ( v \right )} \right )\), pentru toti \(u, v \in I, u < v\); 
+Convexitatea unei functii \(f : I\rightarrow \mathbb{R}\), inseamna geometric faptul ca, punctele de pe graficului lui  \(f_{\left [ u,v \right ]}\) sunt sub (sau pe) coarda care uneste capetele \(\left ( u , f {\left ( u \right )} \right )\)  si \(\left ( v , f {\left ( v \right )} \right )\), pentru orice \(u, v \in I, u < v\); 
 Vezi Fig 1.1 . Astfel inegalitatea \ref{eq:1.1} este echivalenta cu 
 \begin{displaymath}
-	f\left ( x \right )\leq f\left ( u \right ) +\frac{f\left ( v \right )- f\left ( u \right )}{v - u}\left ( x - u \right ) \label{eq:1.2} \tag{1.2}
+  f\left ( x \right )\leq f\left ( u \right ) +\frac{f\left ( v \right )- f\left ( u \right )}{v - u}\left ( x - u \right ) \label{eq:1.2} \tag{1.2}
 \end{displaymath}
-pentru toti \(x\in \left [  u, v\right ]\), si \(u, v \in I, u < v\). 
+pentru orice \(x\in \left [  u, v\right ]\), si \(u, v \in I, u < v\). 
 
-%
 %
 % TODO figura
 %
-%
+Fig 1.1 Frunctii convexe: graficul este sub coarda
 
 Aceasta remarca arata faptul ca functiile convexe sunt majorate de functiile afine pe orice subinterval compact. 
 
@@ -114,7 +118,7 @@ care ne conduce la
 \left | f\left ( a\pm t\varepsilon  \right )- f\left ( a \right ) \right |\leq t max \left \{ \left | f\left ( a-\varepsilon  \right )- f\left ( a \right ) \right |, \left | f\left ( a+\varepsilon  \right ) - f\left ( a \right )\right | \right \},
 \end{displaymath}
  pentru orice \(t\in \left [ 0 , 1 \right ]\). Continuitatea functiei \(f\) este acum clara. 
-	Exemple simple precum, \(f\left ( x \right )= 0\) daca \(x\in \left ( 0 , 1 \right )\), si daca \(f\left ( 0 \right )= f\left ( 1 \right ) = 1\), arate faptul ca salturi in sus pot aparea la punctele finale ale intervalului de definire a unei functii convexe. Din fericire, aceste posibile discontinuitati sunt detasabile. 
+	Exemple simple precum, \(f\left ( x \right )= 0\) daca \(x\in \left ( 0 , 1 \right )\), si daca \(f\left ( 0 \right )= f\left ( 1 \right ) = 1\), arate faptul ca salturi in sus pot aparea la punctele finale ale intervalului de definire a unei functii convexe. Din fericire, aceste posibile discontinuitati pot fi inlaturate. 
 
 \end{demonstration}
 
@@ -133,50 +137,222 @@ daca x\in \left ( a,b \right ) & \\
 \end{displaymath}
  este o functie convexa continua. 
 
-Rezultatul este o consecinta a urmatoarelor:	
+	Acest rezultat este o consecinta a urmatoarelor rezultate :
 
-%TODO
+% Rescris folosind noul doc (15/11/21)
 
 \subsection{Lema}
 
+Daca \(f: I \rightarrow \mathbb{R}\) este convexa, atunci sau \(f\) este monotona pe intervalul \(I\), sau exista un punct \(\xi \in int I\) astfel incat \(f\) este descrescatoare pe intervalul \(\left ( -\infty , \xi  \right )\cap\) si \(I\) descrescatoare pe intervalul \(\left[\xi , \infty  \right )\cap I\).
+
 \begin{demonstration}
-TODO	
+Luam \(a < b\) puncte interioare arbitrare ale lui \(I\) si fie \(m = inf\left \{ f\left ( x \right )  : x\in \left [ a,b \right ]\right \}\). Cum \(f\) este continua pe \(\left [ a,b \right ]\), acest infimum este atins in punctul \(\xi \in \left [ a,b \right ]\), adica \(m = f\left ( \xi  \right )\).
+Daca \(a \leq x <  y< \xi\), atunci \(y\) este o combinatie convexa a lui \(x\) si \(\xi\), mai exact, \(y = \frac{\xi -y}{\xi -x}x + \frac{y - x}{\xi -x}\xi\). Cum \(f\) este convexa, 
+\begin{displaymath}
+  f\left ( y \right )\leq \frac{\xi -y}{\xi -x}f\left ( x \right )+ \frac{y-x}{\xi -x}f\left ( \xi  \right )\leq f\left ( x \right ) 
+\end{displaymath}
+Demonstratia se incheie cu un process de lipire (la stanga lui \(a\) si la dreapta lui \(b\)), observand ca proprietatea de covexitate face imposibila existent a trei numere \(u < v < w\) in \(I\) astfel incat \(f\left ( u \right ) < f\left ( v \right )> f\left ( w \right )\). 
 \end{demonstration}
 
-
 \subsection{Corolar}
+\begin{enumerate}[a)]
+\item Orice functie convexa \(f: I \rightarrow \mathbb{R}\) care nu este monotona pe
+intervalul \(I\) are un minim global interior. 
+\item Daca o functie convexa \(f: \mathbb{R} \rightarrow \mathbb{R}\) este marginita superior, atunci este constanta.
+\end{enumerate}
+Atingere supremului la capete nu este o proprietate caracteristica a functiilor convexe, dar insa avem urmatorul rezultat. 
 
 \subsection{Teorema}
 
-\begin{demonstration}
-TODO	
-\end{demonstration}
+Fie \(f: I \rightarrow \mathbb{R}\). Atunci \(f\) este (strict) convexa daca si numai daca pentru orice subinterval compact \(J\) al lui \(I\), si fiecare functie afina \(L\), supremul lui \(f+L\) pe \(J\) este atins intr-un capat al intervalului (si doar acolo). 
 
+
+\begin{demonstration}
+Ne vom restrange la cazul functiilor convexe. Cazul functiilor strict convexe poate fi tratat in acelasi mod. 
+Necesar: Daca \(f\) este convexa, la fel este si suma \(F = f + L\). Cum orice punct al unui subinterval \(J = \left [ x , y \right ]\) este o combinatie convexa \(z = \left ( 1 - \lambda  \right )x + \lambda y \)a lui \(x\) si \(y\), avem
+\begin{displaymath}
+  \sup_{z\in J}F\left ( z \right ) = \sup_{\lambda \in \left [ 0 , 1 \right ]}F\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \sup_{\lambda \in \left [ 0,1 \right ]}\left [ \left ( 1-\lambda  \right )F\left ( x \right ) + \lambda F\left ( y \right ) \right ] + max \left \{ F\left ( x \right ), F\left ( y \right ) \right \}
+\end{displaymath}
+
+Suficienta: Avand un subinterval \(J = \left [ x,y \right ]\) al lui \(I\), exista o functie afina \(L\left ( x \right ) = mx + n\) care este egala cu \(f\) la punctele  \(x\) si \(y\). 
+Atunci
+\begin{displaymath}
+  \sup_{\lambda \in \left [ 0,1 \right ]}\left [ \left ( f - L \right )\left ( 1 - \lambda  \right )x + \lambda y \right ] = 0
+\end{displaymath}
+
+Care ne conduce la 
+\begin{displaymath}
+  0\geq f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )- L\left ( \left ( 1 - \lambda  \right )x - \lambda L \right )= f\left ( \left ( 1 - \lambda  \right )x + \lambda y  \right ) - \left ( 1 - \lambda  \right )L\left ( x \right ) - \lambda L\left ( y \right ) = f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right ) - \left ( 1 - \lambda  \right ) f\left ( x \right ) - \lambda f \left ( y \right )
+\end{displaymath}
+
+Pentru orice \(\lambda \in \left [ 0,1 \right ]\). 
+
+\end{demonstration}
 
 \subsection{Remarca}
 
+O functie \(f: I \rightarrow \mathbb{R}\) se numeste cvasiconexa daca,
+ \begin{displaymath}
+  f\left ( \left ( 1-\lambda  \right )x + \lambda y \right )\geq  min\left \{ f\left ( x \right ), f\left ( y \right ) \right \}
+\end{displaymath}
+pentru orice  \(x, y \in I\) si \(\lambda  \in \left ( 0,1 \right ]\).
+	 Urmatoarea caracterizare a convexitatii in cadrul clasei functiilor continue se dovedeste utila si in verificarea convexitatii. 
+
 \subsection{Teorema}
+O functie \(f : I \rightarrow \mathbb{R}\) este convexa daca si numai daca ea verifica urmatoarele doua conditii:
+\begin{enumerate}[a)]
+\item \(f\) este continua in fiecare punct din interiorul lui \(I\); si
+\item \(f\) este convexa in punctul de mijloc , adica, 
+\end{enumerate}
+
+\begin{displaymath}
+  f\left ( \frac{x+y}{2} \right )\leq \frac{f\left ( x \right )+f\left ( y \right )}{2}
+\end{displaymath}
+pentru orice \(x, y \in I\). 
+
 
 \begin{demonstration}
-TODO	
+Necesitatea rezulta din teorema 1.1.2. Suficienta este demonstrate prin reducerea la absurd. Daca \(f\) nu este convexa, atunci exista un interval \(\left [ a,b \right ]\) astfel incat graficul functiei \(f\) restricionata la  \(\left [ a,b \right ]\) sa nu fie sub coarda care uneste punctele \(\left ( a, f\left ( a \right ) \right )\) si \(\left ( b, f\left ( b \right ) \right )\); ca urmare , functia
+\begin{displaymath}
+  \varphi \left ( x \right )= -f\left ( x \right ) + f\left ( a \right )+ \frac{f\left ( b \right )- f\left ( a \right )}{b-a}\left ( x-a \right ), x\in \left [ a,b \right ]
+\end{displaymath}
+are  \(\gamma = inf \left \{ \varphi \left ( x \right ) : x\in \left [ a,b \right ]\right \}< 0\). Observam ca \(-\varphi\) este convexa in punctul de mijloc, continuu si \(\varphi \left ( a \right ) =\varphi \left ( b \right ) = 0\). Fie \(c = inf \left \{ x \in \left [ a,b  \right ] : \varphi \left ( x \right )= \gamma \right \} \), atunci \(\varphi \left ( c \right ) = \gamma\)  si \(c \in \left ( a,b  \right )\). Conform definitiei lui \(c\), pentru orice \(h>0\) pentru care \(c\pm h\in \left ( a,b \right )\) avem 
+\begin{displaymath}
+  \varphi \left ( c - h  \right )> \varphi \left ( c \right ) si \varphi \left ( c + h  \right )\geq  \varphi \left ( c \right )
+\end{displaymath}
+
+Astfel 
+\begin{displaymath}
+  -\varphi \left ( c \right )> \frac{-\varphi \left ( c-h \right )-\varphi \left ( c+h \right )}{2} 
+\end{displaymath}
+Ceea ce este in contraditie cu faptul ca \(-\varphi\) esteconvexa in punctul de mijloc. 
 \end{demonstration}
 
 
 \subsection{Corolar}
 
+Fie \(f: I \rightarrow \mathbb{R}\) o functie continua. Atunci, \(f\) este convexa daca si numai daca
+\begin{displaymath}
+  f\left ( x+h \right )+ f\left ( x - h \right ) - 2f\left ( x \right )\geq 0
+\end{displaymath}
+
+pentru orice \(x \in I\) si orice \(h > 0\) astfel incat si \(x + h si x – h\) apartin lui \(I\). 
+Observam ca si Teorema 1.1.8 si corolarul acesteia 1.1.9 de mai sus, admit variante in cazul functiilor strict convexe, 
+Corolarul 1.1.9 ne permite sa verificam imedat convexitatea / concavitatea stricta a unor functii elementare, precum functia exponentiala, cea logaritmica, si restrictia functiei sinus pe \(\left [ 0 , \pi \right ]\). Intradevar, pentru functia exponentiala , faptul ca  \(a , b > 0, a\neq b\), implica \(\frac{a + b}{2}> \sqrt{ab}\)
+este echivalenta cu 
+\(e^{x + h} + e^{x - h } - 2e^{x}> 0\)
+pentru orice \(x\in \mathbb{R}\) si orice \(h > 0\).
+	Multe alte exemple pot fi deduse folosind urmatoarele proprietati ale functiilor convexe / concave. 
+
 \subsection{Propozitie}
+Operatii cu functii convexe 
+\begin{enumerate}[a)]
+\item Adunand doua functii convexe ( definite pe acelasi interval) obtinem o functie convexa; daca una dintre ele este strict convexa, atunci suma lor este de asemenea strict convexa.
+\item Inmultind o functie (strict) convexa cu un scalar (strict)  pozitiv obtinem de asemenea o functie (strict) convexa.
+\item Presupunem ca f si g sunt doua functii convexe pozitive definite pe un interval I. Atunci, produsul lor este o functie convexa pe I daca sunt sincrone in sensul ca, \begin{displaymath}
+   \left ( f\left ( x \right ) - f\left ( y \right ) \right )\left ( g\left ( x \right ) - g\left ( y \right )\right )\geq 0
+\end{displaymath} pentru orice \(x , y \in \mathbb{R}\); de exemplu , aceasta conditie apare daca f si g sunt amandoua descrescatoare sau amandoua crescatoare.
+\item Restrictia unei functii (strict) convexe pe I, la un subinterval al lui I este de asemenea o functie (strict) convexa. 
+\item Presupunem ca \(f\) este o functie bijectiva intre doua interval \(I\) si \(J\). Daca \(f\) este strict crescatoare, atunci \(f\) este (strict) convexa daca si numai daca \(f^{-1}\) este (strict) concava. Daca \(f\) este o functie bijectiva descrescatoare, atunci \(f\) si  \(f^{-1}\) sunt ambele convexe sau ambele concave.
+\item Daca \(f\) este o functie strict pozitiva concava, atunci \(\frac{1}{f}\) este o functie convexa. Aici rolul concavitatii si al convexitatii nu poate fi schimbat unul cu celalalt.
+\item Maximul a doua functii (stricte) convexe \(f , g : I \rightarrow \mathbb{R}\),
+\begin{displaymath}
+  max \left \{ f , g \right \}\left ( x \right )=  max \left \{ f\left ( x \right ), g\left ( x \right ) \right \}
+\end{displaymath} este de asemenea o functie (strict) convexa.
+\item Compunerea \(f\left ( ax + b \right )\), a unei functii \(f\) convexe si a unei functii afine \(ax+b\), este o functie convexa. 
+\end{enumerate}
+
+Detaliile sunt simple. 
+In continuare , vom discuta extinderea inegalitatii convexitatii(1.1). In primul rand, observam faptul ca intervalele sunt inchise la combinatii convexe arbitrare, adica, 
+\begin{displaymath}
+  \sum_{ k= 1}^{n}\lambda _{k}x_{k} \in I
+\end{displaymath}
+pentru orice \(x_{1},......, x_{n} \in\)  si orice \(\lambda _{1},......, \lambda _{n} \in \left [ 0 , 1  \right ]\) cu \(\sum_{k = 1}^{n} \lambda _{k} = 1\). Acest lucru poate fi demonstrat prin inductie dupa \(n\). Cazul \(n=1\) este trivial, in timp ce \(n = 2\) rezulta din definitia unei multimi convexe. Presupunand faptul ca rezultatul este adevarat pentru toate combinatiile convexe cu cel mult \(n\geq 2\) puncte, sa trecem la cazul combinatiilor cu \(n + 1\) puncte, \(x = \sum_{k = 1}^{n + 1} \lambda _{k}x_{k}\). Cazul non-trivial este atunci cand toti coeficientii \(\lambda _{k}\) se afla in \(\left ( 0 , 1 \right )\). Dar in acest cacz , datorita ipotezei de inductie, x poate fi reprezentat ca o combinatie convexa de doua elemente ale lui \(I\), 
+\begin{displaymath}
+  x = \left ( 1 - \lambda _{n + 1} \right )\left ( \sum_{k = 1}^{n} \frac{\lambda _{k}}{1 - \lambda _{n + 1}} x_{k}\right ) + \lambda _{n + 1}x_{n + 1},
+\end{displaymath}
+prin urmare x apartine lui \(I\). 
+	Remarca de mai sus asupra intervalelor are o echivalenta remarcabila pentru functiile convexe :
 
 \subsection{Lema}
+Cazul discret al inegalitatii lui Jensen
+O functie cu valoari reala \(f\) definite pe un interval \(I\) este convexa daca si numai daca pentru orice puncte \(x_{1},.......,x_{n}\) din \(I\) si orice scalari \(\lambda _{1},.......,\lambda _{n}\) din \(\left [ 0 , 1 \right ]\) cu \(\sum_{k = 1}^{n}\lambda _{k}= 1\) avem, 
+\begin{displaymath}
+  f\left ( \sum_{k = 1}^{n} \lambda _{k}x_{k}\right )\leq \sum_{k = 1}^{n}\lambda _{k}f\left ( x_{k} \right ).
+\end{displaymath}
+
+Daca \(f\) este strict convexa, inegalitatea de mai sus este stricta daca punctele \(x_{k}\) nu sunt toate egale intre ele , si scalarii \(\lambda _{k}\) sunt toti pozitivi. 
 
 \begin{demonstration}
-TODO	
+Prima afirmatie rezulta prin inductie matematica. In ceea ce priveste cea de a doua afirmatie, presupunem ca functia \(f\) este strict convexa si 
+\begin{displaymath}
+  f\left ( \sum_{k = 1}^{n} \lambda _{k}x_{k}\right )=  \sum_{k = 1}^{n}\lambda _{k}f\left ( x_{k} \right ). \label{eq:1.3} \tag{1.3}
+\end{displaymath}
+pentru  punctele \(x_{1}, ........, x_{n} \in I\) si cativa scalari \(\lambda _{1}, ........, \lambda _{n} \in \left ( 0 , 1\right )\) cu suma egala cu \(1\). Daca \(x_{1}, ........, x_{n}\) nu sunt toti egali, multimea \(S = \left \{ k: x_{k}<  max \left \{ x_{1,....,x_{n}} \right \} \right \}\) va fi o submultime proprie a multimii  \(\left \{ 1,....,n \right \}\) si \(\lambda _{S} = \sum_{k \in S}^{}\lambda _{S} \in \left ( 0,1 \right )\). Cum \(f\) este strict convexa avem, 
+\begin{displaymath}
+  f\left ( \sum_{k=1}^{n}\lambda _{k}x_{k} \right ) = f\left ( \lambda _{S}\left ( \sum_{k\in S}^{}\frac{\lambda _{k}}{\lambda _{S}} x_{k}\right ) +\left ( 1-\lambda _{S} \right )\left ( \sum_{k\notin S}^{} \frac{\lambda _{k}}{1 - \lambda _{S}}x_{k}\right )\right ) < 
+\end{displaymath}
+  
+\begin{displaymath}
+  \lambda _{S}f\left ( \sum_{k\in S}^{}\frac{\lambda _{k}}{\lambda _{S}} x_{k}\right ) +\left ( 1 - \lambda _{S} \right )f\left ( \sum_{k\notin S}^{}\frac{\lambda _{k}}{1 - \lambda _{S}} x_{k}\right ) < 
+\end{displaymath}
+  
+\begin{displaymath}
+  \lambda _{S} \sum_{k\in S}^{}\frac{\lambda _{k}}{\lambda _{S}} f\left ( x_{k} \right ) +\left ( 1 - \lambda _{S} \right ) \sum_{k\notin S}^{}\frac{\lambda _{k}}{1 - \lambda _{S}}f\left ( x_{k} \right )= \sum_{k=1}^{n}\lambda _{k}f\left ( x_{k} \right ),
+\end{displaymath}
+  
+
+care contrazice ipoteza noastra \ref{eq:1.3}. Astfel, toate punctele \(x_{k}\) ar trebui sa coincida.
 \end{demonstration}
+
+O consecinta imediata a lemei 1.1.11 (cand este aplicata functiei exponentiale) este urmatorul rezultat care extinde bine cunoscuta inegalitate AM-GM( adica inegalitatea dintre media aritmetica si cea geometrica).
 
 
 \subsection{Teorema}
+Forma ponderata a inegalitatii AM-GM
+Daca \(x_{1},.......,x_{n}\in \left ( 0,\infty  \right ) si \lambda_{1},......,\lambda _{n} \in \left ( 0 , 1 \right ), \sum_{k = 1}^{n}\lambda _{k}= 1\), atunci
+\begin{displaymath}
+  \sum_{k = 1}^{n}\lambda _{k}x_{k}> x_{1}^{\lambda _{1}}\cdots x_{n}^{\lambda _{n}}
+\end{displaymath}
+
+In afara de cazul cand \(x_{1} = \cdots = x_{n}\). 
+	Inlocuind \(x_{k}\) cu \(\frac{1}{x_{k} }\) in ultima inegalitate, obtinem 
+\begin{displaymath}
+  x_{1}^{\lambda _{1}}\cdots x_{n}^{\lambda _{n}}> \frac{1}{\sum_{k = 1}^{n}}\frac{\lambda _{k}}{x_{k}}
+\end{displaymath}
+
+in afara de cazul cand \(x_{1} = \cdots = x_{n}\). 
+Asta reprezinta forma ponderata a inegalitatii mediei geometrice – mediei armonice (adica de inegalitatea GM-HM). 
+
+Pentru \(\lambda _{1} = \cdots =\lambda _{n}= \frac{1}{n}\) recuperam inegalitatea obisnuita care afirma ca pentru orice \(x_{1},.....,x_{n}\) de numere positive, nu toate egale, avem
+
+\begin{displaymath}
+  \frac{x_{1}+.....+x_{n}}{n}> \sqrt[n]{x_{1}\cdots x_{n}}> \frac{n}{\left ( \frac{1}{x_{1}}+....+\frac{1}{x_{n}} \right )}. 
+\end{displaymath}
+
+
 
 
 \section{Inegalitatea lui Young si consecintele sale}
+
+Urmatoarul caz special al formei ponderate a inegalitatii AM-GM este cunoscuta sub numele de inegalitatea lui Young:  
+\begin{displaymath}
+  ab \leq \frac{a^{p}}{p}+ \frac{b^{q}}{q},
+\end{displaymath}
+pentru orice \(a,b \geq 0\),
+si de fiecare data cand  \(p,q \in \left ( 0 , 1 \right )\) cu \(\frac{1}{p}+\frac{1}{q} = 1\); egalitatea are loc daca si numai daca \(a^{p}= b^{q}\). Inegalitatea lui Young poate fi de asemenea obtinuta ca o consecinta a convexitatii stricte a functiilor exponentiale. De fapt 
+\begin{displaymath}
+  ab = e^{log_{a}b}= e^{\left (\frac{1}{p}  \right )log_{a}p+ \left ( \frac{1}{q} \right )log_{b}q}
+\leq \frac{1}{p}e^{log_{a}p}+\frac{1}{q}e^{log_{b}q}= \frac{a^{p}}{p}+\frac{b^{q}}{q}
+\end{displaymath}
+
+pentru toti \(a,b>0\) cu \(a^{p}\neq b^{q}\). Inca un argument este oferit de studiul variatiei functiei diferentiale. 
+\begin{displaymath}
+  F\left ( a \right )= \frac{a^{p}}{p}+\frac{b^{q}}{q} - ab, a\geq 0
+\end{displaymath}
+
+unde \(b\geq 0\) este un paramentru. Aceatsa functie atinge punctul minim globa strict la \(a= b^{\frac{q}{p}}\), care ne conduce la \(F\left ( a \right )> F\left ( b^{\frac{q}{p}} \right ) = 0\) pentru orice \(a\geq 0, a\neq b^{\frac{q}{p}}\). 
+	W.H.Young a dovedid de fapt  o inegalitate mult mai generala, pentru \(f\left ( x \right )=  x^{p-1}\).
 
 \subsection{Teorema}
 

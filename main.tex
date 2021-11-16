@@ -42,7 +42,7 @@
 %CAPITOLUL 1
 %
 %
-\chapter{Func\c tii convexe pe intervale}
+\chapter{Definitii. Proprietati}
 
 \section{Definitii. Proprietati}
 
@@ -146,7 +146,7 @@ daca x\in \left ( a,b \right ) & \\
 Daca \(f: I \rightarrow \mathbb{R}\) este convexa, atunci sau \(f\) este monotona pe intervalul \(I\), sau exista un punct \(\xi \in int I\) astfel incat \(f\) este descrescatoare pe intervalul \(\left ( -\infty , \xi  \right )\cap\) si \(I\) descrescatoare pe intervalul \(\left[\xi , \infty  \right )\cap I\).
 
 \begin{demonstration}
-Luam \(a < b\) puncte interioare arbitrare ale lui \(I\) si fie \(m = inf\left \{ f\left ( x \right )  : x\in \left [ a,b \right ]\right \}\). Cum \(f\) este continua pe \(\left [ a,b \right ]\), acest infimum este atins in punctul \(\xi \in \left [ a,b \right ]\), adica \(m = f\left ( \xi  \right )\).
+Luam \(a < b\) puncte interioare arbitrare ale lui \(I\) si fie \\ \(m = inf\left \{ f\left ( x \right )  : x\in \left [ a,b \right ]\right \}\). Cum \(f\) este continua pe \(\left [ a,b \right ]\), acest infimum este atins in punctul \(\xi \in \left [ a,b \right ]\), adica \(m = f\left ( \xi  \right )\).
 Daca \(a \leq x <  y< \xi\), atunci \(y\) este o combinatie convexa a lui \(x\) si \(\xi\), mai exact, \(y = \frac{\xi -y}{\xi -x}x + \frac{y - x}{\xi -x}\xi\). Cum \(f\) este convexa, 
 \begin{displaymath}
   f\left ( y \right )\leq \frac{\xi -y}{\xi -x}f\left ( x \right )+ \frac{y-x}{\xi -x}f\left ( \xi  \right )\leq f\left ( x \right ) 
@@ -182,8 +182,13 @@ Atunci
 
 Care ne conduce la 
 \begin{displaymath}
-  0\geq f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )- L\left ( \left ( 1 - \lambda  \right )x - \lambda L \right )= f\left ( \left ( 1 - \lambda  \right )x + \lambda y  \right ) - \left ( 1 - \lambda  \right )L\left ( x \right ) - \lambda L\left ( y \right ) = f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right ) - \left ( 1 - \lambda  \right ) f\left ( x \right ) - \lambda f \left ( y \right )
+  0\geq f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )- L\left ( \left ( 1 - \lambda  \right )x - \lambda L \right )= f\left ( \left ( 1 - \lambda  \right )x + \lambda y  \right ) - \left ( 1 - \lambda  \right )L\left ( x \right ) - \lambda L\left ( y \right ) =
 \end{displaymath}
+
+\begin{displaymath}
+  = f\left ( \left ( 1 - \lambda  \right )x + \lambda y \right ) - \left ( 1 - \lambda  \right ) f\left ( x \right ) - \lambda f \left ( y \right )
+\end{displaymath}
+
 
 Pentru orice \(\lambda \in \left [ 0,1 \right ]\). 
 
@@ -356,16 +361,170 @@ unde \(b\geq 0\) este un paramentru. Aceatsa functie atinge punctul minim globa 
 
 \subsection{Teorema}
 
+Inegalitatea lui Young
+Presupunem prin absurd ca \(f: \left [ 0,\infty  \right ) \rightarrow \left [ 0,\infty  \right )\) este o functie continua strict crescatoare astfel incat \(f\left ( 0 \right )= 0\) si \(\lim_{x\rightarrow \infty }f\left ( x \right )= \infty\). Atunci 
+\begin{displaymath}
+  uv\leq \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{v}f^{-1}\left ( y \right )dy
+\end{displaymath}
+
+pentru orice \(u,v\geq 0\), si egalitatea are loc daca si numai daca \( v = f\left ( u \right )\). 
+
+Fig 1.2
 
 \begin{demonstration}
-TODO	
+Folosind definitia derivatei se poate demonstra cu usurinta ca functia 
+\begin{displaymath}
+  F\left ( u \right )= \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{f\left ( u \right )}f^{-1}\left ( y \right )dy -uf\left ( u \right ), u \in \left [ 0,\infty  \right )
+\end{displaymath}
+
+este diferentiala , cu \({F}'\) identic 0. Astfel, \(F\left ( u \right )= F\left ( 0 \right )= 0, pentru orice u\geq 0\). 
+	Daca \(u, v \geq 0\)  si \(v\geq f\left ( u \right )\), atunci 
+\begin{displaymath}
+  uv = uf\left ( u \right )+ u\left ( v- f\left ( u \right ) \right )=  \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{f\left ( u \right )}f^{-1}\left ( y \right )dy + u\left ( v - f\left ( u \right ) \right ) =
+\end{displaymath}
+
+\begin{displaymath}
+  = \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{v}f^{-1}\left ( y \right )dy + \left [ u\left ( v-f\left ( u \right )  \right ) - \int_{f\left ( u \right )}^{v}f^{-1}\left ( y \right )dy\right ]\leq 
+\end{displaymath}
+
+\begin{displaymath}
+  \leq \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{v}f^{-1}\left ( y \right )dy.
+\end{displaymath}
+
+
+
+	Cealalt caz, unde \(v\leq f\left ( u \right )\) poate fi tratat in acelasi mod. 
 \end{demonstration}
 
 \subsection{Teorema}
 
+Inegalitatea lui Rogers-Hölder pentru p > 1
+
+Fie \(p,q \in \left ( 1, \infty  \right )\) cu \(\frac{1}{p} + \frac{1}{q} = 1\), si  \(f\in L^{p}\left ( \mu  \right )\) si \(g\in L^{q}\left ( \mu  \right )\). Atunci \(fg\) apartine lui \(L^{1}\left ( \mu  \right )\) si avem 
+\begin{displaymath}
+  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \int_{\Omega}^{}\left | fg \right |d\mu (1.6) 
+\end{displaymath}
+
+si 
+\begin{displaymath}
+  \int_{\Omega}^{}\left | fg \right |d\mu \leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q} . (1.7)
+\end{displaymath}
+
+	Ca o consecinta 
+\begin{displaymath}
+  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q}. (1.8)
+\end{displaymath}
+
+	Rezultatul de mai sus se extinde intr-o maniera directa la perechi \(p = 1, q = \infty\) si \(p = \infty\). In domeniul complementar, \(p\in \left ( -\infty , 1 \right )\setminus \left \{ 0 \right \} si \frac{1}{p} + \frac{1}{q} = 1\), semnul inegalitatii in (1.6) – (1.8) ar trebui inversat. 
+	Din Inegalitatea Rogers – Hölder rezulta ca pentru orice \(p, q, r \in \left ( 1 , \infty  \right )\) cu \(\frac{1}{p} + \frac{1}{q} = 1\) si orice \(f\in L^{p}\left ( \mu  \right )\) si \(g\in L^{q}\left ( \mu  \right )\) avem \(fg\in L^{r}\left ( \mu  \right )\) si 
+\begin{displaymath}
+  \left \| fg \right \|_{L^{r}}\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L^{q}} (1.9)
+\end{displaymath}
+
+%TODO REFS
+
+Cazul de inegalitate de mai sus (1.8), unde \(p = q = 2\), este cunoscut ca inegalitatea Cauchy-Bunyakovsky-Schwarz . 
+
 \begin{demonstration}
-TODO	
+Prima inegalitate este triviala. Daca \(f\) sau \(g\) sunt \(0 \mu\) – aproape peste tot, atunci cea de a doua inegalitate este triviala. Altfel, folosind inegalitatea lui Young, avem 
+\begin{displaymath}
+  \frac{\left | f\left ( x \right ) \right |}{\left \| f \right \|_{L^{p}}} \cdot \frac{\left | g\left ( x \right ) \right |}{\left \| g \right \|_{L^{q}}}\leq \frac{1}{p}\cdot \frac{\left | f\left ( x \right ) \right |^{p}}{\left \| f \right \|^{p}_{L^{p}}} + \frac{1}{q}\cdot \frac{\left | g\left ( x \right ) \right |^{q}}{\left \| g \right \|^{q}_{L^{q}}}.
+\end{displaymath}
+ 
+pentru orice \(x\) din \(\Omega\), astfel incat \(fg \in L^{1}\left ( \mu  \right )\). Prin urmare 
+\begin{displaymath}
+  \frac{1}{\left \| f \right \|_{L^{p}}\left \| g \right \|_{L^{1}}}\int_{\Omega }\left | fg \right |d\mu \leq 1.
+\end{displaymath}
 \end{demonstration}
+
+\subsection{Remarca}
+
+Conditii pentru egalitatea din Teorma 1.2.2
+Observatia de baza este faptul ca  \(f\geq 0 si \int_{\Omega }f d\mu  = 0 implica f = 0 \mu-\) aproape peste tot. 
+	Prin urmare avem egalitate in (1.6) daca si numai daca 
+\begin{displaymath}
+  f\left ( x \right )g\left ( x \right ) = e^{i\theta }\left | f\left ( x \right ) g\left ( x \right )\right |
+\end{displaymath}
+pentru o constanta reala \(\theta\) si pentru \(\mu-\) aproape peste toti \(x\). 
+	Presupunem ca \(p , q \in \left ( 1 , \infty  \right )\) si \(f\) si \(g\) nu sunt zero \(\mu-\) aproape peste tot. Pentru a avea egalitate in (1.7) este necesar si suficient sa avem 
+\begin{displaymath}
+  \frac{\left | f\left ( x \right ) \right |}{\left \| f \right \|_{L^{p}}} \cdot \frac{\left | g\left ( x \right ) \right |}{\left \| g \right \|_{L^{q}}}\leq \frac{1}{p}\cdot \frac{\left | f\left ( x \right ) \right |^{p}}{\left \| f \right \|^{p}_{L^{p}}} + \frac{1}{q}\cdot \frac{\left | g\left ( x \right ) \right |^{q}}{\left \| g \right \|^{q}_{L^{q}}}. 
+\end{displaymath}
+
+\(\mu-\)aproape peste tot. Cazul egalitatii in Inegalitatea lui Young demonstreaza ca aceasta este echivalenta cu \(A\left | f\left ( x \right ) \right |^{p} = B\left | g\left ( x \right ) \right |^{q} \mu-\)aproape peste tot,
+pentru unele numere positive A si B. 
+	Daca \(p = 1\) si \(q = \infty\), avem egalitate in ecuatia (1.7) daca si numai daca avem o constanta \(\lambda \geq 0\) astfel incat \(\left | g\left ( x \right ) \right |\leq \lambda\),  \(\mu\) aproape peste tot, si \(\left | g\left ( x \right ) \right |= \lambda,  \mu\) aproape peste tot in multimea \(\left \{ x : f\left ( x \right )\neq 0 \right \}\). 
+
+\subsection{Teorema}
+Inegalitatea Minkowski
+Pentru \(1\leq  p < \infty si f , g \in L^{p}\left ( \mu  \right ) \)avem
+\begin{displaymath}
+  \left \| f + g  \right \|_{L^{p}}\leq \left \| f \right \|_{L^{p}} + \left \| g \right \|_{L^{p}} (1.10)
+\end{displaymath}
+
+\begin{demonstration}
+Pentru \(p  = 1\), inegalitatea (1.10) rezulta imediat prin integrarea inegalitatii \(\left | f + g \right |\leq \left | f \right | + \left | g \right |\). Pentru \(p \in \left ( 1 , \infty  \right )\) avem:
+\begin{displaymath}
+  \left | f + g  \right |^{p}\leq \left ( \left | f \right | +\left | g \right |\right )^{p}\leq \left ( 2 sup\left \{ \left | f \right |,\left | g \right | \right \} \right )^{p}\leq 2^{p}\left ( \left | f \right |^{p}  + \left | g \right |^{p}\right )
+\end{displaymath}
+care ne demonstreaza ca \(f + g \in L^{p}\left ( \mu  \right )\). Mai mult de atat, conform Teoremei 1.2.2, 
+\begin{displaymath}
+  \left \| f + g  \right \|_{L^{p}}^{p} = \int_{\Omega }\left | f + g \right |^{p}d\mu \leq \int_{\Omega }\left | f + g \right |^{p - 1}\left | f \right |d\mu + \int_{\Omega }\left | f + g  \right |^{p - 1}\left | g \right |d\mu \leq 
+\end{displaymath}
+
+\begin{displaymath}
+  \leq\left ( \int_{\Omega }\left | f \right |^{p}d\mu  \right )^{\frac{1}{p}}\left ( \int_{\Omega }\left | f + g  \right | ^{\left ( p - 1 \right )}d\mu \right )^{\frac{1}{q}}+ \left ( \int_{\Omega }\left | g \right |^{p}d\mu  \right )^{\frac{1}{p}}\left ( \int_{\Omega} \left | f + g \right |^{\left ( p - 1 \right )q}d\mu \right )^{\frac{1}{q}}= 
+\end{displaymath}
+
+\begin{displaymath}
+  =\left ( \left \| f \right \|_{L^{p}} + \left \| g \right \|_{L^{p}} \right )\left \| f + g  \right \|_{L^{p}}^{\frac{p}{q}}
+\end{displaymath}
+
+
+
+unde \(\frac{1}{p} + \frac{1}{q} = 1\), si observam ca \(p - \frac{p}{q} = 1\). 	
+\end{demonstration}
+
+
+\subsection{Remarca}
+
+Daca \(p = 1\), obtinem egalitate in (1.10) daca si numai daca exista o functie masurabila pozitiva \(\varphi\) astfel incat 
+\begin{displaymath}
+  f\left ( x \right )\varphi \left ( x \right ) = g\left ( x \right )
+\end{displaymath}
+\(\mu –\) aproape peste tot in multimea \(\left \{ x : f\left ( x \right )g\left ( x \right )\neq 0 \right \}\). 
+	Daca \(p \in \left ( 1 , \infty  \right )\) si \(f\) nu este o aproape peste tot, atunci avem egalitate in (1.10) daca si numai daca  \(g = \lambda f\) aproape peste tot, pentru unele \(\lambda \geq 0\). 
+	In  cazul particular unde \(\left ( \Omega , \Sigma, \mu \right )\) este spatiul de masura asociat cu masura de numarare pe o muktime finite, \(\mu  : \rho \left ( \left \{ 1,......, n \right \} \right )\rightarrow \mathbb{N}, \mu \left ( A \right ) = \left | A \right |\), 
+recuperam formele clasice discrete ale inegalitatilor de mai sus. De exemplu, poate fi citita versiunea discreta a inegalitatii lui Rogers- Holder
+\begin{displaymath}
+  \left | \sum_{k=1}^{n} \xi _{k}\eta _{k}\right |\leq \left ( \sum_{k = 1}^{n}\left | \xi _{k}\right |^{p}  \right )^{\frac{1}{p}}\left ( \sum_{k = 1}^{n} \left | \eta _{k} \right |^{q}\right )^{\frac{1}{q}}
+\end{displaymath}
+
+pentru  orice \(\xi _{k}, \eta _{k} \in \left \{ 1,.....,n \right \}.\) Pe de alta parte, un moment de reflectie demonstreaza faptul ca putem trece imediat de la aceste inegalitati discrete la analogiile lor integrale, corespunzatoare spatiilor de masura finite. 
+
+\subsection{Remarca}
+
+Mai multe despre inegalitatea Cauchy – Bunyakovsky – Schwarz
+A.L. Cauchy , in faimosul sau curs de Analiza, a derivat cazul discret al acestei inegalitati din inegalitatea algebrica a  lui Lagrange ,
+\begin{displaymath}
+  \left ( \sum_{k = 1}^{n} a_{k}^{2}\right )\left ( \sum_{k = 1}^{n} b_{k}^{2}\right ) =  \sum_{1\leq j\leq k\leq n}\left ( a_{j}b_{k} - a_{k}b_{j} \right )^{2} + \left ( \sum_{k = 1}^{n} a_{k}b_{k}\right )^{2}
+\end{displaymath}
+
+Astfel 
+
+\begin{displaymath}
+  \left | \sum_{k = 1}^{n} a_{k}b_{k} \right |\leq \left ( \sum_{k = 1}^{n}a_{k}^{2} \right )^{\frac{1}{2}}\left ( \sum_{k = 1}^{n}b_{k}^{2} \right )^{\frac{1}{2}}
+\end{displaymath}
+
+pentru orice numere reale \(a_{1},.....,a_{n}, b_{1},......, b_{n}\). Cazul egalitatii este simplu. Inegalitatea corespunzatoare pentru integrale a fost demonstrate independent de V.Y.Bunyakovsky si H.A.Schwarz. 
+	In 1890, H.Poincare a observant versiunea integrala a identitatii algebrice lui Lagrange (care da inegalitatea Cauuchy-Bunyakovsky-Schwarz in deplina generalitate ): Daca \(\mu\) este o masura de probabilitate pe un spatiu \(\Omega\) si \(f\) si \(g\) sunt doua functii apartinand spatiului \(L^{2}\left ( \mu  \right )\), atunci 
+\begin{displaymath}
+  \left (\int_{\Omega}f^{2}d\mu \right )\left (\int_{\Omega}g^{2}d\mu \right ) - \left (\int_{\Omega}fgd\mu \right )^{2} = \frac{1}{2}\int_{\Omega}\int_{\Omega}\left ( f\left ( x \right )g\left ( y \right ) - f\left ( y \right )g\left ( x \right )\right )^{2}d\mu \left ( x \right )d\mu \left ( y \right ).
+\end{displaymath}
+	El a folosit aceasta identitate integral pentru a deriva cazul unidimensional al unei inegalitati purtandu-i numele . O alta dovada simpla a inegalitatii Cauuchy-Bunyakovsky-Schwarz este oferita pntrintr-o identitat echivalenta cu legea cosinusurilor : pentru fiecare pereche de vectori nenuli \(x\) si \(y\) intr-un spatiu vectorial interior real, 
+\begin{displaymath}
+  \left \| \frac{x}{\left \| x \right \|} - \frac{y}{\left \| y \right \|}\right \|^{2} = 2 - 2\frac{\left \langle x , y \right \rangle}{\left \| x \right \|\left \| y \right \|}. 
+\end{displaymath}
 
 
 
@@ -376,808 +535,105 @@ TODO
 %
 
 
-%\chapter{\c Siruri convergente de numere reale}
-%
-%\section{Teorie}
-%
-%\begin{definition}
-%
-%Un \c sir \((x_{n})_{n \in \mathbb{N}} \subset \mathbb{R} \), se nume\c ste convergent dac\u a exist\u a \(x \in \mathbb{R}\) astfel \^ inc\^ at:
-%\(\forall _{\varepsilon } > 0, \in n_{\varepsilon } \in \mathbb{N} \) astfel \^ inc\^ at este satisfacut\u a inegalitatea: \(\left | x_{n}- x \right | \leq \varepsilon \).
-%
-%\end{definition}
-%
-%\begin{proposition}
-%
-%Unicitatea limitei unui \c sir de numere reale
-%Fie \((x_{n})_{n \in \mathbb{N}} \subset \mathbb{R}\). 
-%Dac\u a \(\left\{\begin{matrix}
-%x_{n} \to  x\\ 
-%x_{n} \to y
-%\end{matrix}\right.
-%\) atunci \(x=y.\)
-%
-%\end{proposition}
-%
-%\begin{demonstration}
-%  S\u a presupunem, prin absurd, c\u a \(x \neq  y\). Cum suntem pe \(\mathbb{R}\) \^ inseamn\u a c\u a avem una din situa\c tiile \(x < y\) sau \(y < x\). Pentru a face o alegere, fie \(x < y\) atunci \(y – x > 0\) \c si din defini\c tie pentru \(\varepsilon = \frac{y- x}{2}  > 0\) rezult\u a c\u a, 
-%\end{demonstration}
-%
-%
-%\begin{itemize}
-%  \item \(\exists  n_{1} \in \mathbb{N}\) astfel \^ inc\^ at \(\left | x_{n} - x  \right | < \frac{y - x }{2} , \forall n \geq n_{1} \)
-%  \item \(\exists  n_{2} \in \mathbb{N}\) astfel \^ inc\^ at \(\left | x_{n} - y  \right | < \frac{y - x }{2} , \forall n \geq n_{2} \)
-%\end{itemize}
-%
-%Fie \(n = max (n _{1}, n_{2}) \geq n_{1}, n_{2}.\) Atunci \(\left | x_{n} - x \right | < \frac{y-x}{2}\) \c si \(\left | x_{n} - y  \right | <  \frac{y-x}{2}\) de unde 
-%
-%\begin{displaymath}
-%  y-x = \left | y-x \right | = \left | (y-x_{n})+ (x_{n} -x) \right |\leq \left | y-x_{n} \right | + \left | x_{n} - x \right | < \frac{y-x}{2} + \frac{y-x}{2} = y-x
-%\end{displaymath}
-%
-%
-%A\c sadar, \(y-x < y-x\), contradic\c tie!
-%
-%Un rezultat foarte frecvent folosit este ceea ce se nume\c ste ”teorema cle\c stelui”.
-%
-%\textbf{Teorema cle\c stelui}
-%
-%Fie \((x_{n})_{n\in \mathbb{N}}, (y_{n})_{n\in \mathbb{N}},(z_{n})_{n\in \mathbb{N}} \) trei \c siruri de numere reale. 
-%Dac\u a:
-%
-%\[\left\{\begin{matrix}
-%x_{n} \leq  y_{n} \leq z_{n}, \forall  n \in \mathbb{N}\\ 
-%x_{n} \to x, z_{n} \rightarrow x
-%
-%\end{matrix}\right. \]
-%Atunci \(y_{n} \to x\).
-%
-%\begin{demonstration}
-%  Vom ar\u ata pentru \^ inceput urm\u atoarea inegalitate. Dac\u a \(a \leq x\leq b\) atunci \(\left | x \right | \leq  max (\left | a \right |, \left | b \right |) \). 
-%Vom folosi propriet\u a\c tile de la modul. Avem:
-%\end{demonstration}
-%
-%
-%\begin{displaymath}
-%  \left | x \right | = \left\{\begin{matrix} x, daca x \geq 0\\ -x, daca x< 0 \end{matrix}\right. \leq \left\{\begin{matrix} b\leq max(b,-b) = \left | b \right |\leq max(\left | a \right |,\left | b \right |) daca x\geq 0\\  -a\leq max(a,-a) = \left | a \right | 
-%  \leq max (\left | a \right |,\left | b \right |) daca x< 0 \end{matrix}\right. \leq max (\left | a \right |, \left | b \right |)
-%\end{displaymath}
-% 
-%
-%Din \(x_{n} \leq y_{n}\leq z_{n}\), \(\forall n\in \mathbb{N} \) rezult\u a c\u a \(x_{n}-x \leq y_{n}-x \leq z_{n}-x, \forall n\in \mathbb{N}. \)
-%De aici folosind inegalitatea demonstrat\u a deducem c\u a:
-%
-%\[\left | y_{n} - x \right |\leq max (\left | x_{n}-x \right |, \left | z_{n} - x \right |),\forall n\in \mathbb{N} \label{eq:1.1} \tag{1.1}\]
-%
-%
-%Deoarece \(x_{n} \to x, \forall \varepsilon > 0, \exists {n_{\varepsilon }}'\in \mathbb{N}\) astfel \^ inc\^ at pentru \(\forall n \geq {n_{\varepsilon }}'\) este satisfacut\u a inegalitatea \[\left | x_{n}-x \right |< \varepsilon.\label{eq:1.2} \tag{1.2} \]
-%	
-%Similar din \(z_{n} \to x, \forall \varepsilon > 0,\exists {n_{\varepsilon }}'' \in \mathbb{N}\) astfel \^ inc\^ at pentru \(\forall n\geq {n_{\varepsilon }}''\) este satisfacut\u a inegalitatea \[\left | z_{n} -x \right |< \varepsilon. \label{eq:1.3} \tag{1.3}\]
-%
-%Fie acum \(\varepsilon > 0.\) Not\u am \(n_{\varepsilon } = max ({n_{\varepsilon }}', {n_{\varepsilon }}'')\). Fie acum \(n\geq n_{\varepsilon }\). Deoarece \(n_{\varepsilon \geq }{n_{\varepsilon }}'\) iar \(n\geq n_{\varepsilon }\) rezult\u a c\u a \(n\geq {n_{\varepsilon }}'\) \c si din \ref{eq:1.2} rezult\u a c\u a \[\left | x_{n} - x \right |< \varepsilon \label{eq:1.4} \tag{1.4} \]
-%	
-%Deoarece \(n_{\varepsilon }\geq {n}''_{\varepsilon }\) iar \(n\geq n_{\varepsilon}\) \c si din \ref{eq:1.3} rezult\u a c\u a  \[\left | z_{n}-x  \right |< \varepsilon \label{eq:1.5} \tag{1.5}\]
-%	
-%Din \ref{eq:1.4} \c si \ref{eq:1.5} rezult\u a c\u a
-%
-%\[ max(\left | x_{n} -x  \right |, \left | z_{n}-x \right |) = \begin{Bmatrix}
-%\left | x_{n}-x daca  \right |\\ 
-%\left | z_{n}-x daca  \right |
-%\end{Bmatrix} < \varepsilon.  \label{eq:1.6} \tag{1.6} \]
-%
-%Folosind inegalitatea \ref{eq:1.6} din inegalitatea \ref{eq:1.1} deducem c\u a \(\left | y_{n}-x  \right |< \varepsilon\).
-% 
-%A\c sadar am demonstrat : \(\forall \varepsilon > 0, \exists n_{\varepsilon \in \mathbb{N}}\) astfel \^ inc\^ at pentru \(\forall n\geq n_{\varepsilon }\) este satisfacut\u a inegalitatea \(\left | y_{n}-x \right |< \varepsilon.\) 
-%
-%Conform defini\c tiei aceast\u a inegalitate \^ inseamn\u a c\u a \(y_{n} \to y.\) 
-%
-%\begin{example}
-%  Fie \(c \in \mathbb{R}\), Consider\u am \c sirul \(x_{n}=c\). Atunci \(\lim_{n \to \infty }x_{n}=c\) sau \(\lim_{n \to \infty }c=c\), limita unei constante este acea constant\u a. 
-%\end{example}
-%
-%
-%\begin{demonstration}
-%  \(\forall n\in \mathbb{N}\) avem \(x_{n} - c = c - c = 0 , \left | x_{n}-c \right |= 0\). De aici deducem c\u a \(\forall \varepsilon > 0, \exists n_{\varepsilon} = 1 \in \mathbb{N}\) astfel \^ inc\^ at pentru \(\forall n\geq n_{\varepsilon }= 1\) este satisfacut\u a inegalitatea \(\left | x_{n}-c \right |= 0< \varepsilon\). 
-%	Conform defini\c tiei \(\lim_{n \to \infty }x_{n} = c. \)
-%\end{demonstration}
-%
-%	
-%\begin{proposition}
-%  Dac\u a un \c sir de numere naturale este convergent atunci el este sta\c tionar. 
-%Fie \((x_{n})_{n\in \mathbb{N}}\) un \c sir de numere naturale. Dac\u a exist\u a \(x\in \mathbb{R}\) astfel \^ inc\^ at \(\lim_{n \to \infty }x_{n}= x\), atunci exist\u a \(k\in \mathbb{N}\) astfel \^ inc\^ at \(x_{n}= x_{k}, \forall n\geq k\).
-%\end{proposition}
-%
-%	
-%Astfel spus scris desf\u a\c surat \c sirul arat\u a astfel:
-%\begin{displaymath}
-%x_{1},x_{2},x_{3},x_{4},.........,x_{k-1},x_{k},x_{k},x_{k}........
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%  Deoarece \(\lim_{n \to \infty }x_{n}= x\) pentru \(\varepsilon = \frac{1}{2}> 0, \exists n_{\frac{1}{2}}\in \mathbb{N}\) astfel \^ inc\^ at \(\forall n\geq n_{\frac{1}{2}}\) este satisfacut\u a inegalitatea \(\left | x_{n} -x \right |<  \frac{1}{2}\). 
-%\end{demonstration}
-%	
-%S\u a not\u am \(k=n_{\frac{1}{2}}\in \mathbb{N}\) \c si s\u a re\c tinem c\u a \c stim c\u a \(\forall n\geq k \) este satisfacut\u a inegalitatea 
-%
-%\begin{displaymath}
-%  \left | x_{n} -x \right |< \frac{1}{2}. \label{eq:2.1} \tag{2.1} 
-%\end{displaymath}
-%
-%
-%Fie \(n\geq k\). Rela\c tia \ref{eq:2.1} fiind adev\u arat\u a pentru orice num\u ar \(\geq k\) ea va fi adev\u arat\u a \^ in particular pentru k adic\u a avem 
-%\begin{displaymath}
-%  \left | x_{k}-x \right |< \frac{1}{2}. \label{eq:2.2} \tag{2.2}
-%\end{displaymath}
-%
-%
-%Dar la noi \(n\geq k\) deci din \ref{eq:2.1} avem \c si 
-%\begin{displaymath}
-%  \left | x_{n}-x \right |< \frac{1}{2}.\label{eq:2.3} \tag{2.3}
-%\end{displaymath}
-%
-%
-%Avem 
-%\begin{displaymath}
-%  \left | x_{n}-x_{k} \right |= \left | (x_{n}-x)+(x-x_{k}) \right |\leq \left | x_{n}-x \right |+\left | x-x_{k} \right |= 
-%\end{displaymath}
-%\begin{displaymath}
-%  =\left | x_{n}-x \right |+ \left | -(x-x_{k}) \right |= \left | x_{n}-x \right |+ \left | x_{k} -x\right |. \label{eq:2.4} \tag{2.4}
-%\end{displaymath}
-%
-%
-%
-%Am folosit inegalitatea tringhiului \c si \(\left | -a \right |= \left | a \right |\). Folosind \ref{eq:2.2} \c si \ref{eq:2.3} din \ref{eq:2.4} deducem c\u a 
-%\begin{displaymath}
-%  \left | x_{n}-x_{k} \right |< \frac{1}{2}+ \frac{1}{2}= 1. \label{eq:2.5} \tag{2.5} 
-%\end{displaymath}
-%
-%
-%Dar \(x_{n}, x_{k}\) sunt numere naturale, \c si deci diferen\c ta lor este un num\u ar \^ intreg adic\u a \(x_{n}- x_{k}\in \mathbb{Z}\). Cum \(\left |x_{n}- x_{k} \right |\geq 0\) iar din \ref{eq:2.5} \(\left |x_{n}- x_{k} \right |< 1\) rezult\u a c\u a \(\left |x_{n}- x_{k} \right |\in \left [ 0,1 \right ]\) deci \(\left |x_{n}- x_{k} \right |\in\mathbb{Z}\cap \left [ 0,1 \right)= \left \{ ....,-n ,....,-2,-1,0,1,2,3,....,n,... \right \}\cap \left [ 0,1 \right )= \left \{ 0 \right \}\) de unde \(\left | x_{n}-x_{k} \right |=0\) adic\u a \(x_{n}-x_{k}=0,x_{n}=x_{k}.\) 
-%
-%A\c sasar am demonstrat: \(\forall n\geq k avem x_{n}=x_{k},\) ceea ce \^ incheie demonstra\c tia. 
-%
-%\section{Exerci\c tii}
-%
-%\begin{enumerate}
-% \item Calcula\c ti
-%\begin{displaymath}
-%   \lim_{n\to\infty }\left ( \frac{1}{\sqrt{n^{4}+1}}+ \frac{2}{\sqrt{n^{4}+2} } +\frac{3}{\sqrt{n^{4}+3}}+........+\frac{n}{\sqrt{n^{4}+n}}  \right )
-%\end{displaymath}
-%
-%
-%\begin{solve}
-%  Not\u am \( x_{n}= \frac{1}{\sqrt{n^{4}+1}} + \frac{2}{\sqrt{n^{4}+2}}+\frac{3}{\sqrt{n^{4}+3}}+........+\frac{n}{\sqrt{n^{4}+n}} \).
-%Adic\u a \( x_{n}= \sum_{k=1}^{n}\frac{k}{n^{4}+k}\).
-%\end{solve}
-%
-%
-%\^ in continuare proced\u am astfel. De num\u ar\u ator nu ne atingem. Vom lucra cu numitorul, ideea fiind de a se avea acela\c si numitor peste tot. 
-%
-%Avem 
-%\begin{displaymath}
-%  1\leq k\leq n \Rightarrow 
-%\end{displaymath}
-%\begin{displaymath}
-%  \Rightarrow  n^{4}+1 \leq n^{4}+k \leq n^{4}+n \Rightarrow 
-%\end{displaymath}
-%\begin{displaymath}
-%  \Rightarrow  \sqrt{n^{4}+1}\leq \sqrt{n^{4}+k}\leq \sqrt{n^{4}+1} \Rightarrow 
-%\end{displaymath}
-%\begin{displaymath}
-%  \Rightarrow  \frac{1}{\sqrt{n^{4}+1}}\geq \frac{1}{\sqrt{n^{4}+k}}\geq \frac{1}{\sqrt{n^{4}+n}}.
-%\end{displaymath}
-%
-%
-%Acum \^ inmul\c tind cu k ob\c tinem 
-%
-%\begin{displaymath}
-%  \frac{k}{\sqrt{n^{4}+1}}\geq \frac{k}{\sqrt{n^{4}+k}}\geq \frac{k}{\sqrt{n^{4}+n}} \label{eq:3.1} \tag{3.1} 
-%\end{displaymath}
-%
-%
-%\^ in continuare \^ in rela\c tia \ref{eq:3.1} dam lui \(k\) valorile \(1,2,.....,n\). 
-%
-%Pentru \(k = 1\) rezult\u a:
-%
-%\begin{displaymath}
-%  \frac{1}{\sqrt{n^{4}+1}}\geq \frac{1}{\sqrt{n^{4}+k}}\geq \frac{1}{\sqrt{n^{4}+n}} 
-%\end{displaymath}
-%
-%
-%Pentru \(k = 2\) rezult\u a:
-%
-%\begin{displaymath}
-%  \frac{2}{\sqrt{n^{4}+1}}\geq \frac{2}{\sqrt{n^{4}+2}}\geq \frac{2}{\sqrt{n^{4}+n}}
-%\end{displaymath}
-%
-%
-%Adun\^ and inegalit\u a\c tile de mai sus ob\c tinem 
-%
-%\begin{displaymath}
-%  \frac{1}{\sqrt{n^{4}+1}}+ \frac{2}{\sqrt{n^{4}+1}}+......+ \frac{n}{\sqrt{n^{4}+1}} \geq \frac{1}{\sqrt{n^{4}+1}}+ \frac{2}{\sqrt{n^{4}+2}}+......+ \frac{n}{\sqrt{n^{4}+n}}\geq
-%\end{displaymath}
-%\begin{displaymath}
-%  \geq\frac{1}{\sqrt{n^{4}+n}}+ \frac{2}{\sqrt{n^{4}+n}}+......+ \frac{n}{\sqrt{n^{4}+n}}
-%\end{displaymath}
-%
-%
-%Sau
-%\begin{displaymath}
-%  \frac{1+2+....+n}{\sqrt{n^{4}+1}}\geq x_{n}\geq \frac{1+2+.....+n}{\sqrt{n^{4}+n}}
-%\end{displaymath}
-%
-%
-%Dar \c stim c\u a \(1+2+...+n = \frac{n(n+1)}{2}\), deci vom ob\c tine 
-%\begin{displaymath}
-%  \frac{n(n+1)}{2\sqrt{n^{4}+1}}\geq x_{n}\geq \frac{n(n+1)}{2\sqrt{n^{4}+n}} \label{eq:3.2} \tag{3.2}
-%\end{displaymath}
-%
-%Acum 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{n(n+1)}{2\sqrt{n^{4}+1}}=\frac{1}{2}  
-%\end{displaymath}
-%\c si 
-%\begin{displaymath}
-%    \lim_{n \to \infty }\frac{n(n+1)}{2\sqrt{n^{4}+n}}=\frac{1}{2} \label{eq:3.3} \tag{3.3}
-%\end{displaymath}
-%
-%Vom da la ambele factor comun for\c tat. 
-%
-%Din \ref{eq:3.2} \c si \ref{eq:3.3} \c si teorema cle\c stelui rezult\u a c\u a:
-%\begin{displaymath}
-%  \lim_{n \to \infty }x_{n}=\frac{1}{2}
-%\end{displaymath}
-%\end{enumerate}
-%
-%
-%\chapter{\c Siruri m\u arginite}
-%
-%\section{Teorie}
-%
-%\begin{definition}
-%  Fie \((x_{n})_{n\in \mathbb{N}}\) un \c sir de numere reale. \c sirul \((x_{n})_{n\in \mathbb{N}}\) se nume\c ste m\u arginit dac\u a \c si numai dac\u a \(\exists  a, b \in \mathbb{R}, a< b\) astfel \^ inc\^ at \(\forall n\in \mathbb{N}\) este satisfacut\u a inegalitatea \(x_{n}\in \left [ a,b \right ]\), sau echivalent \(\exists M> 0\) astefle \^ inc\^ at \(\forall  n\in \mathbb{N}\) este satisfacut\u a inegalitatea \(\left | x_{n} \right |\leq M\).
-%\end{definition}
-%
-%\begin{definition}
-%  Fie \((x_{n})_{n\in \mathbb{N}}\) un \c sir de numere reale. Spunem c\u a \(\lim_{n \to \infty }x_{n}=\infty\) dac\u a, \(\forall \varepsilon > 0,\exists n_{\varepsilon }\in \mathbb{N}\) astfel \^ inc\^ at pentru \(\forall n\geq n_{\varepsilon }\) este satisfacut\u a inegalitatea \(x_{n}> \varepsilon\). 
-%Sau \(\forall \varepsilon > 0,\exists n_{\varepsilon }\in \mathbb{N}\) astfel \^ inc\^ at \(x_{n}> \varepsilon ,\forall n\geq n_{\varepsilon }\). 
-%\end{definition}
-%
-%
-%\begin{proposition}
-%  Fie \((x_{n})_{n\in \mathbb{N}}\) un \c sir de numere reale. Dac\u a \(\lim_{n \to \infty }x_{n}=\infty\) atunci \( \lim_{n \to \infty }\frac{1}{x_{n}}=0.\) 
-%\end{proposition}
-%
-%\begin{demonstration}
-%  Fie \(\varepsilon > 0\). Deoarece \(\lim_{n \to \infty }x_{n}=\infty\) din defini\c tie aplicat\u a pentru \(\frac{1}{\varepsilon }> 0\) rezult\u a c\u a \(\exists n_{\varepsilon }\in \mathbb{N}\) astfel \^ inc\^ at pentru \(\forall n\geq n_{\varepsilon }\) este satisfacut\u a inegalitatea \(x_{n}> \frac{1}{\varepsilon }\).
-%\end{demonstration}
-% 
-%
-%Din aceast\u a inegalitate rezult\u a c\u a \(\forall n\geq n_{\varepsilon }\) este satisfacut\u a inegalitatea \(x_{n}> 0\), prin urmare are sens frac\c tia \(\frac{1}{x_{n}}, \forall n\geq n_{\varepsilon }\). Dar inegalitatea de mai sus este echivalent\u a cu \(\exists n_{\varepsilon }\in \mathbb{N}\) astfel \^ inc\^ at \(\forall n\geq n_{\varepsilon }\) este satisfacut\u a inegalitatea\( \frac{1}{x_{n}}< \varepsilon.\) Conform defini\c tiei aceasta \^ inseamn\u a c\u a \(\lim_{n \to \infty }\frac{1}{x_{n}}=0\).
-%
-%
-%\textbf{Lema Stolz-Cesaro (Cazul \(\frac{1}{\infty }\))}
-%
-%Fie \(\left ( x_{n} \right )_{n\in \mathbb{N}}\subset \mathbb{R}\) \c si \(\left (\alpha _{n} \right )_{n\in \mathbb{N}}\subset \left ( 0,\infty \right )\) astfel \^ inc\^ at \(\alpha _{n} \uparrow \infty\). 
-%Dac\u a 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{x_{n} - x_{n-1}}{\alpha _{n}-a_{n-1}}\in \mathbb{R}
-%\end{displaymath}
-%	atunci 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{x_{n}}{ \alpha _{n}}\in \mathbb{R} 
-%\end{displaymath}
-%	\c si \^ in plus 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{x_{n}}{ \alpha _{n}}= \lim_{n \to \infty }\frac{x_{n} - x_{n-1}}{ \alpha _{n}- \alpha _{n-1}}.
-%\end{displaymath}
-%
-%\begin{demonstration}
-%  Fie \(\alpha = \lim_{n \to \infty }\frac{x_{n}-x_{n-1}}{\alpha _{n}-\alpha _{n-1}}\). 
-%\end{demonstration}
-%
-%
-%Atunci \(\forall \varepsilon > 0,\exists n_{\varepsilon }\in \mathbb{N}\) astefl \^ inc\^ at \(\left | \frac{x_{n}-x_{n-1}}{\alpha _{n}- \alpha _{n-1}} - \alpha \right |< \frac{\varepsilon }{2} \forall  n\geq n_{\varepsilon  }\)
-%
-%Sau, 
-%\begin{displaymath}
-%  \alpha _{n} \uparrow, 
-%\left | x_{n}- x_{n-1 }- \alpha \left ( \alpha _{n}-\alpha _{n-1} \right ) \right | < \frac{\varepsilon }{2}\left ( \alpha _{n}- \alpha _{n-1} \right ), \forall n\geq n_{\varepsilon } \label{eq:4.1} \tag{4.1}
-%\end{displaymath}
-%
-%
-%Not\u am cu \(k=n_{\varepsilon }+1\). Pentru \(n\geq k \) lu\^ and \^ in  \ref{eq:4.1} , \(n= k+1, k+2,....,n\) ob\c tinem:
-%\(\left | x_{k+1} - x_{k} - \alpha \left ( a_{k+1}- a_{k} \right ) \right |< \frac{\varepsilon }{2}\left ( \alpha _{k+1} - \alpha _{k} \right )\). 
-%
-%\(\left | x_{k+2} - x_{k+1} - \alpha \left ( a_{k+2}- a_{k+1} \right ) \right |< \frac{\varepsilon }{2}\left ( \alpha _{k+2} - \alpha _{k+1} \right )
-%...
-%...
-%...
-%\left | x_{n} - x_{n-1} - \alpha \left ( a_{n}- a_{n-1} \right ) \right |< \frac{\varepsilon }{2}\left ( \alpha _{n} - \alpha _{n-1} \right )\)
-%
-%De unde ob\c tinem, prin adunare:
-%
-%\begin{displaymath}
-%  \left | x_{n} - x_{k} - \alpha \left ( \alpha _{n}-\alpha _{k} \right ) \right |= 
-%\end{displaymath}
-%\begin{displaymath}
-%  \left | x_{n} - x_{n-1} -\alpha \left ( \alpha _{n}-\alpha _{n-1} \right )+.....+x_{k+2}-x_{k+1}-\alpha \left ( \alpha _{k+2}-\alpha _{k+1} \right )  +x_{k+1}-x_{k}-\alpha \left ( \alpha _{k+1}-\alpha _{k} \right )\right |
-%\end{displaymath}
-%\begin{displaymath}
-%  \leq \left | x_{n}-x_{n-1}-\alpha \left ( \alpha _{n}-\alpha _{n-1} \right ) \right |+.......+\left | x_{k+2}-x_{k+1}-\alpha \left ( \alpha _{k+2}-\alpha _{k+1} \right ) \right |+\left | x_{k+1}-x_{k}- \alpha \left ( \alpha _{k+1}-\alpha _{k} \right ) \right |
-%\end{displaymath}
-%\begin{displaymath}
-%  \leq \frac{\varepsilon }{2}\left ( \alpha _{k+1} -\alpha _{k} \right )+\frac{\varepsilon }{2}\left ( \alpha _{k+2}-\alpha _{k+1} \right )+\frac{\varepsilon }{2}\left ( \alpha _{n}- \alpha _{n-1}\right )= \frac{\varepsilon }{2}\left ( \alpha _{n}-\alpha _{k} \right )
-%\end{displaymath}
-%
-%\(\leq \frac{\varepsilon }{2}\alpha _{n}\) deoarece \(\alpha _{k}> 0\). 
-%
-%
-%\section{Exerci\c tii}
-%
-%\begin{enumerate}
-%\item Calcula\c ti 
-%
-% Fie \(\alpha > 0\) s\u a se calculeze 
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{1^{\alpha }+2^{\alpha }+....+n^{\alpha }}{n^{\alpha +1}}
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%  Fie \(x_{n}=1^{\alpha }+2^{\alpha }+....+n^{\alpha },a_{n}= n^{\alpha }\). Deoarece \(\alpha > 0 , \alpha \uparrow \infty.\) Din lema Stolz-Cesaro, cazul 
-%\end{demonstration}
-%
-%\begin{displaymath}
-%  \left [ \frac{1}{\infty } \right ], 
-%\lim_{n \to \infty }\frac{1^{\alpha }+2^{\alpha }+....+n^{\alpha }}{n^{\alpha +1}}=\lim_{n \to \infty }\frac{x_{n}}{\alpha _{n}}= \lim_{n \to \infty } \frac{x_{n+1}-x_{n}}{\alpha _{n+1}-_{n}}=\lim_{n \to \infty } \frac{\left ( n+1 \right )^{\alpha }}{\left ( n+1 \right )^{\alpha+1} -n^{\alpha +1}}
-%\end{displaymath}
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\left ( n+1 \right )^{\alpha +1}-n^{\alpha +1}}{\left ( n+1 \right )^{\alpha }}
-%\end{displaymath}
-%
-%D\u am factor comun for\c tat la num\u ar\u ator pe \(n^{\alpha +1}\). Avem 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\left ( n+1 \right )^{\alpha +1}-n^{\alpha +1}}{\left ( n+1 \right )^{\alpha }} = \lim_{n \to \infty }\frac{n^{\alpha +1\left [ \frac{\left ( n+1 \right )^{\alpha +1}}{n^{\alpha +1}} -1\right ]}}{\left ( n+1 \right )^{\alpha }} 
-%\end{displaymath}
-%\begin{displaymath}
-%  = \lim_{n \to \infty }\frac{n^{\alpha }}{\left ( n+1 \right )^{\alpha }}\cdot n\left [ \left ( \frac{n+1}{n} \right )^{\alpha +1}-1 \right ]
-%\end{displaymath}
-%\begin{displaymath}
-%  =\lim_{n \to \infty }\frac{n^{\alpha }}{\left ( n+1 \right )^{\alpha }}\cdot \lim_{n \to \infty }n\left [ \left ( \frac{n+1}{n} \right )^{\alpha +1} -1\right ]
-%\end{displaymath}
-%\begin{displaymath}
-%  =\lim_{n \to \infty }n\left [ \left ( 1+\frac{1}{n} \right )^{\alpha +1}-1 \right ]
-%\end{displaymath}
-%\begin{displaymath}
-%  = \lim_{n \to \infty }\frac{\left ( 1+\frac{1}{n} \right )^{\alpha +1}-1}{\frac{1}{n}}
-%\end{displaymath}
-%\begin{displaymath}
-%  =\lim_{n \to \infty }\frac{\left ( 1+n \right )^{\alpha +1}-1}{n}= \alpha +1
-%\end{displaymath}
-%
-%Am folosit limita fundamental\u a 
-%
-%\begin{displaymath}
-%  \lim_{x \to \infty }\frac{\left ( 1+x \right )^{\gamma }-1}{x} = \gamma ,\gamma \in \mathbb{R}
-%\end{displaymath}
-%
-%
-%\^ intorc\^ andu-ne la problem\u a, ob\c tinem:
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{1^{\alpha }+2^{\alpha }+....+n^{\alpha }}{n^{\alpha +1}} = \frac{1}{\alpha +1}
-%\end{displaymath}
-%
-%
-%\item Calcula\c ti
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{e^{\sqrt{1}}+ e^{\sqrt{2}}+....+e^{\sqrt{n}}}{\sqrt{n}e^{\sqrt{n}}}
-%\end{displaymath}
-%
-%
-%\begin{solve}
-%  Fie \( x_{n} = e^{\sqrt{1}}+ e^{\sqrt{2}}+......+e^{\sqrt{n}}, a_{n}= \sqrt{n}e^{\sqrt{n}}.\) Avem de calculat \(\lim_{n \to \infty }\frac{x_{n}}{a_{n}}= \left [ \frac{1}{\infty } \right ]\)
-%\end{solve}
-%
-%
-%
-%Din lema Stolz-Cesaro 
-%
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{x_{n}}{a_{n}}= \lim_{n \to \infty }\frac{x_{n+1}-x_{n}}{\alpha _{n+1}-\alpha _{n}}=\lim_{n \to \infty }\frac{e^{\sqrt{n+1}}}{\sqrt{n+1}e^{\sqrt{n+1}}-\sqrt{n}e^{\sqrt{n}}}
-%\end{displaymath}
-%
-%
-%Vom calcula acum 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sqrt{n+1}e^{\sqrt{n+1}}-\sqrt{n}e^{\sqrt{n}}}{e^{\sqrt{n+1}}}
-%\end{displaymath}
-%
-%
-%Avem 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sqrt{n+1}e^{\sqrt{n+1}}-\sqrt{n}e^{\sqrt{n}}}{e^{\sqrt{n+1}}} = \lim_{n \to \infty }\frac{\left ( \sqrt{n+1}-\sqrt{n} \right )e^{\sqrt{n+1}}+ \sqrt{n}\left ( e^{\sqrt{n+1}}-e^{\sqrt{n}} \right )}{e^{\sqrt{n+1}}}
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  = \lim_{n \to \infty }\left ( \sqrt{n+1}-\sqrt{n} \right )+ \lim_{n \to \infty }\frac{\sqrt{n}\left ( e^{\sqrt{n+1}} -e^{\sqrt{n}} \right )}{e^{\sqrt{n+1}}} 
-%\end{displaymath}
-%
-%
-%Prima limit\u a, \^ inmul\c tind \c si \^ imp\u ar\c tind cu conjugata ei ne da da 0, adic\u a:
-%\begin{displaymath}
-%  \lim_{n \to \infty }\left ( \sqrt{n+1}-\sqrt{n} \right ) = 0
-%\end{displaymath}
-%
-%
-%Pentru cea de a doua limit\u a proced\u am astfel:
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sqrt{n}\left ( e^{\sqrt{n+1}} -e^{\sqrt{n}} \right )}{e^{\sqrt{n+1}}}  = \lim_{n \to \infty } \sqrt{n}\left ( 1- \frac{e^{\sqrt{n}}}{e^{\sqrt{n+1}}} \right )
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  =\lim_{n \to \infty }\sqrt{n}\left ( 1-e^{\sqrt{n}-\sqrt{n+1}} \right )
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  = - \lim_{n \to \infty } \frac{e^{\sqrt{n}- \sqrt{n+1}}-1}{\sqrt{n}- \sqrt{n+1}} \cdot \sqrt{n}\left ( \sqrt{n}-\sqrt{n+1} \right )
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  = -\lim_{n \to \infty } \frac{e^{\sqrt{n}- \sqrt{n+1}}-1}{\sqrt{n}- \sqrt{n+1}} \cdot \lim_{n \to \infty }\sqrt{n}\left ( \sqrt{n} -\sqrt{n+1}\right )
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  = -1 \cdot \left ( -\frac{1}{2} \right ) =\frac{1}{2}
-%\end{displaymath}
-%
-%Am \^ inmul\c tit \c si am \^ imp\u ar\c tit cu conjugata ei, iar la ultima factor comun for\c tat. 
-%
-%Din acestea deducem c\u a:
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{e^{\sqrt{n+1}}}{\sqrt{n+1}e^{\sqrt{n+1}}-\sqrt{n}e^{\sqrt{n}}} = 2
-%\end{displaymath}
-%
-%
-%Deci ultima limit\u a din enun\c t \(\lim_{n \to \infty } \frac{x_{n}}{\alpha _{n}} = 2\)
-%\end{enumerate}
-%
-%\begin{proposition}
-%  Fie \(\left ( x_{n} \right )_{n\in \mathbb{N}}\) un \c sir de numere reale strict pozitive. Dac\u a \(\lim_{n \to \infty }\frac{x_{n+1}}{x_{n}}\in \mathbb{R}\) atunci \(\lim_{n \to \infty } \sqrt[n]{x_{n}}\in \mathbb{R}\). \^ in plus \(\lim_{n \to \infty } \sqrt[n]{x_{n}} = \lim_{n \to \infty }\frac{x_{n+1}}{x_{n}}\).
-%\end{proposition}
-% 
-%Pe scurt 
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty } \sqrt[n]{x_{n}} = \lim_{n \to \infty }\frac{x_{n+1}}{x_{n}}
-%\end{displaymath}
-%
-%
-%\begin{definition}
-%  Din defini\c tia logaritmilor naturali avem 
-%\end{definition}
-%
-%\begin{displaymath}
-%  \ln x = \alpha  \Leftrightarrow x = e^{\alpha }
-%\end{displaymath}
-%
-%De aici deducem c\u a \(x = e^{\alpha } = e^{\ln x}\) adic\u a 
-%\begin{displaymath}
-%  x = e^{\ln x}, \forall x> 0
-%\end{displaymath}
-%
-%De aici dac\u a \(x=u^{v}\) ob\c tinem \(u^{v} = e^{\ln\left ( u^{v} \right )} = u^{v\ln u}\). 
-%S\u a re\c tinem aceast\u a egalitate
-%\begin{displaymath}
-%  u^{v} = u^{v\ln u}
-%\end{displaymath}
-%
-%Ea se folose\c ste tot timpul c\^ and baza \c si puterea sunt variabile. La noi  \(\sqrt[n]{x_{n}}= x_{n}^{\frac{1}{n}} \)de unde folosind egalitatea de mai sus rezult\u a c\u a 
-%\begin{displaymath}
-%  \sqrt[n]{x_{n}}= x_{n}^{\frac{1}{n}} = e^{\frac{1}{n}\cdot \ln x_{n}} = e^{\frac{\ln x_{n}}{n}}
-%\end{displaymath}
-%
-%
-%Fie \(A = \lim_{n \to \infty }\frac{x_{n}+1}{x_{n}}\). Atunci \(\ln\) fiind func\c tie continu\u a 
-%\begin{displaymath}
-%  \ln A = \ln \lim_{n \to \infty }\frac{x_{n}+1}{x_{n}} = \lim_{n \to \infty }\ln \frac{x_{n}+1}{x_{n}}.
-%\end{displaymath}
-%
-%
-%Vom ar\u ata c\u a \^ in ipotezele noastre 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\ln x_{n}}{n} = \lim_{n \to \infty }\ln\frac{x_{n+1}}{x_{n}}
-%\end{displaymath}
-%
-% Din lema Stolz-Cesato cazul \(\left [ \frac{1}{\infty } \right ]\), ipotezele sunt satisfacute, rezult\u a c\u a 
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\ln x_{n}}{n} 
-%= \lim_{n \to \infty }\frac{\ln x_{n}}{n}  
-%= \lim_{n \to \infty}\frac{x_{n+1}-\ln x_{n}}{n+1-n} 
-%= \lim_{n \to \infty}\left ( \ln x_{n+1} - \ln x_{n} \right ) 
-%= \lim_{n \to \infty }\ln \frac{x_{n+1}}{x_{n}} 
-%= \ln A
-%\end{displaymath}
-%
-%
-%De aici deducem c\u a 
-%
-%\begin{displaymath}
-%  \lim_{n \to \infty }\sqrt[n]{x_{n}} = \lim_{n \to \infty } e^{\frac{\ln x_{n}}{n}} = e^{\lim_{n \to \infty } \frac{\ln x_{n}}{n}} = e^{\ln A} = A = \lim_{n \to \infty}\frac{x_{n+1}}{n}.
-%\end{displaymath}
-%
-%\chapter{\c Siruri recurente \c si asimtote oblice}
-%
-%\section{Teorie}
-%
-%\begin{theorem}
-%   Fie \(a\in \mathbb{R}\) \c si \(f: \left ( \alpha ,\infty  \right )n \to \mathbb{R}\) o func\c tie continu\u a cu proprietatea c\u a \(f_{(x)}> x, \forall x > a\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\) prin condi\c tia ini\c tial\u a \(x_{1}> \alpha\) \c si rela\c tia de recuren\c t\u a \(x_{n+1} = f_{\left ( x_{n} \right )}\) pentru orice  \(n\geq 1	\)
-%\end{theorem}
-%
-%Atunci 
-%\begin{displaymath}
-%  \lim_{x \to \infty }x_{n} = \infty
-%\end{displaymath}
-%
-%Dac\u a exist\u a \(b_{0}\in \mathbb{R}\) astfel \^ inc\^ at \(y = x + b_{0}\) este asimtot\u a oblic\u a la graficul func\c tiei f, atunci
-%\begin{displaymath}
-%  \lim_{x \to \infty }\frac{x_{n}}{n}=b_{0}
-%\end{displaymath}
-%
-%Dac\u a exist\u a \(b_{0}, b_{1}\in \mathbb{R}, b_{0 }\neq 0\) astfel \^ inc\^ at 
-%\begin{displaymath}
-%  \lim_{n \to \infty }x\left ( f\left ( x \right )-x-b_{0} \right )= b_{1},
-%\lim_{n \to \infty } \frac{n}{\ln n}\left ( \frac{x_{n}}{n} -b_{0}\right )=\frac{b_{1}}{b_{0}}
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%  Din condi\c tia ini\c tial\u a avem \(x_{1}> \alpha\). Presupunem \(x_{n}> \alpha\).
-%Din ipoteza \(f_{\left ( x \right )}> x, \forall  x> \alpha\) rezult\u a c\u a \(f_{\left ( x _{n}\right )}> x_{n}\), adic\u a \(x_{n+1}> x_{n}\). Cum Presupunem \(x_{n}> \alpha\) rezult\u a c\u a \(x_{n+1}> \alpha\). Conform induc\c tiei matematice rezult\u a c\u a \(x_{n}> \alpha,  \forall n\geq 1\). 
-%\end{demonstration}
-%
-%
-%Fie \(n\geq 1\). Din ipoteza \(f_{\left ( x \right )}> x, \forall x> \alpha\) \c si \(x_{n}> \alpha\) rezult\u a c\u a \(f_{\left ( x_{n} \right )}> x_{n}\) sau \(x_{n+1}> x_{n}\). A\c sadar \c sirul este strict cresc\u ator. Dac\u a prin absurd ar fi majorat, atunci din  teorema lui Weierstrass este convergent \c si fie \(\lim_{n \to \infty }x_{n} = L\in \mathbb{R}\). Cum \c sirul este cresc\u atpr avem \(x_{n}\geq x_{1}, \forall n\geq 1\) de unde, trec\^ and la limit\u a rezult\u a ca \(L \geq 1\). Cum \(x_{1}\geq \alpha\) rezult\u a c\u a \(L\geq \alpha\), iar din ipoteza \(f_{\left ( x \right )}\geq x, \forall x\geq \alpha\) rezult\u a, in particular, \(f_{\left ( L \right )}> L\). Deoarece \(\lim_{n \to \infty }x_{n}= L\), iar f este contnu\u a, rezult\u a c\u a \(\lim_{n \to \infty }f_{\left ( x_{n} \right )} = f_{\left ( L \right )}\) sau \(\lim_{n \to \infty }x_{n+1} = f_{\left ( L \right )}\), adic\u a \(\lim_{n \to \infty }x_{n} = f_{\left ( L \right )}\). Cum \(\lim_{n \to \infty }x_{n} = f_{\left ( L \right )}\), din unicitatea limitei unui \c sir de numere reale rezult\u a c\u a \(f_{\left ( L \right )} = L\), ceea ce este fals. A\c ssadar \c sirul \(\left ( x_{n} \right )_{n\geq 1}\) nu este majorat \c si fiind cresc\u ator, dup\u a cum am demonstrat, \(\lim_{n \to \infty }x_{n}=\infty\). 
-%Deoarece \(y= x + b_{0}\) este asimtot\u a oblic\u a la graficul func\c tiei f, conform defini\c tiei \(\lim_{x \to \infty }\left ( f_{\left ( x \right )}-x \right )= b_{0}\). Cum, din 1. , \(\lim_{x \to \infty }x_{n} = \infty\), din caracterizarea limitei unei func\c tii \^ intr-un punct cu \c siruri rezult\u a c\u a \(\lim_{x \to \infty }\left ( f_{\left ( x_{n} \right )} -x_{n}\right )= b_{0}\) sau \c tin\^ and cont de rela\c tia de recuren\c t\u a \(\lim_{x \to \infty }\left ( x_{n+1} -x_{n}\right )=b_{0}\). Din lema Stolz-Cesaro, cazul \(\left [ \frac{1}{\infty } \right ],\) rezult\u a c\u a \(\lim_{n \to \infty }\frac{x_{n}}{n}= \lim_{n \to \infty}\left ( x_{n+1} -x_{n}\right ) = b_{0}\).
-%
-%Pentru orice \(n\geq 1\) not\u am \(y_{n}= x_{n}-b_{n}n\) Avem 
-%\begin{displaymath}
-%  y_{n+1}-y_{n}= x_{1}-x_{n}-b_{0} = f_{\left ( x_{n} \right )}-x_{n}-b_{0},\forall n\geq 1.
-%\end{displaymath}
-%
-%Cum \(\lim_{x \to \infty }x\left ( f_{\left ( x \right )} -x-b_{0}\right )=b_{1}\) iar din 1. \(\lim_{x \to \infty }x_{n}=\infty\), din caracterizarea limitei unei func\c tii \^ intr-un punct cu \c siruri rezult\u a c\u a \(\lim_{x \to \infty }x_{n}\left ( y_{n+1} -y_{n}\right )=b_{1}\).
-%
-%Din egalitatea \(f_{\left ( x \right )}-x-b_{0}= x\left ( f_{\left ( x \right )}-x-b_{0} \right )\cdot \frac{1}{x}, \forall x>\alpha,x  \neq 0\) trec\^ and la limit\u a ob\c tinem 
-%\begin{displaymath}
-%  f_{\left ( x \right )}-x-b_{0}= \lim_{x \to \infty }x\left ( f_{\left ( x \right )}-x-b_{0} \right )\cdot \lim_{x \to \infty }\frac{1}{x} = b_{1}\cdot 0 = 0.
-%\end{displaymath}
-%
-%Adic\u a \(y=x+b_{0}\) este asimtot\u a oblic\u a la graficul func\c tiei f . Din 2. Rezult\u a c\u a \(\lim_{n \to \infty }\frac{x_{n}}{n} = b_{0}\), de unde \c tin\^ and cont c\u a \(b_{0}\neq 0\) rezult\u a c\u a \(\lim_{n \to \infty }\frac{n}{x_{n}} = \frac{1}{b_{0}}\). 
-%
-%
-%Din egalitatea
-% \begin{displaymath}
-%  \frac{y_{n+1} - y_{n}}{\frac{1}{n}} = x_{n}\left ( y_{n+1} -y_{n}\right )\cdot \frac{n}{x_{n}}, \geq 1
-%\end{displaymath}
-%
-%Trec\^ and la lmit\u a ob\c tinem 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{y_{n+1} - y_{n}}{\frac{1}{n}} = \frac{b_{1}}{b_{0}}
-%\end{displaymath}
-%.
-%
-%Iar\u a\c si din lema Stolz-Cesaro ob\c tinem 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{y_{n}}{1+\frac{1}{2}+...+\frac{1}{n-1}} = \frac{b_{1}}{b_{0}} . 
-%\end{displaymath}
-%
-%Cum \(\lim_{n \to \infty }\frac{{1+\frac{1}{2}+...+\frac{1}{n-1}}}{\ln n} = 1\), rezult\u a c\u a \(\lim_{n \to \infty }\frac{y_{n}}{\ln n } = \frac{b_{1}}{b_{0}}\), sau \(\lim_{n \to \infty }\frac{x_{n}-b_{0}n}{\ln n }  = \frac{b_{1}}{b_{0}}\).
-%
-%
-%O prim\u a aplica\c tie a tepremei o constituie:
-%
-%\begin{theorem}
-%  Fie \(\varphi : \left [ 0,\infty  \right ) \to \mathbb{R}\) o func\c tie continu\u a cu proprietatea c\u a \(\varphi_{\left ( x \right )}> 0, \forall x> 0\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\) prin condi\c tia ini\c tial\u a \(x_{1}> 0\) \c si rela\c tia de recuren\c t\u a \(x_{n+1} = x_{n} + \varphi \left ( \frac{1}{x_{n}} \right )\) pentru \(\forall  n\geq 1\). 
-%\end{theorem}
-%
-%Atunci :
-%\(\lim_{x \to \infty } x_{n} = \infty\) \c si \(\lim_{x \to \infty }\frac{x_{n}}{n} = \varphi\left ( 0 \right )\) iar dac\u a \^ in plus , \(\varphi\left ( 0 \right )> 0\) \c si  \(\varphi\) este derivabil\u a \^ in 0, 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{n}{\ln n }\left ( \frac{x_{n}}{n} -\varphi \left ( 0 \right )\right ) = \frac{{\varphi }'\left ( 0 \right )}{\varphi \left ( 0 \right )}.
-%\end{displaymath}
-% 
-%
-%\begin{demonstration}
-%  Fie \(f : \left ( 0,\infty  \right ) \to \mathbb{R}, f_{\left ( x \right )} = x+ \varphi \left ( \frac{1}{x} \right )\). Evident f este continu\u a \c si deoarece \(\varphi \left ( x \right )> 0\) rezult\u a c\u a \(f_{\left ( x \right )}> x, \forall x> 0 \). 
-%\end{demonstration}
-%
-%Deoarece \(\varphi\) este continu\u a \^ in 0, \(\lim_{x \to \infty }\left ( f_{\left ( x \right ) }-x\right ) = \lim_{x \to \infty }\varphi \left ( \frac{1}{x} \right )  = \lim_{t \to 0, t> 0 }\varphi \left ( t \right ) = \varphi \left ( 0 \right )\). 
-%A\c sadar \(y= x+\varphi \left ( 0 \right )\) este asimtot\u a oblic\u a la graficul func\c tiei f. Din prima teorem\u a 1 \c si 2 rezult\u a c\u a \(\lim_{n \to \infty }x_{n} = \infty\) \c si \(\lim_{n \to \infty }\frac{x_{n}}{n} = \varphi \left ( 0 \right )\). Deoarece \(\varphi\) este derivabil\u a \^ in 0, \(\lim_{x \to \infty } x\left ( f_{\left ( x \right )}-x- \varphi \left ( 0 \right ) \right ) = \lim_{x \to \infty } x\left ( \varphi \left ( \frac{1}{x} \right ) -\varphi \left ( 0 \right )\right ) = \lim_{t \to 0, t> 0 } \frac{\varphi \left ( t \right )-\varphi \left ( 0 \right )}{t} = {\varphi }'\left ( 0 \right )\). Cum \(\varphi \left ( 0 \right )> 0\), din prima teorem\u a , 3. , rezult\u a c\u a 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{n}{\ln n } \left ( \frac{x_{n}}{n }- \varphi \left ( 0 \right ) \right )= \frac{{\varphi}'\left ( 0 \right )}{\varphi \left ( 0 \right )}
-%\end{displaymath}
-%
-%
-%A doua aplica\c tie a teoremei o constituie 
-%
-%\begin{theorem}
-%  Fie \(\varphi : \left [ 0,\infty  \right ) \to \mathbb{R}\) o func\c tie continu\u a, derivabil\u a \^ in 0 cu proprietatea c\u a \(\varphi \left ( x \right )> 1, \forall x> 0, \varphi \left ( 0 \right ) = 1\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\), prin condi\c tia ini\c tial\u a \(x_{1}> 0\) \c si rela\c tia de recuren\c t\u a \(x_{n+1}= x_{n }\varphi\left ( \frac{1}{x_{n}} \right )\) pentru orice \(n\geq 1\). 
-%\end{theorem}
-%Atunci:
-%\(\lim_{x \to \infty }x_{n} = \infty\) \c si \(\lim_{n \to \infty }\frac{x_{n}}{n} = {\varphi }'\left ( 0 \right )\) iar dac\u a \^ in plus  \({\varphi }'\left ( 0 \right )> 0\) \c si \(\varphi\) este de dou\u a ori derivabil\u a \^ in 0, \(\lim_{n \to \infty }\frac{n}{\ln n}\left ( \frac{x_{n}}{n}-{\varphi }' \left ( 0 \right )\right )= \frac{{\varphi }''\left ( 0 \right )}{2{\varphi }'\left ( 0 \right )}\). 
-%
-%\begin{demonstration}
-%  Fie \(f : \left ( 0,\infty  \right ) \to \mathbb{R}, f_{\left ( x \right )}= x\varphi \left ( \frac{1}{x} \right )\). Evident f este continu\u a \c si deoarece \(\varphi \left ( x \right )> 1,\forall x> 0\) rezult\u a c\u a \(f_{\left ( x \right )}> x, \forall x> 0\). Deoarece \(\varphi\) este continu\u a \^ in 0 \c si \(\varphi \left ( 0 \right )= 1\) rezult\u a c\u a \(\lim_{x \to \infty }\frac{f_{\left ( x \right )}}{x} = \lim_{x \to \infty } \varphi \left ( \frac{1}{x} \right ) = \lim_{t \to 0, t> 0 }\varphi \left ( t \right ) = \varphi \left ( 0 \right ) = 1\). Deoarece \(\varphi\) este derivabil\u a \^ in 0, 
-%\end{demonstration}
-%
-%\begin{displaymath}
-%  \lim_{x \to \infty }\left ( f_{\left ( x \right )} -x\right ) = \lim_{x \to \infty } x\left ( \varphi \left ( \frac{1}{x} \right ) -1\right )\lim_{t \to 0, t> 0}\frac{\varphi \left ( t \right ) - \varphi \left ( 0 \right )}{t} = 
-%\end{displaymath}
-%\begin{displaymath}
-%  {\varphi }'\left ( 0 \right )
-%\end{displaymath}
-%A\c sadar \(y = x +{\varphi }'\left ( 0 \right )\).
-% 
-%este asimtot\u a oblic\u a la graficul func\c tiei f. Din teorema 1, 1 si 2, rezult\u a c\u a \(\lim_{n \to \infty }x_{n} = \infty\) \c si \(\lim_{n \to \infty }\frac{x_{n}}{n} = {\varphi }'\left ( 0 \right )\). Deoarece \(\varphi\) este de dou\u a ori derivabil\u a \^ in 0,
-%\begin{displaymath}
-%  \lim_{x \to \infty }x\left ( f_{\left ( x \right ) } -x-{\varphi }'\left ( 0 \right )\right ) = \lim_{x \to \infty }x\left ( x\varphi \left ( \frac{1}{x} \right ) - x - {\varphi }'\left ( 0 \right ) \right ) = \end{displaymath}
-%\begin{displaymath}
-%  \lim_{t \to 0, t> 0}\frac{\varphi \left ( t \right ) - \varphi \left ( 0 \right )- {\varphi }'\left ( 0 \right )t}{t^{2}} = \frac{{\varphi }''\left ( 0 \right )}{2}
-%\end{displaymath}
-%
-%Din teorema 1, 3, rezult\u a c\u a 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{n}{\ln n }\left ( \frac{x_{n}}{n}  - {\varphi }'\left ( 0 \right )\right ) = \frac{{\varphi }''\left ( 0 \right )}{2{\varphi }'\left ( 0 \right )}.
-%\end{displaymath}
-% 
-%
-%\begin{corollary}
-%  Fie \(\alpha \in \mathbb{R} \setminus \left \{ 0 \right \}\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\) prin condi\c sia ini\c tial\u a \(x_{1}> 0\) \c si rela\c tia de recuren\c t\u a \(x_{n+1}= x_{n}+ e^{\frac{\alpha }{x_{n}}}\) pentru orice \(n\geq 1\).
-%\end{corollary}
-% 
-%Atunci \(\lim_{x \to \infty }x_{n} = \infty , \lim_{n \to \infty }\frac{x_{n}}{n} = 1, \lim_{n \to \infty }\frac{n}{\ln n }\left ( \frac{x_{n}}{n} -1\right ) = \alpha\). 
-%
-%\begin{demonstration}
-%  Fie \(\varphi :\left [ 0,\infty  \right ) \to \left ( 0,\infty \right ), \varphi \left ( x \right ) = e^{\alpha x}\). S\u a observ\u am c\u a \({\varphi }'\left ( x \right ) = \alpha e^{\alpha x}\). Aplic\u am de dou\u a ori func\c tia \(\varphi\). 
-%\end{demonstration}
-%
-%
-%\begin{corollary}
-%  Fie \(\alpha > 1,\beta > 0\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\) prin condi\c tia \(x_{1} > 0\) \c si rela\c tia de recuren\c t\u a 
-%\end{corollary}
-%
-%\begin{displaymath}
-%  x_{n+1} = x_{n} + \ln\left ( \alpha +\frac{\beta }{x_{n}} \right ), pentru \forall n\geq 1.
-%\end{displaymath}
-%
-%
-%Atunci 
-%\begin{displaymath}
-%  \lim_{x \to \infty }=\infty ,\lim_{n \to \infty }\frac{x_{n}}{n} = \ln \alpha , \lim_{n \to \infty }\frac{n}{\ln n}\left ( \frac{x_{n}}{n} - \ln \alpha \right ) = \frac{\beta }{\alpha \ln \alpha }.
-%\end{displaymath}
-% 
-%\begin{demonstration}
-%  Fie \(\varphi :\left [ 0,\infty  \right ) \to \left ( 0,\infty  \right ), \varphi \left ( x \right ) = \ln \left ( \alpha   + \beta x \right )\). S\u a observ\u am c\u a \({\varphi }'\left ( x \right ) = \frac{\beta }{\alpha +\beta x}\). Aplic\u am teorema 2 pentru func\c tia \(\varphi\).
-%\end{demonstration}
-%
-%
-%\begin{corollary}
-%  Fie \(\alpha > 1,\beta > 0\). Definim \c sirul de numere reale \(\left ( x_{n} \right )_{n\geq 1}\) prin condi\c tia ini\c tial\u a \(x_{1}> 0\) \c si rela\c tia de recuren\c t\u a
-%\end{corollary}
-%\begin{displaymath}
-%  x_{n+1} = x_{n} + \sqrt{\alpha +\frac{\beta }{x_{n}}}, pentru \forall n\geq 1.
-%\end{displaymath}
-%
-%
-%Atunci 
-%\begin{displaymath}
-%  \lim_{x \to \infty }x_{n} = \infty , \lim_{x \to \infty }\frac{x_{n}}{n} = \sqrt{\alpha }, \lim_{n \to \infty }\frac{n}{\ln n}\left ( \frac{x_{n}}{n} -\sqrt{\alpha }\right ) = \frac{\beta }{2\alpha }. 
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%Fie \(\varphi :\left [ 0,\infty  \right ) \to \left ( 0,\infty  \right ), \varphi \left ( x \right ) = \sqrt{\alpha +\beta x}\). S\u a observ\u am c\u a \({\varphi }'\left ( x \right ) = \frac{\beta }{2}\left ( \alpha +\beta x \right )^{-\frac{1}{2}}\). Aplic\u am teorema 2 pentru func\c tia \(\varphi\). 
-%\end{demonstration}
-%
-%
-%\section{Exerci\c tii}
-%
-%Calcula\c ti \begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sum_{k=1}^{n}k\left ( \sqrt[n]{n+k} -1\right )}{n\ln n } = \frac{1}{2}
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%  S\u a not\u am \(x_{n} = \frac{1}{n}\sum_{k=1}^{n} k \ln \left ( n+k \right ), n \geq 1\). 
-%\end{demonstration}
-%
-%\begin{displaymath}
-%  \sum_{k=1}^{n}k\left ( \sqrt[n]{n+k}-1 \right )\sim x_{n}. \label{eq:5.1} \tag{5.1}
-%\end{displaymath}
-%
-%Fie \(n\geq 2\). Avem \(\ln \left ( n+1 \right )\leq \ln \left ( n+k \right )\leq \ln \left ( n+n \right ), \forall 1\leq k\leq n,\) de unde 
-%\begin{displaymath}
-%  \sum_{k=1}^{n} k \ln \left ( n+1 \right )\leq \sum_{k=1}^{n}k \ln \left ( n+k \right )\leq \sum_{k=1}^{n} k \ln \left ( n+n \right ), \frac{\ln \left ( n+1 \right )}{\ln n }
-%\end{displaymath}
-%
-%\begin{displaymath}
-%  \frac{\sum_{k=1}^{n}k}{n^{2}}\leq \frac{x_{n}}{n\ln n}\leq \frac{\ln \left ( n+n \right )}{\ln n }
-%\end{displaymath}
-%
-%\(\frac{\sum_{k=1}^{n}k}{n^{2}}\), sau \^ inc\u a, 
-%\begin{displaymath}
-%  \frac{\ln \left ( n+1 \right )}{\ln n} \cdot \frac{n+1}{2n}\leq \frac{x_{n}}{n\ln n }\leq \frac{\ln \left ( n+n \right )}{\ln n }\cdot \frac{n+1}{2n} \label{eq:5.2} \tag{5.2}
-%\end{displaymath}
-%
-%
-%Din \ref{eq:5.2} \c si teorema cle\c stelui rezult\u a c\u a \(\lim_{n \to \infty }\frac{x_{n}}{n\ln n } = \frac{1}{2}\). Astfel spus \(x_{n\sim }\frac{n\ln n }{2} (3)\)
-%Din \ref{eq:5.1} \c si \ref{eq:5.3} rezult\u a c\u a \(\sum_{k=1}^{n}k\left ( \sqrt[n]{n+k}-1 \right )\sim \frac{n\ln n }{2}\), adic\u a egalitatea din enun\c t. 
-%
-%
-%Calcula\c ti 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sum_{k=1}^{n}\frac{1}{k\left ( \sqrt[n]{n+k}-1 \right )}}{\frac{\ln^{2}n}{n}} = 1
-%\end{displaymath}
-%
-%\begin{demonstration}
-%  S\u a not\u am \(x_{n}= \frac{1}{n}\sum_{k=1}^{n}\frac{\ln\left ( n+k \right )}{k}, n\geq 1\). 
-%\c stim c\u a 
-%
-%\end{demonstration}
-%\begin{displaymath}
-%  \sum_{k=1}^{n}\frac{1}{k}\left ( \sqrt[n]{n+k}-1 \right )\sim x_{n}. \label{eq:6.1} \tag{6.1}
-%\end{displaymath}
-%
-%Fie \(n\geq 2\). Avem \(\sum_{k=1}^{n}\frac{\ln\left ( n+1 \right )}{k}\leq \sum_{k=1}^{n}\frac{\ln\left ( n+k \right )}{k}\leq \sum_{k=1}^{n}\frac{\ln\left ( n+n \right )}{k}\), de unde 
-%
-%\(\frac{\ln \left ( n+1 \right )}{n}\sum_{k=1}^{n}\frac{1}{k}\leq x_{n}\leq \frac{\ln \left ( n+n \right )}{n}\sum_{k=1}^{n}\frac{1}{k}\), sau \^ inc\u a, 
-%\begin{displaymath}
-%  \frac{\ln \left ( n+1 \right )}{\ln n}\cdot \frac{\sum_{k=1}^{n}\frac{1}{k}}{\ln n}\leq \frac{x_{n}}{\frac{\ln^{2}n}{n}}\leq \frac{\ln \left ( n+n \right )}{\ln n}\cdot \frac{\sum_{k=1}^{n}\frac{1}{k}}{\ln n }. \label{eq:6.2} \tag{6.2}
-%\end{displaymath}
-%
-%Cum din lema Stolz- Cesaro, cazul \(\left [ \frac{1}{\infty } \right ], \lim_{n \to \infty }\frac{\sum_{k=1}^{n}\frac{1}{k}}{\ln n} = 1\), din \ref{eq:6.2} \c si teorema cle\c stelui deducem c\u a \(\lim_{n \to \infty }\frac{x_{n}}{\frac{\ln ^{2}n}{n}} = 1\). 
-%Altfel spus 
-%\begin{displaymath}
-%  x_{n}\sim \frac{\ln^{2}n}{n}. \label{eq:6.3} \tag{6.3}
-%\end{displaymath}
-%
-%
-%Din \ref{eq:6.1} \c si \ref{eq:6.3} deducem c\u a \(\sum_{k=1}^{n}\frac{1}{k}\left ( \sqrt[n]{n+k}-1 \right )\sim \frac{\ln^{2}n}{n}\), adic\u a egalitatea din enun\c t. 
-%
-%Calcula\c ti 
-%\begin{displaymath}
-%  \lim_{n \to \infty }\frac{\sum_{k=2}^{n}\frac{1}{k \ln k}\left ( \sqrt[n]{n+k}-1 \right )}{\frac{\left ( \ln n \right )\left [ \ln \left ( \ln n  \right ) \right ]}{n}} = 1
-%\end{displaymath}
-%
-%
-%\begin{demonstration}
-%  Not\u am \(x_{n} = \frac{1}{n}\sum_{k=2}^{n}\frac{\ln \left ( n+k \right )}{k \ln k}, \geq 2.\)
-%\c stim c\u a 
-%
-%\end{demonstration}
-%\begin{displaymath}
-%  \sum_{k=2}^{n}\frac{1}{k\ln k}\left ( \sqrt[n]{n+k}-1 \right )\sim x_{n} . \label{eq:7.1} \tag{7.1}
-%\end{displaymath}
-%
-%Fie \(n\geq 2\). Avem \(\sum_{k=2}^{n}\frac{\ln \left ( n+1 \right )}{k\ln k}\leq \sum_{k=2}^{n}\frac{\ln \left ( n+k \right )}{k\ln k}\leq \sum_{k=2}^{n}\frac{\ln \left ( n+1 \right )}{k\ln k}\), de unde,
-%
-%\(\frac{\ln \left ( n+1 \right )}{n}\left ( \sum_{k=2}^{n}\frac{1}{k\ln k } \right )\leq x_{n}\leq \frac{\ln \left ( n+n \right )}{n}\left ( \sum_{k=2}^{n}\frac{1}{k\ln k } \right )\), sau \^ inc\u a, 
-%\begin{displaymath}
-%  frac{\ln \left ( n+1 \right )}{n}\cdot \frac{\sum_{k=2}^{n}\frac{1}{k\ln k }}{\ln \left ( \ln n \right )}\leq \frac{x_{n}}{\frac{\left ( \ln n \right )\left [ \ln\left ( \ln n \right ) \right ]}{n}}\leq \frac{\ln \left ( n+n \right )}{n}\cdot \frac{\sum_{k=2}^{n}\frac{1}{k\ln k }}{\ln \left ( \ln n \right )}. \label{eq:7.2} \tag{7.2}
-%\end{displaymath}
-%
-%
-%Din lema Stolz-Cesaro , cazul \(\left [ \frac{1}{\infty } \right ], lim_{n \to \infty }\frac{\sum_{k=1}^{n}\frac{1}{k\ln k}}{\ln\left ( \ln n \right ) } = 1,\) din \ref{eq:7.2} \c si teorema cle\c steluui deducem c\u a \(\lim_{n \to \infty }\frac{x_{n}}{\frac{\left ( \ln n  \right )\left [ \ln\left ( \ln n \right ) \right ]}{n}} = 1\). Altfel spus 
-%\begin{displaymath}
-%  x_{n}\sim \frac{\left ( \ln n \right )\left [ \ln\left ( \ln n \right ) \right ]}{n}. \label{eq:7.3} \tag{7.3}
-%\end{displaymath}
-%
-%Din \ref{eq:7.1} \c si \ref{eq:7.3} deducem c\u a \(\sum_{k=2}^{n}\frac{1}{k}\left ( \sqrt[n]{n+k}-1 \right )\sim \frac{\left ( \ln n \right )\left [ \ln\left ( \ln n \right ) \right ]}{n}\), adic\u a egalitatea din enun\c t. \cite{dumitru}
+\chapter{Exercitii}
+
+Multe dintre funcțiile familiare ale trigonometriei și geometriei au proprietăți de convexitate ușor de stabilit și, de cele mai multe ori, aceasta convexitatea are consecinţe utile.
+Problema 1 (Pe maximul produsului a două muchii)
+Într-un triunghi echilateral cu aria A, produsul dintre oricare două laturi este egal cu \(\left (\frac{4}{\sqrt{3}}  \right )\)A. Arătați că acesta reprezintă cazul extrem ceea ce inseamnca că, pentru un triunghi cu aria A trebuie să existe două laturi lungimile dintre care au un produs care este cel puțin la fel de mare ca \(\left (\frac{4}{\sqrt{3}}  \right )A\).
+	Pentru a începe, avem nevoie de formule care să relaționeze lungimile marginilor cu zonele, și, în notația tradițională din figura 2.1, există trei formule egale în mod egal:
+
+\begin{displaymath}
+  A = \frac{1}{2}ab sin\gamma = \frac{1}{2}ac sin \beta = \frac{1}{2}bc sin \alpha. 
+\end{displaymath}
+
+%TODO FIGURA
+
+Fig. 2.1 Toate funcțiile trigonometrice sunt convexe (sau concave) dacă
+Argumentele lor sunt limitate la un domeniu adecvat și, în consecință,
+există multe consecințe geometrice interesante ale inegalității lui Jensen.
+
+Aria A a triunghiului generic are trei reprezentari de baza :
+\(A = \frac{1}{2}ab sin\gamma = \frac{1}{2}ac sin \beta = \frac{1}{2}bc sin \alpha. \)
+Acum, dacă facem media acestor reprezentări, atunci găsim ca :
+\begin{displaymath}
+  \frac{1}{3}\left ( ab + ac + bc \right )= \left ( 2A \right )\frac{1}{3}\left \{ \frac{1}{sin \alpha } + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}, (2.1.1)
+\end{displaymath}
+
+și aceasta este o formulă care aproape că ne imploră să întrebăm despre convexitatea \(\frac{1}{sin x}\). Reprezentarea grafica pentru \(x \mapsto \frac{1}{sin x}\), pentru \(x\in \left ( 0 , \infty  \right )\) cu siguranță este convexă, iar suspiciunile noastre pot fi confirmate prin calcularea derivatei a doua, \({\left ( \frac{1}{sin x} \right )}''= \frac{1}{sin x} + 2\frac{cos^{2}x}{sin ^{3}x}> 0 pentru orice x\in \left ( 0, \pi  \right ) . (2.1.2)\)
+	Prin urmare, din moment ce avem \(\frac{\left ( \alpha + \beta  + \gamma  \right )}{3}= \frac{\pi }{3}\), rezulta din inegalitatea lui Jensen ca 
+\begin{displaymath}
+  \frac{1}{3}\left \{ \frac{1}{sin \alpha }  + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}\geq \frac{1}{sin \frac{\pi }{3}} =  \frac{2}{\sqrt{3}}, 
+\end{displaymath}
+
+deci , prin inegalitatea (2.1.1), obtinem limita presupusa. 
+m\begin{displaymath}
+  ax \left ( ab, ac, bc \right )\geq \frac{1}{3}\left ( ab + ac + bc \right )\geq \frac{4}{\sqrt{3}}A ( 2.1.3) 
+\end{displaymath}
+
+Conexiuni si rafinamente 
+Această problemă de provocare este strâns legată de o inegalitate binecunoscută a lui Weitzenböck care afirmă că în orice triunghi avem 
+\begin{displaymath}
+  a^{2} + b^{2} + c^{2} \geq \frac{4}{\sqrt{3}}A . (2.1.4)
+\end{displaymath}
+
+De fapt, pentru a trece de la limita (2.1.3) la inegalitatea lui Weitzenböck trebuie doar să ne amintim ca 
+\begin{displaymath}
+  ab + ac + bc \leq a^{2} + b^{2} + c^{2}, 
+\end{displaymath}
+
+care este un lucru familiar pe care il putem obtine in trei moduri  - Inegalitatea lui Cauchy, limita AM-GM sau inegalitatea de rearanjare -  toți vor face acest lucru cu aceeasi grație.
+	Inegalitatea lui Weitzenböck se dovedește a avea multe dovezi instructive - Engel (1998) dă unsprezece! 
+
+Există câteva metode matematice pe care le-am putea numi generic amelioratori; în linii mari, acestea sunt metode care pot fi utilizate într- un mod semi-automat pentru a generaliza o identitate, de a rafina o inegalitate sau în caz contrar, sa îmbunătățeasca un rezultat dat. 
+Următoarea problemă de provocare oferă un exemplu de alt fel. Aceasta sugerează cum s-ar putea gândi la ascuțirea aproape a oricărui rezultat care se obține prin inegalitatea lui Jensen.
+Problema 2
+Formula defectului lui Hölder
+Daca \(f : \left [ a,b  \right ] \to \mathbb{R}\) este derivata de doua ori si daca vem limitele 
+\begin{displaymath}
+  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], (2.2.1)
+\end{displaymath}
+
+atunci pentru orice valori reale \(a\leq x_{1}\leq x_{2}\leq ....\leq x_{n} \leq b \)si orice numere reale pozitive \(p_{k}, k= 1,2,.....,n  cu p_{1} + p_{2} + .....+ p_{n} = 1\), atunci axista o vaoare reala \(\mu \in \left [ m, M \right ]\) pentru care, una are formula
+\begin{displaymath}
+  \sum_{k = 1}^{n}p_{k}f\left ( x_{k} \right ) - f\left ( \sum_{k = 1}^{n} p_{k}x_{k}\right ) = \frac{1}{4}\mu \sum_{j = 1}^{n}\sum_{k = 1}^{n}p_{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}. ( 2.2.2)
+\end{displaymath}
+
+Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca „inegalitatea lui Hölder”. Formula defectului (2.2.2) este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară (2.2.1). 
+În mod similar, dacă M este mic, să spunem \(0 \leq M ≤ \leq \epsilon\)  , atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x.\) Pentru o funcție exact afină, partea stângă a limitei (2.2.1) este identic egal cu zero, dar în general limita (2.2.1) afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \)sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
+
+Această problemă ne duce in mod firesc la urmatoarea intrebar: Cum putem folosi faptul că \(0\leq m\leq {f}''\left ( x \right )\leq M \)? Odata c ne-am adresat intrebarea aceasta , s-ar putea să nu fie nevoie de mult pentru a observa că cele două funcții aferente
+\begin{displaymath}
+  g\left ( x \right ) = \frac{1}{2}Mx^{2} - f\left ( x \right ) si 
+h\left ( x \right ) = f\left ( x \right ) - \frac{1}{2}mx^{2}
+\end{displaymath}
+
+sunt din nou convexe . In schimb aceasta observatie ne indeamna sa ne intrebam ce spune inegalitatea lui Jensen despre aceste functii. 
+	Pentru \(g\left ( x \right )\), inegalitatea lui Jensen ne da limita 
+\begin{displaymath}
+  \frac{1}{2}M\bar{x}^{2} - f\left ( \bar{x} \right )\leq \sum_{k = 1}^{n}p_{k}\left \{ \frac{1}{2}Mx_{k}^{2} - f\left ( x_{k} \right )\right \}
+\end{displaymath}
+
+unde avem multimea \(\bar{x} = p_{1}x_{1}+ p_{2}x_{2}+ ..... + p_{n}x_{n}\) si aceasta limita este usor rearanjata pentru a duce la 
+\begin{displaymath}
+  \left \{ \sum_{k = 1}^{n} p_{k}f\left ( x_{k} \right )\right \} - f\left (\bar{x}  \right )\leq \frac{1}{2}M\left \{ \left ( \sum_{k=1}^{n} p_{k}x_{k}^{2}\right ) - \bar{x}^{2} \right \} = \frac{1}{2}M\sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2}. 
+\end{displaymath}
+
+	Calculul analog pentru  \(h\left ( x \right )\) ne ofera o limita inferioara 
+\begin{displaymath}
+  \left \{ \sum_{k = 1}^{n} p_{k}f\left ( x_{k} \right )\right \} - f\left (\bar{x}  \right )\geq \frac{1}{2}m\sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2}
+\end{displaymath}
+
+si aceste limite superioare si inferioare aproape completeaza demonstratia asertiei ( 2.2.1). Singurul lucru care lipseste este identitatea 
+\begin{displaymath}
+  \sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2} = \frac{1}{2}\sum_{j = 1}^{n}\sum_{k = 1}^{n} p _{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}
+\end{displaymath}
+
+care se poate verifica usor prin expansiunea algebrica si definirea lui \(\bar{x}\). 
+	Comvexitatea si inegalitatea lui Jensen ofera solutii simple pentru multe probleme.  
+	Urmatoarea problema vine din celebra sectiune cu probleme a ”American Mathematical Monthly” si ofera un exemplu clasic al acestui fenomen. 
+	La inceput problema pare destul de usoara, dar, curand, intampinam dificultati. 
+
+Problema 3(6)
 
 
 \bibliographystyle{unsrt}

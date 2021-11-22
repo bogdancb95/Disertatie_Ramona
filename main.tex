@@ -24,8 +24,8 @@
 
 \facultatea{Matematic\u a \c si Informatic\u a}
 \specializarea{Informatic\u a}
-\teza{licen\c t\u a}
-\titlu{Licen\c t\u a}
+\teza{Disertatie}
+\titlu{Disertatie}
 \coordonatorPrincipal{Cosma Lumini\c ta}
 \autor{T\u anase Ramona Elena}
 \data{2021}
@@ -593,21 +593,22 @@ care este un lucru familiar pe care il putem obtine in trei moduri  - Inegalitat
 Există câteva metode matematice pe care le-am putea numi generic ameliatoare; în linii mari, acestea sunt metode care pot fi utilizate într- un mod semi-automat pentru a generaliza o identitate, de a rafina o inegalitate sau în caz contrar, sa îmbunătățeasca un rezultat dat. 
 Următoarea problemă oferă un exemplu de alt fel. Aceasta sugerează cum s-ar putea gândi la ascuțirea aproape a oricărui rezultat care se obține prin inegalitatea lui Jensen.
 
+
 Problema 2
 
 Formula defectului lui Hölder
 
 Daca \(f : \left [ a,b  \right ] \to \mathbb{R}\) este derivata de doua ori si daca avem limitele 
 \begin{displaymath}
-  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], \label{eq21} \tag{21}
+  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], \label{eq:2.2.1} \tag{2.2.1}
 \end{displaymath}
 atunci pentru orice valori reale \(a\leq x_{1}\leq x_{2}\leq ....\leq x_{n} \leq b \) si orice numere reale pozitive \(p_{k}, k= 1,2,.....,n \) cu \(p_{1} + p_{2} + .....+ p_{n} = 1\), atunci axista o valoare reala \(\mu \in \left [ m, M \right ]\) pentru care, una are formula
 \begin{displaymath}
   \sum_{k = 1}^{n}p_{k}f\left ( x_{k} \right ) - f\left ( \sum_{k = 1}^{n} p_{k}x_{k}\right ) = \frac{1}{4}\mu \sum_{j = 1}^{n}\sum_{k = 1}^{n}p_{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}. \label{eq:2.2.2} \tag{2.2.2}
 \end{displaymath}
 
-Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 - 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Hölder”. Formula defectului \ref{eq:2.2.2} este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară \ref{eq21}. 
-În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.1) este identic egal cu zero, dar în general limita \ref{eq21} afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \) sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
+Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 - 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Hölder”. Formula defectului \ref{eq:2.2.2} este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară \ref{eq:2.2.1}. 
+În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.2.1) este identic egal cu zero, dar în general limita \ref{eq:2.2.1} afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \) sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
 
 Această problemă ne duce in mod firesc la urmatoarea intrebar: Cum putem folosi faptul că \(0\leq m\leq {f}''\left ( x \right )\leq M \)? Odata ce ne-am adresat intrebarea aceasta , s-ar putea să nu fie nevoie de mult pentru a observa că cele două funcții aferente
 \begin{displaymath}
@@ -653,7 +654,7 @@ Daca ne uitam mai atent, putem observa ca
 ne poate ajuta la aducerea inegalitatii lui Jensen in joc. De fapt , odata ce am scris aceasta functie , se poate verifica aproape fara calcul ca inegalitatea propusa (2.3.1) este echivalenta cu 
 
 \begin{displaymath}
-  f\left ( \frac{x + y + z}{3} \right )\leq \frac{1}{3}\left \{ f\left ( x \right ) + f\left ( y \right ) + f\left ( z \right ) \right \}\label{eq:2.3.2} \tag{2.3.2}
+  f\left ( \frac{x + y + z}{3} \right )\leq \frac{1}{3}\left \{ f\left ( x \right ) + f\left ( y \right ) + f\left ( z \right ) \right \}    \label{eq:2.3.2} \tag{2.3.2}
 \end{displaymath}
 pentru orice x, y, z astfel incat \(exp\left ( x + y + z \right )\geq 2^{9}.\)
 

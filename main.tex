@@ -57,7 +57,7 @@ O functie \(f: I \rightarrow \mathbb{R}\) se numeste convexa daca,
 f \left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \left ( 1 - \lambda  \right ) f_{\left ( x \right )} + \lambda f_{\left ( y \right )} 	\label{eq:1.1} \tag{1.1}
 \end{displaymath}
 
-pentru orice \(x\) si \(y\) din \(I\), si orice \(\lambda \in \left [ 0,1 \right ]\). Functia \(f\) se numeste strict convexa daca inegalitatea \ref{eq:1.1} se pastreaza  stricta pentru orice x si y din I, si orice  \(\lambda \in \left ( 0,1 \right )\) . Daca \(-f\) este convexa (respective stric convexa), atunci spunem ca \(f\) este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca \(f\) este functie afina. 
+pentru orice \(x\) si \(y\) din \(I\), si orice \(\lambda \in \left [ 0,1 \right ]\). Functia \(f\) se numeste strict convexa daca inegalitatea \ref{eq:1.1} se pastreaza  stricta pentru orice x si y din I, si orice  \(\lambda \in \left ( 0,1 \right )\) . Daca \(-f\) este convexa (respectiv stric convexa), atunci spunem ca \(f\) este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca \(f\) este functie afina. 
 
 
 Functiile afine sunt tocmai functiile de forma \(mx + n\),  \(m\) si \(n\) constante reale.
@@ -80,7 +80,7 @@ pentru orice \(x\in \left [  u, v\right ]\), si \(u, v \in I, u < v\).
 
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{fig1.1.png}
-	\\ Fig 1.1 Frunctii convexe: graficul este sub coarda
+	\\ Fig 1.1 Functii convexe: graficul este sub coarda
 \end{center}
 
 Aceasta remarca arata faptul ca functiile convexe sunt majorate de functiile afine pe orice subinterval compact. 
@@ -164,7 +164,7 @@ Demonstratia se incheie cu un process de lipire (la stanga lui \(a\) si la dreap
 intervalul \(I\) are un minim global interior. 
 \item Daca o functie convexa \(f: \mathbb{R} \rightarrow \mathbb{R}\) este marginita superior, atunci este constanta.
 \end{enumerate}
-Atingere supremului la capete nu este o proprietate caracteristica a functiilor convexe, dar insa avem urmatorul rezultat. 
+Atingere supremului la capete nu este o proprietate caracteristica a functiilor convexe, dar avem insa urmatorul rezultat. 
 
 \subsection{Teorema}
 
@@ -178,7 +178,7 @@ Ne vom restrange la cazul functiilor convexe. Cazul functiilor strict convexe po
   \sup_{z\in J}F\left ( z \right ) = \sup_{\lambda \in \left [ 0 , 1 \right ]}F\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \sup_{\lambda \in \left [ 0,1 \right ]}\left [ \left ( 1-\lambda  \right )F\left ( x \right ) + \lambda F\left ( y \right ) \right ] + max \left \{ F\left ( x \right ), F\left ( y \right ) \right \}
 \end{displaymath}
 
-Suficienta: Avand un subinterval \(J = \left [ x,y \right ]\) al lui \(I\), exista o functie afina \(L\left ( x \right ) = mx + n\) care este egala cu \(f\) la punctele  \(x\) si \(y\). 
+Suficienta: Avand un subinterval \(J = \left [ x,y \right ]\) al lui \(I\), exista o functie afina \(L\left ( x \right ) = mx + n\) care este egala cu \(f\) la cele doua puncte  \(x\) si \(y\). 
 Atunci
 \begin{displaymath}
   \sup_{\lambda \in \left [ 0,1 \right ]}\left [ \left ( f - L \right )\left ( 1 - \lambda  \right )x + \lambda y \right ] = 0
@@ -234,7 +234,7 @@ Astfel
 \begin{displaymath}
   -\varphi \left ( c \right )> \frac{-\varphi \left ( c-h \right )-\varphi \left ( c+h \right )}{2} 
 \end{displaymath}
-Ceea ce este in contraditie cu faptul ca \(-\varphi\) esteconvexa in punctul de mijloc. 
+Ceea ce este in contraditie cu faptul ca \(-\varphi\) este convexa in punctul de mijloc. 
 \end{demonstration}
 
 
@@ -244,7 +244,6 @@ Fie \(f: I \rightarrow \mathbb{R}\) o functie continua. Atunci, \(f\) este conve
 \begin{displaymath}
   f\left ( x+h \right )+ f\left ( x - h \right ) - 2f\left ( x \right )\geq 0
 \end{displaymath}
-
 pentru orice \(x \in I\) si orice \(h > 0\) astfel incat si \(x + h\) si \(x - h\) apartin lui \(I\). 
 Observam ca si Teorema 1.1.8 si corolarul acesteia 1.1.9 de mai sus, admit variante in cazul functiilor strict convexe, 
 Corolarul 1.1.9 ne permite sa verificam imedat convexitatea / concavitatea stricta a unor functii elementare, precum functia exponentiala, cea logaritmica, si restrictia functiei sinus pe \(\left [ 0 , \pi \right ]\). Intradevar, pentru functia exponentiala , faptul ca  \(a , b > 0, a\neq b\), implica \(\frac{a + b}{2}> \sqrt{ab}\)
@@ -254,7 +253,7 @@ pentru orice \(x\in \mathbb{R}\) si orice \(h > 0\).
 	Multe alte exemple pot fi deduse folosind urmatoarele proprietati ale functiilor convexe / concave. 
 
 \subsection{Propozitie}
-Operatii cu functii convexe 
+Operatii cu functii convexe: 
 \begin{enumerate}[a)]
 \item Adunand doua functii convexe ( definite pe acelasi interval) obtinem o functie convexa; daca una dintre ele este strict convexa, atunci suma lor este de asemenea strict convexa.
 \item Inmultind o functie (strict) convexa cu un scalar (strict)  pozitiv obtinem de asemenea o functie (strict) convexa.
@@ -272,7 +271,7 @@ Operatii cu functii convexe
 \end{enumerate}
 
 Detaliile sunt simple. 
-In continuare , vom discuta extinderea inegalitatii convexitatii(1.1). In primul rand, observam faptul ca intervalele sunt inchise la combinatii convexe arbitrare, adica, 
+In continuare , vom discuta extinderea inegalitatii convexitatii (1.1). In primul rand, observam faptul ca intervalele sunt inchise la combinatii convexe arbitrare, adica, 
 \begin{displaymath}
   \sum_{ k= 1}^{n}\lambda _{k}x_{k} \in I
 \end{displaymath}
@@ -285,7 +284,8 @@ prin urmare x apartine lui \(I\).
 
 \subsection{Lema}
 Cazul discret al inegalitatii lui Jensen
-O functie cu valoari reala \(f\) definite pe un interval \(I\) este convexa daca si numai daca pentru orice puncte \(x_{1},.......,x_{n}\) din \(I\) si orice scalari \(\lambda _{1},.......,\lambda _{n}\) din \(\left [ 0 , 1 \right ]\) cu \(\sum_{k = 1}^{n}\lambda _{k}= 1\) avem, 
+
+O functie cu valoari reala \(f\) definita pe un interval \(I\) este convexa daca si numai daca pentru orice puncte \(x_{1},.......,x_{n}\) din \(I\) si orice scalari \(\lambda _{1},.......,\lambda _{n}\) din \(\left [ 0 , 1 \right ]\) cu \(\sum_{k = 1}^{n}\lambda _{k}= 1\) avem, 
 \begin{displaymath}
   f\left ( \sum_{k = 1}^{n} \lambda _{k}x_{k}\right )\leq \sum_{k = 1}^{n}\lambda _{k}f\left ( x_{k} \right ).
 \end{displaymath}
@@ -297,7 +297,7 @@ Prima afirmatie rezulta prin inductie matematica. In ceea ce priveste cea de a d
 \begin{displaymath}
   f\left ( \sum_{k = 1}^{n} \lambda _{k}x_{k}\right )=  \sum_{k = 1}^{n}\lambda _{k}f\left ( x_{k} \right ). \label{eq:1.3} \tag{1.3}
 \end{displaymath}
-pentru  punctele \(x_{1}, ........, x_{n} \in I\) si cativa scalari \(\lambda _{1}, ........, \lambda _{n} \in \left ( 0 , 1\right )\) cu suma egala cu \(1\). Daca \(x_{1}, ........, x_{n}\) nu sunt toti egali, multimea \(S = \left \{ k: x_{k}<  max \left \{ x_{1,....,x_{n}} \right \} \right \}\) va fi o submultime proprie a multimii  \(\left \{ 1,....,n \right \}\) si \(\lambda _{S} = \sum_{k \in S}^{}\lambda _{S} \in \left ( 0,1 \right )\). Cum \(f\) este strict convexa avem, 
+pentru  punctele \(x_{1}, ........, x_{n} \in I\) si cativa scalari \(\lambda _{1}, ........, \lambda _{n} \in \left ( 0 , 1\right )\) care au suma egala cu \(1\). Daca \(x_{1}, ........, x_{n}\) nu sunt toti egali, multimea \(S = \left \{ k: x_{k}<  max \left \{ x_{1,....,x_{n}} \right \} \right \}\) va fi o submultime proprie a multimii  \(\left \{ 1,....,n \right \}\) si \(\lambda _{S} = \sum_{k \in S}^{}\lambda _{S} \in \left ( 0,1 \right )\). Cum \(f\) este strict convexa avem, 
 \begin{displaymath}
   f\left ( \sum_{k=1}^{n}\lambda _{k}x_{k} \right ) = f\left ( \lambda _{S}\left ( \sum_{k\in S}^{}\frac{\lambda _{k}}{\lambda _{S}} x_{k}\right ) +\left ( 1-\lambda _{S} \right )\left ( \sum_{k\notin S}^{} \frac{\lambda _{k}}{1 - \lambda _{S}}x_{k}\right )\right ) < 
 \end{displaymath}
@@ -314,26 +314,27 @@ pentru  punctele \(x_{1}, ........, x_{n} \in I\) si cativa scalari \(\lambda _{
 care contrazice ipoteza noastra \ref{eq:1.3}. Astfel, toate punctele \(x_{k}\) ar trebui sa coincida.
 \end{demonstration}
 
-O consecinta imediata a lemei 1.1.11 (cand este aplicata functiei exponentiale) este urmatorul rezultat care extinde bine cunoscuta inegalitate AM-GM( adica inegalitatea dintre media aritmetica si cea geometrica).
+O consecinta imediata a lemei 1.1.11 (cand este aplicata functiei exponentiale) este urmatorul rezultat care extinde bine cunoscuta inegalitate AM-GM ( adica inegalitatea dintre media aritmetica si cea geometrica).
 
 
 \subsection{Teorema}
 Forma ponderata a inegalitatii AM-GM
+
 Daca \(x_{1},.......,x_{n}\in \left ( 0,\infty  \right ) si \lambda_{1},......,\lambda _{n} \in \left ( 0 , 1 \right ), \sum_{k = 1}^{n}\lambda _{k}= 1\), atunci
 \begin{displaymath}
   \sum_{k = 1}^{n}\lambda _{k}x_{k}> x_{1}^{\lambda _{1}}\cdots x_{n}^{\lambda _{n}}
 \end{displaymath}
-
-In afara de cazul cand \(x_{1} = \cdots = x_{n}\). 
+in afara de cazul cand \(x_{1} = \cdots = x_{n}\). 
+	
 	Inlocuind \(x_{k}\) cu \(\frac{1}{x_{k} }\) in ultima inegalitate, obtinem 
 \begin{displaymath}
   x_{1}^{\lambda _{1}}\cdots x_{n}^{\lambda _{n}}> \frac{1}{\sum_{k = 1}^{n}}\frac{\lambda _{k}}{x_{k}}
 \end{displaymath}
-
 in afara de cazul cand \(x_{1} = \cdots = x_{n}\). 
+
 Asta reprezinta forma ponderata a inegalitatii mediei geometrice – mediei armonice (adica de inegalitatea GM-HM). 
 
-Pentru \(\lambda _{1} = \cdots =\lambda _{n}= \frac{1}{n}\) recuperam inegalitatea obisnuita care afirma ca pentru orice \(x_{1},.....,x_{n}\) de numere positive, nu toate egale, avem
+Pentru \(\lambda _{1} = \cdots =\lambda _{n}= \frac{1}{n}\) recuperam inegalitatea obisnuita care afirma ca pentru orice \(x_{1},.....,x_{n}\)  numere positive, nu toate egale, avem
 
 \begin{displaymath}
   \frac{x_{1}+.....+x_{n}}{n}> \sqrt[n]{x_{1}\cdots x_{n}}> \frac{n}{\left ( \frac{1}{x_{1}}+....+\frac{1}{x_{n}} \right )}. 
@@ -347,35 +348,33 @@ Pentru \(\lambda _{1} = \cdots =\lambda _{n}= \frac{1}{n}\) recuperam inegalitat
 Urmatoarul caz special al formei ponderate a inegalitatii AM-GM este cunoscuta sub numele de inegalitatea lui Young:  
 \begin{displaymath}
   ab \leq \frac{a^{p}}{p}+ \frac{b^{q}}{q},
-\end{displaymath}
+\end{displaymath} 
 pentru orice \(a,b \geq 0\),
-si de fiecare data cand  \(p,q \in \left ( 0 , 1 \right )\) cu \(\frac{1}{p}+\frac{1}{q} = 1\); egalitatea are loc daca si numai daca \(a^{p}= b^{q}\). Inegalitatea lui Young poate fi de asemenea obtinuta ca o consecinta a convexitatii stricte a functiilor exponentiale. De fapt 
+si de fiecare data cand  \(p,q \in \left ( 0 , 1 \right )\) si \(\frac{1}{p}+\frac{1}{q} = 1\); egalitatea are loc daca si numai daca \(a^{p}= b^{q}\). Inegalitatea lui Young poate fi de asemenea obtinuta ca o consecinta a convexitatii stricte a functiilor exponentiale. De fapt 
 \begin{displaymath}
   ab = e^{log_{a}b}= e^{\left (\frac{1}{p}  \right )log_{a}p+ \left ( \frac{1}{q} \right )log_{b}q}
 \leq \frac{1}{p}e^{log_{a}p}+\frac{1}{q}e^{log_{b}q}= \frac{a^{p}}{p}+\frac{b^{q}}{q}
 \end{displaymath}
-
 pentru toti \(a,b>0\) cu \(a^{p}\neq b^{q}\). Inca un argument este oferit de studiul variatiei functiei diferentiale. 
 \begin{displaymath}
   F\left ( a \right )= \frac{a^{p}}{p}+\frac{b^{q}}{q} - ab, a\geq 0
 \end{displaymath}
-
-unde \(b\geq 0\) este un paramentru. Aceatsa functie atinge punctul minim globa strict la \(a= b^{\frac{q}{p}}\), care ne conduce la \(F\left ( a \right )> F\left ( b^{\frac{q}{p}} \right ) = 0\) pentru orice \(a\geq 0, a\neq b^{\frac{q}{p}}\). 
+unde \(b\geq 0\) este un paramentru. Aceasta functie atinge punctul minim global strict la \(a= b^{\frac{q}{p}}\), care ne conduce la \(F\left ( a \right )> F\left ( b^{\frac{q}{p}} \right ) = 0\) pentru orice \(a\geq 0, a\neq b^{\frac{q}{p}}\). 
 	W.H.Young a dovedid de fapt  o inegalitate mult mai generala, pentru \(f\left ( x \right )=  x^{p-1}\).
 
 \subsection{Teorema}
 
 Inegalitatea lui Young
+
 Presupunem prin absurd ca \(f: \left [ 0,\infty  \right ) \rightarrow \left [ 0,\infty  \right )\) este o functie continua strict crescatoare astfel incat \(f\left ( 0 \right )= 0\) si \(\lim_{x\rightarrow \infty }f\left ( x \right )= \infty\). Atunci 
 \begin{displaymath}
   uv\leq \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{v}f^{-1}\left ( y \right )dy
 \end{displaymath}
-
 pentru orice \(u,v\geq 0\), si egalitatea are loc daca si numai daca \( v = f\left ( u \right )\). 
 
 \begin{center}
 	\includegraphics[width=1.0\textwidth]{fig1.2.png}
-	\\ Fig 1.2
+	\\ Fig 1.2 Aria  de unire a celor doua triunghiuri curbilinii depaseste aria dreptunghiului cu laturile u si v
 \end{center}
 
 \begin{demonstration}
@@ -383,7 +382,6 @@ Folosind definitia derivatei se poate demonstra cu usurinta ca functia
 \begin{displaymath}
   F\left ( u \right )= \int_{0}^{u}f\left ( x \right )dx + \int_{0}^{f\left ( u \right )}f^{-1}\left ( y \right )dy -uf\left ( u \right ), u \in \left [ 0,\infty  \right )
 \end{displaymath}
-
 este diferentiala , cu \({F}'\) identic 0. Astfel, \(F\left ( u \right )= F\left ( 0 \right )= 0, pentru orice u\geq 0\). 
 	Daca \(u, v \geq 0\)  si \(v\geq f\left ( u \right )\), atunci 
 \begin{displaymath}
@@ -405,19 +403,17 @@ este diferentiala , cu \({F}'\) identic 0. Astfel, \(F\left ( u \right )= F\left
 
 \subsection{Teorema}
 
-Inegalitatea lui Rogers-Hölder pentru p > 1
+Inegalitatea lui Rogers-Hölder pentru \(p > 1\)
 
 Fie \(p,q \in \left ( 1, \infty  \right )\) cu \(\frac{1}{p} + \frac{1}{q} = 1\), si  \(f\in L^{p}\left ( \mu  \right )\) si \(g\in L^{q}\left ( \mu  \right )\). Atunci \(fg\) apartine lui \(L^{1}\left ( \mu  \right )\) si avem 
 \begin{displaymath}
   \left | \int_{\Omega}^{} fg  d\mu \right |\leq \int_{\Omega}^{}\left | fg \right |d\mu \label{eq:1.6} \tag{1.6}
 \end{displaymath}
-
 si 
 \begin{displaymath}
   \int_{\Omega}^{}\left | fg \right |d\mu \leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q} . \label{eq:1.7} \tag{1.7}
 \end{displaymath}
-
-	Ca o consecinta 
+Ca o consecinta 
 \begin{displaymath}
   \left | \int_{\Omega}^{} fg  d\mu \right |\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q}. \label{eq:1.8} \tag{1.8}
 \end{displaymath}
@@ -437,8 +433,7 @@ Prima inegalitate este triviala. Daca \(f\) sau \(g\) sunt \(0 \mu\) – aproape
 \begin{displaymath}
   \frac{\left | f\left ( x \right ) \right |}{\left \| f \right \|_{L^{p}}} \cdot \frac{\left | g\left ( x \right ) \right |}{\left \| g \right \|_{L^{q}}}\leq \frac{1}{p}\cdot \frac{\left | f\left ( x \right ) \right |^{p}}{\left \| f \right \|^{p}_{L^{p}}} + \frac{1}{q}\cdot \frac{\left | g\left ( x \right ) \right |^{q}}{\left \| g \right \|^{q}_{L^{q}}}.
 \end{displaymath}
- 
-pentru orice \(x\) din \(\Omega\), astfel incat \(fg \in L^{1}\left ( \mu  \right )\). Prin urmare 
+ pentru orice \(x\) din \(\Omega\), astfel incat \(fg \in L^{1}\left ( \mu  \right )\). Prin urmare 
 \begin{displaymath}
   \frac{1}{\left \| f \right \|_{L^{p}}\left \| g \right \|_{L^{1}}}\int_{\Omega }\left | fg \right |d\mu \leq 1.
 \end{displaymath}
@@ -447,7 +442,8 @@ pentru orice \(x\) din \(\Omega\), astfel incat \(fg \in L^{1}\left ( \mu  \righ
 \subsection{Remarca}
 
 Conditii pentru egalitatea din Teorma 1.2.2
-Observatia de baza este faptul ca  \(f\geq 0 si \int_{\Omega }f d\mu  = 0 implica f = 0 \mu-\) aproape peste tot. 
+
+Observatia de baza este faptul ca  \(f\geq 0\) si \(\int_{\Omega }f d\mu  = 0\) implica \(f = 0 \mu-\) aproape peste tot. 
 	Prin urmare avem egalitate in \ref{eq:1.6} daca si numai daca 
 \begin{displaymath}
   f\left ( x \right )g\left ( x \right ) = e^{i\theta }\left | f\left ( x \right ) g\left ( x \right )\right |
@@ -464,7 +460,7 @@ pentru unele numere positive A si B.
 
 \subsection{Teorema}
 Inegalitatea Minkowski
-Pentru \(1\leq  p < \infty si f , g \in L^{p}\left ( \mu  \right ) \)avem
+Pentru \(1\leq  p < \infty si f , g \in L^{p}\left ( \mu  \right ) \) avem
 \begin{displaymath}
   \left \| f + g  \right \|_{L^{p}}\leq \left \| f \right \|_{L^{p}} + \left \| g \right \|_{L^{p}} \label{eq:1.10} \tag{1.10}
 \end{displaymath}
@@ -506,12 +502,12 @@ recuperam formele clasice discrete ale inegalitatilor de mai sus. De exemplu, po
 \begin{displaymath}
   \left | \sum_{k=1}^{n} \xi _{k}\eta _{k}\right |\leq \left ( \sum_{k = 1}^{n}\left | \xi _{k}\right |^{p}  \right )^{\frac{1}{p}}\left ( \sum_{k = 1}^{n} \left | \eta _{k} \right |^{q}\right )^{\frac{1}{q}}
 \end{displaymath}
-
 pentru  orice \(\xi _{k}, \eta _{k} \in \left \{ 1,.....,n \right \}.\) Pe de alta parte, un moment de reflectie demonstreaza faptul ca putem trece imediat de la aceste inegalitati discrete la analogiile lor integrale, corespunzatoare spatiilor de masura finite. 
 
 \subsection{Remarca}
 
 Mai multe despre inegalitatea Cauchy – Bunyakovsky – Schwarz
+
 A.L. Cauchy , in faimosul sau curs de Analiza, a derivat cazul discret al acestei inegalitati din inegalitatea algebrica a  lui Lagrange ,
 \begin{displaymath}
   \left ( \sum_{k = 1}^{n} a_{k}^{2}\right )\left ( \sum_{k = 1}^{n} b_{k}^{2}\right ) =  \sum_{1\leq j\leq k\leq n}\left ( a_{j}b_{k} - a_{k}b_{j} \right )^{2} + \left ( \sum_{k = 1}^{n} a_{k}b_{k}\right )^{2}
@@ -522,13 +518,13 @@ Astfel
 \begin{displaymath}
   \left | \sum_{k = 1}^{n} a_{k}b_{k} \right |\leq \left ( \sum_{k = 1}^{n}a_{k}^{2} \right )^{\frac{1}{2}}\left ( \sum_{k = 1}^{n}b_{k}^{2} \right )^{\frac{1}{2}}
 \end{displaymath}
-
-pentru orice numere reale \(a_{1},.....,a_{n}, b_{1},......, b_{n}\). Cazul egalitatii este simplu. Inegalitatea corespunzatoare pentru integrale a fost demonstrate independent de V.Y.Bunyakovsky si H.A.Schwarz. 
-	In 1890, H.Poincare a observant versiunea integrala a identitatii algebrice lui Lagrange (care da inegalitatea Cauuchy-Bunyakovsky-Schwarz in deplina generalitate ): Daca \(\mu\) este o masura de probabilitate pe un spatiu \(\Omega\) si \(f\) si \(g\) sunt doua functii apartinand spatiului \(L^{2}\left ( \mu  \right )\), atunci 
+pentru orice numere reale \(a_{1},.....,a_{n}, b_{1},......, b_{n}\). Cazul egalitatii este simplu. Inegalitatea corespunzatoare pentru integrale a fost demonstrata independent de V.Y.Bunyakovsky si H.A.Schwarz. 
+	In 1890, H.Poincare a observant versiunea integrala a identitatii algebrice lui Lagrange (care da inegalitatea Cauchy-Bunyakovsky-Schwarz in deplina generalitate ): Daca \(\mu\) este o masura de probabilitate pe un spatiu \(\Omega\) si \(f\) si \(g\) sunt doua functii apartinand spatiului \(L^{2}\left ( \mu  \right )\), atunci 
 \begin{displaymath}
   \left (\int_{\Omega}f^{2}d\mu \right )\left (\int_{\Omega}g^{2}d\mu \right ) - \left (\int_{\Omega}fgd\mu \right )^{2} = \frac{1}{2}\int_{\Omega}\int_{\Omega}\left ( f\left ( x \right )g\left ( y \right ) - f\left ( y \right )g\left ( x \right )\right )^{2}d\mu \left ( x \right )d\mu \left ( y \right ).
 \end{displaymath}
-	El a folosit aceasta identitate integral pentru a deriva cazul unidimensional al unei inegalitati purtandu-i numele . O alta dovada simpla a inegalitatii Cauuchy-Bunyakovsky-Schwarz este oferita pntrintr-o identitat echivalenta cu legea cosinusurilor : pentru fiecare pereche de vectori nenuli \(x\) si \(y\) intr-un spatiu vectorial interior real, 
+	
+	El a folosit aceasta identitate integral pentru a deriva cazul unidimensional al unei inegalitati purtandu-i numele . O alta dovada simpla a inegalitatii Cauchy-Bunyakovsky-Schwarz este oferita printr-o identitate echivalenta cu legea cosinusurilor : pentru fiecare pereche de vectori nenuli \(x\) si \(y\) intr-un spatiu vectorial interior real, 
 \begin{displaymath}
   \left \| \frac{x}{\left \| x \right \|} - \frac{y}{\left \| y \right \|}\right \|^{2} = 2 - 2\frac{\left \langle x , y \right \rangle}{\left \| x \right \|\left \| y \right \|}. 
 \end{displaymath}
@@ -545,8 +541,10 @@ pentru orice numere reale \(a_{1},.....,a_{n}, b_{1},......, b_{n}\). Cazul egal
 \chapter{Exercitii}
 
 Multe dintre funcțiile familiare ale trigonometriei și geometriei au proprietăți de convexitate ușor de stabilit și, de cele mai multe ori, aceasta convexitatea are consecinţe utile.
-Problema 1 (Pe maximul produsului a două muchii)
-Într-un triunghi echilateral cu aria A, produsul dintre oricare două laturi este egal cu \(\left (\frac{4}{\sqrt{3}}  \right )\)A. Arătați că acesta reprezintă cazul extrem ceea ce inseamnca că, pentru un triunghi cu aria A trebuie să existe două laturi lungimile dintre care au un produs care este cel puțin la fel de mare ca \(\left (\frac{4}{\sqrt{3}}  \right )A\).
+
+Problema 1 
+
+Într-un triunghi echilateral cu aria A, produsul dintre oricare două laturi este egal cu \(\left (\frac{4}{\sqrt{3}}  \right )\)A. Arătați că acesta reprezintă cazul extrem ceea ce inseamnca că, pentru un triunghi cu aria A trebuie să existe două fete ale caror lungimi au un produs care este cel puțin la fel de mare ca \(\left (\frac{4}{\sqrt{3}}  \right )A\).
 	Pentru a începe, avem nevoie de formule care să relaționeze lungimile marginilor cu zonele, și, în notația tradițională din figura 2.1, există trei formule egale în mod egal:
 
 \begin{displaymath}
@@ -557,71 +555,70 @@ Problema 1 (Pe maximul produsului a două muchii)
 	\includegraphics[width=0.5\textwidth]{fig2.1.png}
 \end{center}
 
-Fig. 2.1 Toate funcțiile trigonometrice sunt convexe (sau concave) dacă
-Argumentele lor sunt limitate la un domeniu adecvat și, în consecință,
+Fig. 2.1  Toate funcțiile trigonometrice sunt convexe (sau concave) dacă
+argumentele lor sunt limitate la un domeniu adecvat și, în consecință,
 există multe consecințe geometrice interesante ale inegalității lui Jensen.
 
 Aria A a triunghiului generic are trei reprezentari de baza :
 \(A = \frac{1}{2}ab sin\gamma = \frac{1}{2}ac sin \beta = \frac{1}{2}bc sin \alpha. \)
+
 Acum, dacă facem media acestor reprezentări, atunci găsim ca :
 \begin{displaymath}
-  \frac{1}{3}\left ( ab + ac + bc \right )= \left ( 2A \right )\frac{1}{3}\left \{ \frac{1}{sin \alpha } + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}, \label{eq:2.1.1} \tag{2.1.1}
+  \frac{1}{3}\left ( ab + ac + bc \right )= \left ( 2A \right )\frac{1}{3}\left \{ \frac{1}{sin \alpha } + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}, \label{eq:2.1} \tag{2.1}
 \end{displaymath}
+și aceasta este o formulă care aproape că ne imploră să întrebăm despre convexitatea \(\frac{1}{sin x}\). Reprezentarea grafica pentru \(x \mapsto \frac{1}{sin x}\), pentru \(x\in \left ( 0 , \infty  \right )\) cu siguranță este convexă, iar suspiciunile noastre pot fi confirmate prin calcularea derivatei a doua, 
+\({\left ( \frac{1}{sin x} \right )}''= \frac{1}{sin x} + 2\frac{cos^{2}x}{sin ^{3}x}> 0\) pentru orice \(x\in \left ( 0, \pi  \right ) . (2.2)\)
 
-și aceasta este o formulă care aproape că ne imploră să întrebăm despre convexitatea \(\frac{1}{sin x}\). Reprezentarea grafica pentru \(x \mapsto \frac{1}{sin x}\), pentru \(x\in \left ( 0 , \infty  \right )\) cu siguranță este convexă, iar suspiciunile noastre pot fi confirmate prin calcularea derivatei a doua, \({\left ( \frac{1}{sin x} \right )}''= \frac{1}{sin x} + 2\frac{cos^{2}x}{sin ^{3}x}> 0\) pentru orice \(x\in \left ( 0, \pi  \right ) . (2.1.2)\)
 	Prin urmare, din moment ce avem \(\frac{\left ( \alpha + \beta  + \gamma  \right )}{3}= \frac{\pi }{3}\), rezulta din inegalitatea lui Jensen ca 
 \begin{displaymath}
   \frac{1}{3}\left \{ \frac{1}{sin \alpha }  + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}\geq \frac{1}{sin \frac{\pi }{3}} =  \frac{2}{\sqrt{3}}, 
 \end{displaymath}
-
-deci , prin inegalitatea (2.1.1), obtinem limita presupusa. 
-m\begin{displaymath}
-  ax \left ( ab, ac, bc \right )\geq \frac{1}{3}\left ( ab + ac + bc \right )\geq \frac{4}{\sqrt{3}}A \label{eq:2.1.3} \tag{2.1.3}
+deci , prin inegalitatea \ref{eq:2.1}, obtinem limita presupusa. 
+\begin{displaymath}
+  max \left ( ab, ac, bc \right )\geq \frac{1}{3}\left ( ab + ac + bc \right )\geq \frac{4}{\sqrt{3}}A \label{eq:2.3} \tag{2.3}
 \end{displaymath}
 
-Conexiuni si rafinamente 
-Această problemă de provocare este strâns legată de o inegalitate binecunoscută a lui Weitzenböck care afirmă că în orice triunghi avem 
+Această problemă de provocatoare este strâns legată de o inegalitate binecunoscută a lui Weitzenböck care afirmă că în orice triunghi avem 
 \begin{displaymath}
-  a^{2} + b^{2} + c^{2} \geq \frac{4}{\sqrt{3}}A . \label{eq:2.1.4} \tag{2.1.4}
+  a^{2} + b^{2} + c^{2} \geq \frac{4}{\sqrt{3}}A . \label{eq:2.1.4} \tag{2.4}
 \end{displaymath}
 
 De fapt, pentru a trece de la limita \ref{eq:2.1.3} la inegalitatea lui Weitzenböck trebuie doar să ne amintim ca 
 \begin{displaymath}
   ab + ac + bc \leq a^{2} + b^{2} + c^{2}, 
 \end{displaymath}
-
 care este un lucru familiar pe care il putem obtine in trei moduri  - Inegalitatea lui Cauchy, limita AM-GM sau inegalitatea de rearanjare -  toți vor face acest lucru cu aceeasi grație.
 	Inegalitatea lui Weitzenböck se dovedește a avea multe dovezi instructive - Engel (1998) dă unsprezece! 
 
-Există câteva metode matematice pe care le-am putea numi generic amelioratori; în linii mari, acestea sunt metode care pot fi utilizate într- un mod semi-automat pentru a generaliza o identitate, de a rafina o inegalitate sau în caz contrar, sa îmbunătățeasca un rezultat dat. 
-Următoarea problemă de provocare oferă un exemplu de alt fel. Aceasta sugerează cum s-ar putea gândi la ascuțirea aproape a oricărui rezultat care se obține prin inegalitatea lui Jensen.
-Problema 2
-Formula defectului lui Hölder
-Daca \(f : \left [ a,b  \right ] \to \mathbb{R}\) este derivata de doua ori si daca vem limitele 
-\begin{displaymath}
-  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], \label{eq:2.2.1} \tag{2.2.1}
-\end{displaymath}
+Există câteva metode matematice pe care le-am putea numi generic ameliatoare; în linii mari, acestea sunt metode care pot fi utilizate într- un mod semi-automat pentru a generaliza o identitate, de a rafina o inegalitate sau în caz contrar, sa îmbunătățeasca un rezultat dat. 
+Următoarea problemă oferă un exemplu de alt fel. Aceasta sugerează cum s-ar putea gândi la ascuțirea aproape a oricărui rezultat care se obține prin inegalitatea lui Jensen.
 
-atunci pentru orice valori reale \(a\leq x_{1}\leq x_{2}\leq ....\leq x_{n} \leq b \)si orice numere reale pozitive \(p_{k}, k= 1,2,.....,n  cu p_{1} + p_{2} + .....+ p_{n} = 1\), atunci axista o vaoare reala \(\mu \in \left [ m, M \right ]\) pentru care, una are formula
+Problema 2
+
+Formula defectului lui Hölder
+
+Daca \(f : \left [ a,b  \right ] \to \mathbb{R}\) este derivata de doua ori si daca avem limitele 
+\begin{displaymath}
+  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], \label{eq21} \tag{21}
+\end{displaymath}
+atunci pentru orice valori reale \(a\leq x_{1}\leq x_{2}\leq ....\leq x_{n} \leq b \) si orice numere reale pozitive \(p_{k}, k= 1,2,.....,n \) cu \(p_{1} + p_{2} + .....+ p_{n} = 1\), atunci axista o valoare reala \(\mu \in \left [ m, M \right ]\) pentru care, una are formula
 \begin{displaymath}
   \sum_{k = 1}^{n}p_{k}f\left ( x_{k} \right ) - f\left ( \sum_{k = 1}^{n} p_{k}x_{k}\right ) = \frac{1}{4}\mu \sum_{j = 1}^{n}\sum_{k = 1}^{n}p_{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}. \label{eq:2.2.2} \tag{2.2.2}
 \end{displaymath}
 
-Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Holder”. Formula defectului \ref{eq:2.2.2} este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară \ref{eq:2.2.1}. 
-În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.2.1) este identic egal cu zero, dar în general limita \ref{eq:2.2.1} afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \)sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
+Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 - 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Hölder”. Formula defectului \ref{eq:2.2.2} este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară \ref{eq21}. 
+În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.1) este identic egal cu zero, dar în general limita \ref{eq21} afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \) sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
 
-Această problemă ne duce in mod firesc la urmatoarea intrebar: Cum putem folosi faptul că \(0\leq m\leq {f}''\left ( x \right )\leq M \)? Odata c ne-am adresat intrebarea aceasta , s-ar putea să nu fie nevoie de mult pentru a observa că cele două funcții aferente
+Această problemă ne duce in mod firesc la urmatoarea intrebar: Cum putem folosi faptul că \(0\leq m\leq {f}''\left ( x \right )\leq M \)? Odata ce ne-am adresat intrebarea aceasta , s-ar putea să nu fie nevoie de mult pentru a observa că cele două funcții aferente
 \begin{displaymath}
   g\left ( x \right ) = \frac{1}{2}Mx^{2} - f\left ( x \right ) si 
 h\left ( x \right ) = f\left ( x \right ) - \frac{1}{2}mx^{2}
 \end{displaymath}
-
 sunt din nou convexe . In schimb aceasta observatie ne indeamna sa ne intrebam ce spune inegalitatea lui Jensen despre aceste functii. 
 	Pentru \(g\left ( x \right )\), inegalitatea lui Jensen ne da limita 
 \begin{displaymath}
   \frac{1}{2}M\bar{x}^{2} - f\left ( \bar{x} \right )\leq \sum_{k = 1}^{n}p_{k}\left \{ \frac{1}{2}Mx_{k}^{2} - f\left ( x_{k} \right )\right \}
 \end{displaymath}
-
 unde avem multimea \(\bar{x} = p_{1}x_{1}+ p_{2}x_{2}+ ..... + p_{n}x_{n}\) si aceasta limita este usor rearanjata pentru a duce la 
 \begin{displaymath}
   \left \{ \sum_{k = 1}^{n} p_{k}f\left ( x_{k} \right )\right \} - f\left (\bar{x}  \right )\leq \frac{1}{2}M\left \{ \left ( \sum_{k=1}^{n} p_{k}x_{k}^{2}\right ) - \bar{x}^{2} \right \} = \frac{1}{2}M\sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2}. 
@@ -631,18 +628,105 @@ unde avem multimea \(\bar{x} = p_{1}x_{1}+ p_{2}x_{2}+ ..... + p_{n}x_{n}\) si a
 \begin{displaymath}
   \left \{ \sum_{k = 1}^{n} p_{k}f\left ( x_{k} \right )\right \} - f\left (\bar{x}  \right )\geq \frac{1}{2}m\sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2}
 \end{displaymath}
-
 si aceste limite superioare si inferioare aproape completeaza demonstratia asertiei ( 2.2.1). Singurul lucru care lipseste este identitatea 
 \begin{displaymath}
   \sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2} = \frac{1}{2}\sum_{j = 1}^{n}\sum_{k = 1}^{n} p _{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}
 \end{displaymath}
-
 care se poate verifica usor prin expansiunea algebrica si definirea lui \(\bar{x}\). 
 	Comvexitatea si inegalitatea lui Jensen ofera solutii simple pentru multe probleme.  
 	Urmatoarea problema vine din celebra sectiune cu probleme a ”American Mathematical Monthly” si ofera un exemplu clasic al acestui fenomen. 
 	La inceput problema pare destul de usoara, dar, curand, intampinam dificultati. 
 
-Problema 3(6)
+Problema 3
+
+Aratati ca daca a,b si c, sunt numere reale pozitive pentru care unul are limita inferioara \(abc \geq 2^{9}\), atunci 
+\begin{displaymath}
+  \frac{1}{\sqrt{1 + \left ( abc \right )^{\frac{1}{3}}}}\leq \frac{1}{3}\left \{ \frac{1}{\sqrt{1 + a}} + \frac{1}{\sqrt{1 + b}} + \frac{1}{\sqrt{1 + c}}\right \}    	\label{eq:2.3.1} \tag{2.3.1}
+\end{displaymath}
+
+Media din partea dreaptă sugerează că inegalitatea lui Jensen s-ar putea dovedi utilă, în timp ce media geometrică din partea stângă sugerează că funcția exponențială va avea un rol. 
+
+Daca ne uitam mai atent, putem observa ca 
+\begin{displaymath}
+  f\left ( x \right ) = \frac{1}{\sqrt{1+ e^{x}}}
+\end{displaymath}
+ne poate ajuta la aducerea inegalitatii lui Jensen in joc. De fapt , odata ce am scris aceasta functie , se poate verifica aproape fara calcul ca inegalitatea propusa (2.3.1) este echivalenta cu 
+
+\begin{displaymath}
+  f\left ( \frac{x + y + z}{3} \right )\leq \frac{1}{3}\left \{ f\left ( x \right ) + f\left ( y \right ) + f\left ( z \right ) \right \}\label{eq:2.3.2} \tag{2.3.2}
+\end{displaymath}
+pentru orice x, y, z astfel incat \(exp\left ( x + y + z \right )\geq 2^{9}.\)
+
+Pentru a vedea daca putem aplica inegalitatea lui Jensen, trebuie sa evaluam proprietatile convexitatii lui f,  deci doar o derivam de doua ori pentru a avea  
+
+Figura ???/
+
+\begin{displaymath}
+  {f}'\left ( x \right ) = -\frac{e^{x}}{2 \left ( 1 + e^{x} \right )^{\frac{3}{2}}}
+\end{displaymath}
+si
+\begin{displaymath}
+  {f}''\left ( x \right ) = -\frac{1}{2}\left (  1 + e^{x} \right )^{-\frac{3}{2}}e^{x} + \frac{3}{4}\left ( 1 + e^{x} \right )^{-\frac{5}{2}}e^{2x}
+\end{displaymath}
+
+Cea de a doua formula ne arata ca\({f}''\left ( x \right ) \geq 0\) daca si numai daca avem \(e^{x}\geq 2\) , atfel incat cu ajutorul inegalitatii lui Jensen  constatam ca inegalitatea initiala ( 2.3.1) este valabila cu conditia ca fiecare dintre termenii a, b si c sa fie cel putin la fel de mare ca 2. 
+
+Dificultatea cu care ne confruntam aici este ca ipoteza problemei  ne spune doar  ca produsul \(abc\) este cel putin la fel de mare ca \(2^{9}\) ; nu ni se da nicio  limita pentru termenii  individuali, cu exceptia faptului ca \( a > 0, b > 0 \) si \(c > 0\) . Astfel, inegalitatea lui Jensen nu poate completa demonstratia de la sine si noi trebuie să cautam ajutor de la alte resurse. 
+
+Exista multe idei pe care le-am putea incerca, dar inainte de a merge prea departe,  ar trebui sa luam in considerare graficul lui \(f\left ( x \right )\). Ceea ce  gasim  din graficul  Figurii 3 este ca \(f\left ( x \right ) \) arata remarcabil de convex pe interval \(\left [ 0, 10 \right ]  \) in ciuda faptului ca calculul care arata ca \(f\left ( x \right ) \) este concava pe \(\left [ 0, \log _{} 2\right ] \) si convexa pe \(\left [ \log _{} 2 , \infty \right ) \). Astfel, graficul nostru ofera o noua speranta; poate ca o mica modificare a lui \(f\) ar putea avea convexitatea de care noi avem nevoie pentru a rezolva problema.
+
+Cand ne gandim la modul in care am sperat sa folosim \(f\) cu inegalitatea lui Jensen, in curand ne dăm seama ca ne putem ușura puțin sarcina. Sa presupunem, de exemplu, ca putem gasi o functie convexa \(g : \left [ 0 , \infty  \right ) \to \mathbb{R}\) astfel încât avem ambele conditii : 
+\begin{displaymath}
+  g\left ( x \right ) \leq  f\left ( x  \right ), pentru orice x \in  \left [ 0 , \infty  \right )    \label{eq:2.3.3} \tag{2.3.3} 
+\end{displaymath}
+si conditia complementara
+\begin{displaymath}
+  g \left ( x \right ) = f \left ( x \right ) , pentru orice  x\geq 3 \log 2. \label{eq:2.3.4} \tag{2.3.4}
+\end{displaymath}
+
+Pentru o astfel de functie , Inegalitatea lui Jensen ne-ar fi spus ca x,y si z cu \(exp \left ( x + y + z \right )\geq  2^{9} \) avem limitele  
+\begin{displaymath}
+  f\left ( \frac{x + y + z}{3} \right ) = g\left ( \frac{x + y + z}{3} \right ) \leq  \frac{1}{3}\left \{ g\left ( x \right ) + g\left ( y \right ) + g\left ( z \right ) \right \} \leq  \frac{1}{3}\left \{ f\left ( x \right ) + f\left ( y \right ) + f\left ( z \right ) \right \} .
+\end{displaymath}
+
+Primul și ultimul termen al acestei limite reface inegalitatea \ref{eq:2.3.2} deci soluția problemei ar fi completă, cu excepția unui mic detaliu — mai trebuie să arătăm că există o functie  g convexa pe \( \left [ 0 , \infty  \right ) \) astfel incat  \(g\left ( x \right ) \leq  f\left ( x \right )\) pentru orice  \(x \in \left [ 0 , 3\log 2 \right ] și f\left ( x \right ) = g\left ( x \right )\) pentru orice \( x \geq 3\log 2\).
+
+O modalitate de a construi o funcție convexă \(g\) cu proprietățile de minorizare descrise mai sus este să luăm doar \(g\left ( x \right ) = f\left ( x \right )\) pentru \(x \geq  3\log2\) și să definim \(g\left ( x \right )\) pe \(\left [ 0 , 3\log 2 \right ]\) prin extrapolare liniară. Astfel, pentru \(x\in \left [ 0 , 3\log 2 \right ]\), luăm
+\begin{displaymath}
+  g\left ( x \right ) - f\left ( 3\log 2 \right ) + \left ( x - 3\log 2 \right ){f}'\left ( 3\log2 \right ) = \frac{1}{3} + \left ( 3\log2 - x  \right )\left ( \frac{4}{27} \right )
+\end{displaymath}
+
+Trei observatii simple sunt acum suficiente pentru a demonstra ca \(g\left ( x \right )\leq f\left ( x \right )\), pentru orice \(x\geq 0\). Pentru inceput, pentru \(x\geq 3\log 2\), avem \(g\left ( x \right ) = f\left ( x \right )\) din definitie. Cea de a doua observatie, pentru \(\log 2 \leq  x \leq  3\log 2\) avem  \(( x )\leq f\left ( x \right ) \) pentru ca aici  \(g\left ( x \right )\) are valoarea unei drepte tangente la \((f\left ( x \right )\) si prin convexitatea lui f pe \(\log 2 \leq  3 \leq 3\log 2\) dreapta tangenta este sub f. Cea de a treia observatie , in regiunea critica \(0\leq  x \leq \log2\) avem \(g\left ( x \right ) \leq  f\left ( x \right )\) deoarece,  
+\begin{enumerate}
+  \item f este concava,
+  \item g este liniara, 
+  \item f este mai mare decat g la capetele finale ale intervalului \(\left [ 0 , \log 2 \right ]\).
+\end{enumerate}
+Mai precis , la primul punct final unul are 
+\begin{displaymath}
+  g\left ( 0 \right ) = 0.641\cdots \leq f\left ( 0 \right ) = \frac{1}{\sqrt{2}} = 0.707...,
+\end{displaymath}
+in timp ce la cel de al doilea punct final unul are  
+\begin{displaymath}
+  g\left ( \log 2 \right ) = 0.538\cdots  \leq f\left ( \log2 \right ) = \frac{1}{\sqrt{3}} = 0.577... .
+\end{displaymath}
+
+Astfel, functia convexa \(g\) este intr-adevar un minorant al functiei \(f\) care se afla in concordanta cu \(f\) pe \(\left [ 3\log 2 , \infty  \right )\), asadar rezolvarea problemei este completa. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \bibliographystyle{unsrt}

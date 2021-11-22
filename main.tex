@@ -57,7 +57,7 @@ O functie \(f: I \rightarrow \mathbb{R}\) se numeste convexa daca,
 f \left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \left ( 1 - \lambda  \right ) f_{\left ( x \right )} + \lambda f_{\left ( y \right )} 	\label{eq:1.1} \tag{1.1}
 \end{displaymath}
 
-pentru orice \(x\) si \(y\) din \(I\), si orice \(\lambda \in \left [ 0,1 \right ]\). Functia \(f\) se numeste strict convexa daca inegalitate \ref{eq:1.1} este valabila cu inegalitate stricta pentru orice x si y din I, si orice  \(\lambda \in \left ( 0,1 \right )\) . Daca \(-f\) este convexa (respective stric convexa), atunci spunem ca \(f\) este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca \(f\) este functie afina. 
+pentru orice \(x\) si \(y\) din \(I\), si orice \(\lambda \in \left [ 0,1 \right ]\). Functia \(f\) se numeste strict convexa daca inegalitatea \ref{eq:1.1} se pastreaza  stricta pentru orice x si y din I, si orice  \(\lambda \in \left ( 0,1 \right )\) . Daca \(-f\) este convexa (respective stric convexa), atunci spunem ca \(f\) este concava (respectiv strict concava). Daca \(f\) este si convexa si concava, atunci spunem ca \(f\) este functie afina. 
 
 
 Functiile afine sunt tocmai functiile de forma \(mx + n\),  \(m\) si \(n\) constante reale.
@@ -71,7 +71,7 @@ Se poate demonstra usor faptul ca urmatoarele trei functii sunt convexe (desi nu
 \end{enumerate}
 
 Alte criterii de convexitate legate de teoria de baza a functiilor convexe vor fi prezentate in cele ce urmeaza. 
-Convexitatea unei functii \(f : I\rightarrow \mathbb{R}\), inseamna geometric faptul ca, punctele de pe graficului lui  \(f_{\left [ u,v \right ]}\) sunt sub (sau pe) coarda care uneste capetele \(\left ( u , f {\left ( u \right )} \right )\)  si \(\left ( v , f {\left ( v \right )} \right )\), pentru orice \(u, v \in I, u < v\); 
+Convexitatea unei functii \(f : I\rightarrow \mathbb{R}\), inseamna geometric faptul ca, punctele de pe graficului lui  \(f|_{\left [ u,v \right ]}\) sunt sub (sau pe) coarda care uneste capetele \(\left ( u , f {\left ( u \right )} \right )\)  si \(\left ( v , f {\left ( v \right )} \right )\), pentru orice \(u, v \in I, u < v\); 
 Vezi Fig 1.1 . Astfel inegalitatea \ref{eq:1.1} este echivalenta cu 
 \begin{displaymath}
   f\left ( x \right )\leq f\left ( u \right ) +\frac{f\left ( v \right )- f\left ( u \right )}{v - u}\left ( x - u \right ) \label{eq:1.2} \tag{1.2}
@@ -85,7 +85,7 @@ pentru orice \(x\in \left [  u, v\right ]\), si \(u, v \in I, u < v\).
 
 Aceasta remarca arata faptul ca functiile convexe sunt majorate de functiile afine pe orice subinterval compact. 
 
-Fiecare functie convexa f este marginita pe fiecare subinterval compact \(\left [ u , v \right ]\) a intervalului pe care este definite. De fapt , \(f\left ( x \right ) \leq  M = max \left \{ f\left ( u \right ), f\left ( v \right ) \right \}\)  pe \(\left [ u , v \right ]\)  si scriind un punct arbitrar \(x\in  \left [ u , v  \right ]\)  ca  \(x= \frac{\left ( u + v \right )}{2} + t\) pentru unii \(t\) cu \(\left | t \right |\leq \frac{\left ( v - u \right )}{2}\) , deduce cu usurinta ca 
+Fiecare functie convexa f este marginita pe fiecare subinterval compact \(\left [ u , v \right ]\) a intervalului pe care este definita. De fapt , \(f\left ( x \right ) \leq  M = max \left \{ f\left ( u \right ), f\left ( v \right ) \right \}\)  pe \(\left [ u , v \right ]\)  si scriind un punct arbitrar \(x\in  \left [ u , v  \right ]\)  ca  \(x= \frac{\left ( u + v \right )}{2} + t\) pentru unii \(t\) cu \(\left | t \right |\leq \frac{\left ( v - u \right )}{2}\) , deducem cu usurinta ca 
 
 \begin{displaymath}
   f\left ( x \right )=  f\left ( \frac{u+v}{2} + t\right )\geq 2 f\left ( \frac{u + v}{2} \right )- f\left ( \frac{u + v}{2} - t\right )\geq 2f\left ( \frac{u+v}{2} \right ) - M
@@ -130,9 +130,9 @@ f\left ( a+ \right ) & \\
  f\left ( x \right )& \\ 
  f\left ( b- \right )& 
 \end{matrix} \begin{matrix}
-daca x= a & \\ 
-daca x\in \left ( a,b \right ) & \\ 
- daca x= b& 
+\text{daca } x=a & \\ 
+\text{daca } x\in \left ( a,b \right ) & \\ 
+\text{daca } x= b& 
 \end{matrix}\right.
 \end{displaymath}
  este o functie convexa continua. 
@@ -143,10 +143,14 @@ daca x\in \left ( a,b \right ) & \\
 
 \subsection{Lema}
 
-Daca \(f: I \rightarrow \mathbb{R}\) este convexa, atunci sau \(f\) este monotona pe intervalul \(I\), sau exista un punct \(\xi \in int I\) astfel incat \(f\) este descrescatoare pe intervalul \(\left ( -\infty , \xi  \right )\cap\) si \(I\) descrescatoare pe intervalul \(\left[\xi , \infty  \right )\cap I\).
+Daca \(f: I \rightarrow \mathbb{R}\) este convexa, atunci sau \(f\) este monotona pe intervalul \(I\), sau exista un punct \(\xi \in int I\) astfel incat \(f\) este descrescatoare pe intervalul \(\left ( -\infty , \xi  \right )\cap I\) si crescatoare pe intervalul \(\left[\xi , \infty  \right )\cap I\).
 
 \begin{demonstration}
-Luam \(a < b\) puncte interioare arbitrare ale lui \(I\) si fie \\ \(m = inf\left \{ f\left ( x \right )  : x\in \left [ a,b \right ]\right \}\). Cum \(f\) este continua pe \(\left [ a,b \right ]\), acest infimum este atins in punctul \(\xi \in \left [ a,b \right ]\), adica \(m = f\left ( \xi  \right )\).
+Luam \(a < b\) puncte interioare arbitrare ale lui \(I\) si fie 
+\(m = inf\left \{ f\left ( x \right )  : x\in \left [ a,b \right ]\right \}\). Cum \(f\) este continua pe \(\left [ a,b \right ]\), acest infimum este atins in punctul \(\xi \in \left [ a,b \right ]\), adica 
+\begin{displaymath}
+  m = f\left ( \xi  \right )
+\end{displaymath}
 Daca \(a \leq x <  y< \xi\), atunci \(y\) este o combinatie convexa a lui \(x\) si \(\xi\), mai exact, \(y = \frac{\xi -y}{\xi -x}x + \frac{y - x}{\xi -x}\xi\). Cum \(f\) este convexa, 
 \begin{displaymath}
   f\left ( y \right )\leq \frac{\xi -y}{\xi -x}f\left ( x \right )+ \frac{y-x}{\xi -x}f\left ( \xi  \right )\leq f\left ( x \right ) 
@@ -169,7 +173,7 @@ Fie \(f: I \rightarrow \mathbb{R}\). Atunci \(f\) este (strict) convexa daca si 
 
 \begin{demonstration}
 Ne vom restrange la cazul functiilor convexe. Cazul functiilor strict convexe poate fi tratat in acelasi mod. 
-Necesar: Daca \(f\) este convexa, la fel este si suma \(F = f + L\). Cum orice punct al unui subinterval \(J = \left [ x , y \right ]\) este o combinatie convexa \(z = \left ( 1 - \lambda  \right )x + \lambda y \)a lui \(x\) si \(y\), avem
+\\ Necesitatea: Daca \(f\) este convexa, la fel este si suma \(F = f + L\). Cum orice punct al unui subinterval \(J = \left [ x , y \right ]\) este o combinatie convexa \(z = \left ( 1 - \lambda  \right )x + \lambda y \) a lui \(x\) si \(y\), avem
 \begin{displaymath}
   \sup_{z\in J}F\left ( z \right ) = \sup_{\lambda \in \left [ 0 , 1 \right ]}F\left ( \left ( 1 - \lambda  \right )x + \lambda y \right )\leq \sup_{\lambda \in \left [ 0,1 \right ]}\left [ \left ( 1-\lambda  \right )F\left ( x \right ) + \lambda F\left ( y \right ) \right ] + max \left \{ F\left ( x \right ), F\left ( y \right ) \right \}
 \end{displaymath}
@@ -196,7 +200,7 @@ Pentru orice \(\lambda \in \left [ 0,1 \right ]\).
 
 \subsection{Remarca}
 
-O functie \(f: I \rightarrow \mathbb{R}\) se numeste cvasiconexa daca,
+O functie \(f: I \rightarrow \mathbb{R}\) se numeste cvasiconvexa daca,
  \begin{displaymath}
   f\left ( \left ( 1-\lambda  \right )x + \lambda y \right )\geq  min\left \{ f\left ( x \right ), f\left ( y \right ) \right \}
 \end{displaymath}
@@ -369,7 +373,10 @@ Presupunem prin absurd ca \(f: \left [ 0,\infty  \right ) \rightarrow \left [ 0,
 
 pentru orice \(u,v\geq 0\), si egalitatea are loc daca si numai daca \( v = f\left ( u \right )\). 
 
-Fig 1.2
+\begin{center}
+	\includegraphics[width=1.0\textwidth]{fig1.2.png}
+	\\ Fig 1.2
+\end{center}
 
 \begin{demonstration}
 Folosind definitia derivatei se poate demonstra cu usurinta ca functia 
@@ -402,28 +409,28 @@ Inegalitatea lui Rogers-Hölder pentru p > 1
 
 Fie \(p,q \in \left ( 1, \infty  \right )\) cu \(\frac{1}{p} + \frac{1}{q} = 1\), si  \(f\in L^{p}\left ( \mu  \right )\) si \(g\in L^{q}\left ( \mu  \right )\). Atunci \(fg\) apartine lui \(L^{1}\left ( \mu  \right )\) si avem 
 \begin{displaymath}
-  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \int_{\Omega}^{}\left | fg \right |d\mu (1.6) 
+  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \int_{\Omega}^{}\left | fg \right |d\mu \label{eq:1.6} \tag{1.6}
 \end{displaymath}
 
 si 
 \begin{displaymath}
-  \int_{\Omega}^{}\left | fg \right |d\mu \leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q} . (1.7)
+  \int_{\Omega}^{}\left | fg \right |d\mu \leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q} . \label{eq:1.7} \tag{1.7}
 \end{displaymath}
 
 	Ca o consecinta 
 \begin{displaymath}
-  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q}. (1.8)
+  \left | \int_{\Omega}^{} fg  d\mu \right |\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L}^{q}. \label{eq:1.8} \tag{1.8}
 \end{displaymath}
 
 	Rezultatul de mai sus se extinde intr-o maniera directa la perechi \(p = 1, q = \infty\) si \(p = \infty\). In domeniul complementar, \(p\in \left ( -\infty , 1 \right )\setminus \left \{ 0 \right \} si \frac{1}{p} + \frac{1}{q} = 1\), semnul inegalitatii in (1.6) – (1.8) ar trebui inversat. 
 	Din Inegalitatea Rogers – Hölder rezulta ca pentru orice \(p, q, r \in \left ( 1 , \infty  \right )\) cu \(\frac{1}{p} + \frac{1}{q} = 1\) si orice \(f\in L^{p}\left ( \mu  \right )\) si \(g\in L^{q}\left ( \mu  \right )\) avem \(fg\in L^{r}\left ( \mu  \right )\) si 
 \begin{displaymath}
-  \left \| fg \right \|_{L^{r}}\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L^{q}} (1.9)
+  \left \| fg \right \|_{L^{r}}\leq \left \| f \right \|_{L^{p}}\left \| g \right \|_{L^{q}} \label{eq:1.9} \tag{1.9}
 \end{displaymath}
 
 %TODO REFS
 
-Cazul de inegalitate de mai sus (1.8), unde \(p = q = 2\), este cunoscut ca inegalitatea Cauchy-Bunyakovsky-Schwarz . 
+Cazul de inegalitate de mai sus \ref{eq:1.8}, unde \(p = q = 2\), este cunoscut ca inegalitatea Cauchy-Bunyakovsky-Schwarz . 
 
 \begin{demonstration}
 Prima inegalitate este triviala. Daca \(f\) sau \(g\) sunt \(0 \mu\) – aproape peste tot, atunci cea de a doua inegalitate este triviala. Altfel, folosind inegalitatea lui Young, avem 
@@ -441,29 +448,29 @@ pentru orice \(x\) din \(\Omega\), astfel incat \(fg \in L^{1}\left ( \mu  \righ
 
 Conditii pentru egalitatea din Teorma 1.2.2
 Observatia de baza este faptul ca  \(f\geq 0 si \int_{\Omega }f d\mu  = 0 implica f = 0 \mu-\) aproape peste tot. 
-	Prin urmare avem egalitate in (1.6) daca si numai daca 
+	Prin urmare avem egalitate in \ref{eq:1.6} daca si numai daca 
 \begin{displaymath}
   f\left ( x \right )g\left ( x \right ) = e^{i\theta }\left | f\left ( x \right ) g\left ( x \right )\right |
 \end{displaymath}
 pentru o constanta reala \(\theta\) si pentru \(\mu-\) aproape peste toti \(x\). 
-	Presupunem ca \(p , q \in \left ( 1 , \infty  \right )\) si \(f\) si \(g\) nu sunt zero \(\mu-\) aproape peste tot. Pentru a avea egalitate in (1.7) este necesar si suficient sa avem 
+	Presupunem ca \(p , q \in \left ( 1 , \infty  \right )\) si \(f\) si \(g\) nu sunt zero \(\mu-\) aproape peste tot. Pentru a avea egalitate in \ref{eq:1.7} este necesar si suficient sa avem 
 \begin{displaymath}
   \frac{\left | f\left ( x \right ) \right |}{\left \| f \right \|_{L^{p}}} \cdot \frac{\left | g\left ( x \right ) \right |}{\left \| g \right \|_{L^{q}}}\leq \frac{1}{p}\cdot \frac{\left | f\left ( x \right ) \right |^{p}}{\left \| f \right \|^{p}_{L^{p}}} + \frac{1}{q}\cdot \frac{\left | g\left ( x \right ) \right |^{q}}{\left \| g \right \|^{q}_{L^{q}}}. 
 \end{displaymath}
 
 \(\mu-\)aproape peste tot. Cazul egalitatii in Inegalitatea lui Young demonstreaza ca aceasta este echivalenta cu \(A\left | f\left ( x \right ) \right |^{p} = B\left | g\left ( x \right ) \right |^{q} \mu-\)aproape peste tot,
 pentru unele numere positive A si B. 
-	Daca \(p = 1\) si \(q = \infty\), avem egalitate in ecuatia (1.7) daca si numai daca avem o constanta \(\lambda \geq 0\) astfel incat \(\left | g\left ( x \right ) \right |\leq \lambda\),  \(\mu\) aproape peste tot, si \(\left | g\left ( x \right ) \right |= \lambda,  \mu\) aproape peste tot in multimea \(\left \{ x : f\left ( x \right )\neq 0 \right \}\). 
+	Daca \(p = 1\) si \(q = \infty\), avem egalitate in ecuatia \ref{eq:1.7} daca si numai daca avem o constanta \(\lambda \geq 0\) astfel incat \(\left | g\left ( x \right ) \right |\leq \lambda\),  \(\mu\) aproape peste tot, si \(\left | g\left ( x \right ) \right |= \lambda,  \mu\) aproape peste tot in multimea \(\left \{ x : f\left ( x \right )\neq 0 \right \}\). 
 
 \subsection{Teorema}
 Inegalitatea Minkowski
 Pentru \(1\leq  p < \infty si f , g \in L^{p}\left ( \mu  \right ) \)avem
 \begin{displaymath}
-  \left \| f + g  \right \|_{L^{p}}\leq \left \| f \right \|_{L^{p}} + \left \| g \right \|_{L^{p}} (1.10)
+  \left \| f + g  \right \|_{L^{p}}\leq \left \| f \right \|_{L^{p}} + \left \| g \right \|_{L^{p}} \label{eq:1.10} \tag{1.10}
 \end{displaymath}
 
 \begin{demonstration}
-Pentru \(p  = 1\), inegalitatea (1.10) rezulta imediat prin integrarea inegalitatii \(\left | f + g \right |\leq \left | f \right | + \left | g \right |\). Pentru \(p \in \left ( 1 , \infty  \right )\) avem:
+Pentru \(p  = 1\), inegalitatea \ref{eq:1.10} rezulta imediat prin integrarea inegalitatii \(\left | f + g \right |\leq \left | f \right | + \left | g \right |\). Pentru \(p \in \left ( 1 , \infty  \right )\) avem:
 \begin{displaymath}
   \left | f + g  \right |^{p}\leq \left ( \left | f \right | +\left | g \right |\right )^{p}\leq \left ( 2 sup\left \{ \left | f \right |,\left | g \right | \right \} \right )^{p}\leq 2^{p}\left ( \left | f \right |^{p}  + \left | g \right |^{p}\right )
 \end{displaymath}
@@ -488,7 +495,7 @@ unde \(\frac{1}{p} + \frac{1}{q} = 1\), si observam ca \(p - \frac{p}{q} = 1\).
 
 \subsection{Remarca}
 
-Daca \(p = 1\), obtinem egalitate in (1.10) daca si numai daca exista o functie masurabila pozitiva \(\varphi\) astfel incat 
+Daca \(p = 1\), obtinem egalitate in \ref{1.10} daca si numai daca exista o functie masurabila pozitiva \(\varphi\) astfel incat 
 \begin{displaymath}
   f\left ( x \right )\varphi \left ( x \right ) = g\left ( x \right )
 \end{displaymath}
@@ -558,10 +565,10 @@ Aria A a triunghiului generic are trei reprezentari de baza :
 \(A = \frac{1}{2}ab sin\gamma = \frac{1}{2}ac sin \beta = \frac{1}{2}bc sin \alpha. \)
 Acum, dacă facem media acestor reprezentări, atunci găsim ca :
 \begin{displaymath}
-  \frac{1}{3}\left ( ab + ac + bc \right )= \left ( 2A \right )\frac{1}{3}\left \{ \frac{1}{sin \alpha } + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}, (2.1.1)
+  \frac{1}{3}\left ( ab + ac + bc \right )= \left ( 2A \right )\frac{1}{3}\left \{ \frac{1}{sin \alpha } + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}, \label{eq:2.1.1} \tag{2.1.1}
 \end{displaymath}
 
-și aceasta este o formulă care aproape că ne imploră să întrebăm despre convexitatea \(\frac{1}{sin x}\). Reprezentarea grafica pentru \(x \mapsto \frac{1}{sin x}\), pentru \(x\in \left ( 0 , \infty  \right )\) cu siguranță este convexă, iar suspiciunile noastre pot fi confirmate prin calcularea derivatei a doua, \({\left ( \frac{1}{sin x} \right )}''= \frac{1}{sin x} + 2\frac{cos^{2}x}{sin ^{3}x}> 0 pentru orice x\in \left ( 0, \pi  \right ) . (2.1.2)\)
+și aceasta este o formulă care aproape că ne imploră să întrebăm despre convexitatea \(\frac{1}{sin x}\). Reprezentarea grafica pentru \(x \mapsto \frac{1}{sin x}\), pentru \(x\in \left ( 0 , \infty  \right )\) cu siguranță este convexă, iar suspiciunile noastre pot fi confirmate prin calcularea derivatei a doua, \({\left ( \frac{1}{sin x} \right )}''= \frac{1}{sin x} + 2\frac{cos^{2}x}{sin ^{3}x}> 0\) pentru orice \(x\in \left ( 0, \pi  \right ) . (2.1.2)\)
 	Prin urmare, din moment ce avem \(\frac{\left ( \alpha + \beta  + \gamma  \right )}{3}= \frac{\pi }{3}\), rezulta din inegalitatea lui Jensen ca 
 \begin{displaymath}
   \frac{1}{3}\left \{ \frac{1}{sin \alpha }  + \frac{1}{sin \beta } + \frac{1}{sin \gamma }\right \}\geq \frac{1}{sin \frac{\pi }{3}} =  \frac{2}{\sqrt{3}}, 
@@ -569,16 +576,16 @@ Acum, dacă facem media acestor reprezentări, atunci găsim ca :
 
 deci , prin inegalitatea (2.1.1), obtinem limita presupusa. 
 m\begin{displaymath}
-  ax \left ( ab, ac, bc \right )\geq \frac{1}{3}\left ( ab + ac + bc \right )\geq \frac{4}{\sqrt{3}}A ( 2.1.3) 
+  ax \left ( ab, ac, bc \right )\geq \frac{1}{3}\left ( ab + ac + bc \right )\geq \frac{4}{\sqrt{3}}A \label{eq:2.1.3} \tag{2.1.3}
 \end{displaymath}
 
 Conexiuni si rafinamente 
 Această problemă de provocare este strâns legată de o inegalitate binecunoscută a lui Weitzenböck care afirmă că în orice triunghi avem 
 \begin{displaymath}
-  a^{2} + b^{2} + c^{2} \geq \frac{4}{\sqrt{3}}A . (2.1.4)
+  a^{2} + b^{2} + c^{2} \geq \frac{4}{\sqrt{3}}A . \label{eq:2.1.4} \tag{2.1.4}
 \end{displaymath}
 
-De fapt, pentru a trece de la limita (2.1.3) la inegalitatea lui Weitzenböck trebuie doar să ne amintim ca 
+De fapt, pentru a trece de la limita \ref{eq:2.1.3} la inegalitatea lui Weitzenböck trebuie doar să ne amintim ca 
 \begin{displaymath}
   ab + ac + bc \leq a^{2} + b^{2} + c^{2}, 
 \end{displaymath}
@@ -592,16 +599,16 @@ Problema 2
 Formula defectului lui Hölder
 Daca \(f : \left [ a,b  \right ] \to \mathbb{R}\) este derivata de doua ori si daca vem limitele 
 \begin{displaymath}
-  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], (2.2.1)
+  0 \leq m \leq  f''\left ( x \right ) \leq  M , pentru orice x\in \left [ a,b \right ], \label{eq:2.2.1} \tag{2.2.1}
 \end{displaymath}
 
 atunci pentru orice valori reale \(a\leq x_{1}\leq x_{2}\leq ....\leq x_{n} \leq b \)si orice numere reale pozitive \(p_{k}, k= 1,2,.....,n  cu p_{1} + p_{2} + .....+ p_{n} = 1\), atunci axista o vaoare reala \(\mu \in \left [ m, M \right ]\) pentru care, una are formula
 \begin{displaymath}
-  \sum_{k = 1}^{n}p_{k}f\left ( x_{k} \right ) - f\left ( \sum_{k = 1}^{n} p_{k}x_{k}\right ) = \frac{1}{4}\mu \sum_{j = 1}^{n}\sum_{k = 1}^{n}p_{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}. ( 2.2.2)
+  \sum_{k = 1}^{n}p_{k}f\left ( x_{k} \right ) - f\left ( \sum_{k = 1}^{n} p_{k}x_{k}\right ) = \frac{1}{4}\mu \sum_{j = 1}^{n}\sum_{k = 1}^{n}p_{j}p_{k}\left ( x_{j} - x_{k} \right )^{2}. \label{eq:2.2.2} \tag{2.2.2}
 \end{displaymath}
 
-Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Holder”. Formula defectului (2.2.2) este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară (2.2.1). 
-În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.2.1) este identic egal cu zero, dar în general limita (2.2.1) afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \)sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
+Acest rezultat provine din aceeași lucrare faimoasă din 1885 a lui Otto Ludwig Hölder (1859 1937) în care se găseşte dovada sa a inegalităţii care are a ajuns să fie cunoscută universal ca ”inegalitatea lui Holder”. Formula defectului \ref{eq:2.2.2} este mult mai puțin cunoscută, dar este totuși valoroasă. Aceasta oferă o măsură perfect naturală a diferenței dintre cele două părți ale inegalității lui Jensen și ne spune cum să învingem versiunea  inegalității lui Jensen ori de câte ori putem verifica ipoteza suplimentară \ref{eq:2.2.1}. 
+În mod similar, dacă M este mic, să spunem \(0 \leq M \leq \epsilon\), atunci limita (2.2.1) ne spune că f se comportă mai degrabă ca o funcție afină \(f\left ( x \right ) = \alpha  + \beta x\). Pentru o funcție exact afină, partea stângă a limitei (2.2.1) este identic egal cu zero, dar în general limita \ref{eq:2.2.1} afirmă a relație mai subtilă. Mai precis, ne spune că partea stângă este un mic multiplu al unei măsuri de amploare  în care valorile \(x_{j}, j = 1,2,.....,n \)sunt difuzate pe tot intervalul \(\left [ a, b \right ]. \)
 
 Această problemă ne duce in mod firesc la urmatoarea intrebar: Cum putem folosi faptul că \(0\leq m\leq {f}''\left ( x \right )\leq M \)? Odata c ne-am adresat intrebarea aceasta , s-ar putea să nu fie nevoie de mult pentru a observa că cele două funcții aferente
 \begin{displaymath}

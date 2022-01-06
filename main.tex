@@ -714,12 +714,482 @@ in timp ce la cel de al doilea punct final unul are
 
 Astfel, functia convexa \(g\) este intr-adevar un minorant al functiei \(f\) care se afla in concordanta cu \(f\) pe \(\left [ 3\log 2 , \infty  \right )\), asadar rezolvarea problemei este completa. 
 
+Problema 4
+
+   Matematicianul renascentist Pietro Mengoli ( 1625 – 1686) a avut nevoie doar de algebra simpla pentru a demonstra inegalitatea simetrica 
+ \begin{displaymath}
+   \frac{1}{x - 1} + \frac{1}{x} + \frac{1}{x + 1} > \frac{3}{x} , pentru orice x > 1, (2.4.1)
+ \end{displaymath}
+totusi a obtinut o revendicare asupra numuririi intelectuale atunci cand a folosit asta pentru a oferi una dintre cele mai timpurii dovezi ale divergentei seriilor armonice, 
+\begin{displaymath}
+  H_{n} = 1 + \frac{1}{2} + \frac{1}{3} + ....+ \frac{1}{n} \Rightarrow \lim_{n \to \infty } H_{n} = \infty ( 2.4.2)
+\end{displaymath}
+
+Redescoperiti demonstratia algebrica a inegalitatii lu Mengoli ( 2.4.1) si verificati faptul ca rezulta si din inegalitatea lui Jensen. Mai departe, aratati, cum a facut Mengoli , faptul ca inegalitatea (2.4.1) implica divergenta lui \(H_{n}\) . 
+
+Simplificand \(\frac{1}{x}\) din ambele parti si adunand fractiile se vede ca inegalitatea lui Mengoli este echivalenta cu imita triviala \(x^{2} >  x^{2} – 1\). Pentru o demonstratie folosind inegalitatea lui Jensen, observam ca \(x \mapsto \frac{1}{x}\) este convexa. In sfarsit, pentru o versiune moderna a demonstratiei lui Mengoli ca \(H_{n}\) diverge, presuunem ca \(H_{\infty }< \infty\) si scriem \(H_{\infty }\) ca 
+\begin{displaymath}
+  1 + \left ( \frac{1}{2} + \frac{1}{3} + \frac{1}{4} \right ) + \left ( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} \right ) + \left ( \frac{1}{8} + \frac{1}{9} +\frac{1}{10} \right )+.... . 
+\end{displaymath}
+
+Acum, prin aplicarea inegalitatii lui Mengoli in cadrul grupurilor indicate gasim limita inferioara \(1 + \frac{3}{3} + \frac{3}{6} + \frac{3}{9} + ..= 1 + H_{\infty }\), care ne conduce la contradictia \(H_{\infty } > 1 + H_{\infty }\). Apropo, potrivit lui Havil , Mengoli a fost cel care a pus mai intai problema determinarii valorii sumei \(1 + \frac{1}{2^{2}} + \frac{1}{3^{2}} + .....\) .
+Problema a rezistat eforturilor celor mai buni matematicieni ai Europei pana in anu 1731 cand L. Euler a determinat valoarea ca fiind \(\frac{\pi^{2}}{6}\) . 
+
+Problema 5 
+
+Un cub perfect si un produs triplu
+Aratati ca daca \(x , y , z > 0\) si \(x+ y + z = 1\), atunci unul are 
+\begin{displaymath}
+  64 \leq \left ( 1 + \frac{1}{x} \right )\left ( 1 + \frac{1}{y} \right )\left ( 1 + \frac{1}{z} \right ). 
+\end{displaymath}
+
+Limita rezulta prin aplicarea inegalitatii lui Jensen functiei 
+\begin{displaymath}
+  f\left ( t \right ) = log \left ( 1+\frac{1}{t} \right ) = \log \left ( 1 + t \right ) - \log \left ( t \right )
+\end{displaymath},
+care este convexa deoarece 
+\begin{displaymath}
+  {f}''\left ( t \right ) = -\frac{1}{\left ( 1 + t \right )^{2}} + \frac{1}{t^{2}} > 0
+\end{displaymath} 
+pentru orice \(t > 0\) . 
 
 
+Problema 6 
+
+Inegalitatea ariei a n-gonuri
+
+Fig. 4 sugereaza ca alaturi dintre toate poligoanele convexe cu n laturi care pot fi inscrise intr-un cerc, numai n-gonul regulat are aria maxima. Poate inegalitatea lui Jensen sa fie folosita pentru a confirma aceasta sugestie ?
+
+Figurra4
+
+Din figura geometrica de la fig.4, aria A a unui poligon inscris cu n fete poate fi scrisa ca 
+\begin{displaymath}
+  A = \frac{1}{2}\sum_{k = 1}^{n} \sin \theta _{k} unde 0< \theta _{k} si \sum_{k = 1}^n{\theta _{k}} = 2\pi. 
+\end{displaymath}
+	Cum z \(\sin \left ( \cdot  \right )\) este strict cancava pe \(\left [ 0 , \pi  \right ]\) , avem 
+
+\begin{displaymath}
+  A = \frac{1}{2}\sum_{k = 1}^{n} \sin \theta _{k}  \leq \frac{1}{2}n\sin\left ( \frac{1}{n}\sum_{k = 1}^{n}\theta _{k} \right ) = \frac{1}{2}n\sin \left ( \frac{2\pi }{n} \right ) = {A}',
+\end{displaymath}
+
+Si avem egalitate daca si numai daca \(\theta _{k} = \frac{2\pi }{n}\) pentru orice \(1\leq k\leq n. Cum {A}'\) este aria unui n-gon reguat inscris, optimitatea presupusa este confirmata. 
 
 
+Problema 7
+
+Inegalitatile investitionale 
+
+Daca \(0< r_{k} < \infty\), si daca investitia noastra de un doar pe an \(k\) creste la \(1 +  r_{k}\) dolari la sfarsitul anului, numim \(r_{k}\) randamentul nostru investitie n anul \(k\). Demonstrati ca valoarea 
+\begin{displaymath}
+  V = \left ( 1 + r_{1} \right )\left ( 1 + r_{2} \right )\cdots \left ( 1 + r_{n} \right )
+\end{displaymath} 
+investitiei noastra dupa n ani trebuie sa satisfaca limitele. 
+\begin{displaymath}
+  \left ( 1 + r_{G} \right )^{n} \leq \prod_{k = 1}^{n} \left ( 1 + r_{k} \right )\leq \left ( 1 + |r_{A} \right )^{n}, (2.7.1)
+\end{displaymath}
+unde 
+\begin{displaymath}
+  r_{G} = \left ( r_{1}r_{2} \cdots r_{n}\right )^{\frac{1}{n}} si r_{A} = \frac{\left ( r_{1} + r_{2} +  ...+ r_{n}\right )}{n} .
+\end{displaymath}
+
+De asemenea explicati de ce aceasta limita poate fi vazuta ca un rafinament a inegalitatii AM-GM. 
+
+Cea de a doua limita este inegalitatea AM-GM pentru
+\begin{displaymath}
+  a_{k} = 1 = r_{k}, k =1,2,.....,n,
+\end{displaymath} 
+
+Prima limita rezulta din inegalitatea lui Jensen aplicata functiei convexe \(x \mapsto \log\left ( 1 + e^{x} \right ).\) 
+La final, luand luand a n- a radacina si scazand 1, vom vedea ca inegalitatea (2.7.1) rafineaza limita AM-GM  \(r_{G} \leq r_{A}\) prin alunecarea \(V^{\frac{1}{n}} – 1\) intre doua mijloace. 
 
 
+Problema 8
+
+Supraaditivitatea mijloacelor geometrice
+	
+Pentru numerele pozitive \(a_{j} \)si \(b_{j}, j = 1 , 2, ......,n\) unu are supraaditivitatea mediei geometrice :
+\begin{displaymath}
+  \left ( a_{1}a_{2}\cdots a_{n} \right )^{\frac{1}{n}} + \left ( b_{1}b_{2}\cdots b_{n} \right )^{\frac{1}{n}} \leq  \left \{ \left ( a_{1} + b_{1}\right ) \left ( a_{2} + b_{2} \right )\cdots \left ( a_{n} + b_{n} \right )\right \}^{\frac{1}{n}}. 
+\end{displaymath}
+	Rezulta si acest lucru din inegalitatea lui Jensen ?
+	
+	Pentru a construi o demonstratie cu ajutorul inegalitatii lui Jensen, mai intai impartim la 
+\(\left ( a_{1}a_{2}\cdots a_{n} \right )^{\frac{1}{n}}\) si scriem \(c_{k}\) pentru \(\frac{b_{k}}{a_{k}}\), deci inegalitatea de la care am pornit ia forma 
+\begin{displaymath}
+  a + \left ( c_{1}c_{2} \cdots c_{k}\right )^{\frac{1}{n}}\leq \left \{ \left ( 1 + c_{1} \right )\left ( 1 + c_{2} \right )\cdots \left ( 1 + c_{n} \right ) \right \}^{\frac{1}{n}}. 
+\end{displaymath}
+
+Acum, daca scriem \(c_{j}\) ca \(exp\left (d _{j} \right )\), vom vedeaa ca ia umatoarea forma 
+\begin{displaymath}
+  \log\left ( 1 + exp\left ( \bar{d} \right ) \right ) \leq \frac{1}{n}\sum_{j = 1}^{n}\log\left ( 1 + exp\left ( d_{j} \right ) \right ),
+\end{displaymath}
+Unde 
+\begin{displaymath}
+  \bar{d} = \frac{\left ( d_{1} + d_{2}  + ....+ d_{n}\right )}{n}.
+\end{displaymath} 
+
+In final , ultima inegalitate este pur si simplu inegalitatea lui Jensen pentru functiile convexe \(x \mapsto \log \left ( 1 + e^{x} \right )\), astfel, rezolvarea este completa. 
+
+O caracteristica a acestei solutii care merita remarcata este aceea ca progresu a venit rapid dupa ce diviziunea a redus numarul de variabile de la \(2n\) la \(n\). Acest fenomen este de fapt destul de comun si asa reducerile merita aproape intotdeauna incercate. 
+
+Aici este oate demn de remarcat faptul ca demonstratia lui Minkowski a folosit o alta idee. Mai exact, a construit o demonstratie pe faza analizei polinomului \(p\left ( t \right ) = \prod \left ( a_{j}  + tb_{j}\right )\).
+
+Problema 9 
+
+Technica lui Cauchy si Inegalitatea lui Jensen
+
+In 1906, J.L.W.V. Jensen a scris un articol care a fost inspirat de demonstratia data de Cauchy entru inegalitatea AM-GM, si, intr-un efort de a ajunge la miezul argumentului lui Cauchy, Jensen a introdus ckasa de functii care satisfac inegalitatea 
+\begin{displaymath}
+  f\left ( \frac{x + y}{2} \right ) \leq \frac{f\left ( x \right ) + f\left ( y \right )}{2} pentru orice x,y \in \left [ a, b \right ]. (2.9.1)
+\end{displaymath}
+
+Astfel de functii sunt acum numite functii J-convexe, si, dupa cum observam mai jos in exercitiul 10, ele sunt doar putin mai generale decat functiie convexe definite de conditia
+\begin{displaymath}
+  f\left ( px + \left ( 1 - p \right )y \right )\leq pf\left ( x \right ) + \left ( 1-p \right )f\left ( y \right ). 
+\end{displaymath} 
+
+Pentru un moment, ne punem in locul lui Jensen si demonstram cum se poate modifica introducerea lui Cauchy de salt inainte, pentru a dovedi asta pentru orice functii  J-convexe pe care le au. 
+\begin{displaymath}
+  f\left ( \frac{1}{n} \sum_{k = 1}^{n}x_{k}\right )\leq \frac{1}{n}\sum_{k = 1}^{n}f\left ( x_{k} \right )
+\end{displaymath}
+pentru orice \(\left \{ x_{k}: 1\leq k \leq n \right \} \subset \left [ a, b \right ].\) (2.9.2)
+
+Aici se poate observa ca aproape de sfarsitul articolului sau din 1906, Jensen si-a exprimat viziunea indrazneata ca poate ccandva clasa functiei convexe ar putea fi vazuta ca fiind la fel de fundamentala si clasa functiilor pozitive sau clasa de functii crescatoare. Daca se permite trecerea usoara de la notiunea specifica de J-convexitatea la interpretarea ms moderna a convexitatii 
+\begin{displaymath}
+  f\left ( px + \left ( 1 - p \right )y \right )\leq pf\left ( x \right ) + \left ( 1-p \right )f\left ( y \right)
+\end{displaymath} 
+
+apoi punctul lui Jensen de vedere s-a dovedit a fi destul de prevazator. 
+
+In esenta nu este necesara nicio schimbare in argumentul lui Cauchy. In primul rand, pentru cazul \(n = 2^{k}, k=1,2,….,\)  se aplica doar relatia definitorie (2.9.1) la jumatati succesive. Pentru pasul de retragere se alege \(k\) astfel incat \(n\leq 2^{k}\) si aplicam rezultatul lui \(2^{k}\) la secventa captusita \(y_{j} , 1\leq j\leq 2^{k}\) pe care o definesste luand \(y_{j} = x_{j}\) pentru \(1\leq j\leq n \) si \(y_{j} = \frac{\left ( x_{1} + x_{2} + ....+ x_{n} \right )}{n}\) pentru \(n< j\leq 2^{k}\). 
+
+
+Problema 10
+
+Convexitatea si J-Convexitatea 
+
+Demonstrati ca daca \(f : \left [ a,b \right ]\rightarrow \mathbb{R} \) este continua si J-convexa, atunci \(f\) trebuie sa fie convexa in sensul modern exprimat de conditia 
+\begin{displaymath}
+  f\left ( px + \left ( 1 - p \right )y \right )\leq pf\left ( x \right ) + \left ( 1-p \right )f\left ( y \right.
+\end{displaymath}
+ 
+Ca o curiozitatea, ar trebui sa observam faptul ca exista functii J-convexe care nu sunt convexe in sensul modern. Cu toate acestea, astfel de functii sunt discontinue salbatic, si este destul de putin probabil sa apara decat daca sunt invitate in mod special. 
+
+Dupa cum am observat in solutia anterioara, iteratia definitiei definitorii (2.9.1) ne ofera pentru orice \(k = 1,2,….\) Ca 
+\begin{displaymath}
+  f\left ( \frac{1}{2^{k}} \sum_{j = 1}^{2^{k}}x_{j}\right ) \leq  \frac{1}{2^{k}}\sum_{j = 1}^{2^{k}}f\left ( x_{j}\right )
+\end{displaymath}
+
+deci luand \(x_{j} = x\) pentru \(1\leq j\leq m\) si \(x_{j} = y\) pentru \(m< j\leq 2^{k}\) avem de asemenea
+\begin{displaymath}
+  f\left ( \left ( \frac{m}{2^{k}} \right )x + \left ( 1 - \frac{m}{2^{k}} \right )y \right )\leq \left ( \frac{m}{2^{k}} \right )f\left ( x \right ) + \left ( 1 - \frac{m}{2^{k}} \right )f\left ( y \right ). 
+\end{displaymath}
+
+Daca alegem acum \(m_{t}\) si \(k_{t}\) astfel incat \(\frac{m_{t}}{2^{k_{t}}} \rightarrow p\) pentru ca \(t \rightarrow \infty\), atunci continuitatea lui f si limita precedenta ne ofera o convexitatea de acelasi fel ca cea ceruta de definitia moderna 
+\begin{displaymath}
+  f\left ( px + \left ( 1 - p \right )y \right ) \leq  pf\left ( x \right ) + \left ( 1 - p \right )f\left ( y \right )
+\end{displaymath}
+
+
+Problema 11
+
+	Aratati ca pentru orice \(0\leq x , y , z \leq 1\), una are limita
+\begin{displaymath}
+  L\left ( x , y , z \right ) = \frac{x^{2}}{1 + y} + \frac{y^{2}}{1 + z} + \frac{z^{2}}{1 + x+ y} + x^{2} \left ( y^{2} - 1 \right )\left ( z^{2} - 1 \right ) \leq 2.
+\end{displaymath}
+
+Functia \(L\left ( x,y,\ \right )\) este convexa in fiecare din cele trei variabile ale sale separat si, prin argumentul detaliat mai jos, acest lucru mplica faptul ca L trebuie sa atinga punctul maxim  la unul dintre varfurile cubului. 
+
+Dupa opt evaluari usoare constatam ca \(L \left ( 1,0,0 \right ) = 2\) si ca niciun alt colt nu are o valoare mai mare, deci solutia este completa. Este de asemenea usor sa aratam ca daca o functie de pe cub este convexa in fiecare variabila separat, atunci functia trebuie sa atinga maximul peu nul dintre varfuri. In esenta, unul se demonstreaza prin inductie dar, pentru cubul din \(\mathbb{R}^{3}\), se pot da la fel de bine toti pasii.  
+
+In primul rand se observa ca o functie convexa pe \(\left [ 0 , 1 \right ]\) trebuie sa isi ia maximul la unul dintre punctele finale ale intervalului, deci, pentru orice valoare fixa dintre y si z, avem limita 
+\begin{displaymath}
+  L\left ( x,y,z \right )\leq max \left \{ L\left ( 0,y,z \right ), L\left ( 1,y,z \right ) \right \}.
+\end{displaymath}
+
+ Similar din convexitatea lui \(y \mapsto L\left ( 0,y,z \right )\) si \(y \mapsto L\left ( 1,y,z \right )\)  rezulta ca \(L\left ( 0, y, z \right )\) este limitata de max  \(L\left ( 0,0,z \right ), L\left ( 0,1,z \right )\) si \( L\left ( 1,y,z \right )\) este limitat de \(max \left \{ L\left ( 1,0,z \right ) , L \left ( 1,1,z \right )\right \}\). 
+ 
+ Luandu-le pe toate impreuna , avem pentru orice valoare a lui z ca \(L\left ( x,y,z \right )\) este marginita de \(max\left \{ L\left ( 0,0,z \right ), L\left ( 0,1,z \right ), L\left ( 1,1,z \right ) \right \}\). Convexitatea lui \(z \mapsto L\left ( x,y,z \right )\) aplicata de patru ori ne da apoi la final limita 
+ \begin{displaymath}
+  L\left ( x,y,z \right ) \leq  max \left \{ L\left ( e_{1} , e_{2}, e_{3}\right ): e_{k}  = 0 sau e_{k} = 1 pentru k = 1,2,3\right \}
+\end{displaymath}
+  
+Trebuie retinut faptul  ca acest argument nu arata ca se poate gasi maximul prtin algoritmul lacom care efectueaza trei maxime succesive. De fapt, algoritmul lacom poate esua lamentabil aici, asa cum arata exemple simple. 
+
+Problema 12
+
+Pentru orice triunghi cu etichetarea traditionala din figura de mai jos, teorema cosinusului care ne spune ca 
+\begin{displaymath}
+  a^{2} = b^{2}+ c^{2} - abc\cos\alpha.
+\end{displaymath}
+
+Aratati ca aceasta teorema implica formula ariei 
+\begin{displaymath}
+  a^{2} = \left ( b - c^{2} \right ) + 4\tan \left ( \frac{\alpha }{2} \right ), 
+\end{displaymath}
+apoi aratati cum implica inegalitatea lui Jensen faptul ca in orice triunghi 
+\begin{displaymath}
+  a^{2} + b^{2} + c^{2} \geq  \left ( a - b  \right )^{2} + \left ( b- c  \right )^{2} + \left ( c - a \right )^{2} + 4\sqrt{3}A. 
+\end{displaymath}
+
+Aceasta limita este cunoscuta ca inegalitatea Hadwiger-Finsler , si furnizeaza una din cele mai frumoase rafinamente ale inegalitatii Weitzenböck. 
+
+Pentru a demonstra prima formula, observam ca 
+\begin{displaymath}
+  a^{2} = b^{2} + c^{2} - 2ac\cos\alpha  = \left (  b - c \right )^{2} + 2bc\left ( 1 - \cos\alpha  \right ) = \left ( b - c \right )^{2} + \frac{4A\left ( 1 - \cos  \right )}{\sin \alpha } = \left ( b - c \right )^{2} + 4A\tan\left ( \frac{\alpha }{2} \right ),
+\end{displaymath}
+
+deci, prin simetrie si adunare, vedem ca 
+\(a^{2} + b^{2} + c^{2}\) este egal cu 
+\begin{displaymath}
+  \left ( a - b  \right )^{2} + \left ( b - c \right )^{2} + \left ( c - a  \right )^{2} + 4A\left ( \tan\left ( \frac{\alpha }{2} \right ) + \tan\left ( \frac{\beta }{2} \right ) + \tan \frac{\gamma }{2} \right ).
+\end{displaymath}
+
+	Cum \(x \mapsto \tan x\) este convexa pe \(\left [ 0 , \frac{\pi }{2} \right ]\) , inegalitatea lui Jensen ne ofera
+\begin{displaymath}
+  \frac{1}{3}\left \{ \tan \left ( \frac{\alpha }{2} \right ) + \tan \left ( \frac{\beta }{2} \right )  + \tan \left ( \frac{\gamma }{2} \right )\right \} \geq  \tan\left ( \frac{\alpha  + \beta  + \gamma }{6} \right ) = \tan \left ( \frac{\pi }{6} \right ) 
+\end{displaymath}
+
+Si \(\tan \left ( \frac{\pi }{6} \right ) = \sqrt{3}\), si cu asta am incheiat demonstratia. 
+
+Problema 13
+
+	Criteriul {f}'' si Teorema lui Rolle
+	
+Am vazut mai devreme faptul ca teorema funfamentala de calcul implica faptul ca dac auna are \({f}'' \geq 0\) pentru orice \(x\in \left [ a,b \right ]\), atunci \(f\) este convexa pe \(\left [ a,b \right ]\). Acest exercitiu schiteaza cum se poate demonstra acest lucru important prin estimarea diferentei 
+\begin{displaymath}
+  f\left ( px_{1} + qx_{2}\right ) - pf\left ( x_{1} \right ) - qf\left ( x_{2} \right )
+\end{displaymath}
+ prin compararea cu un polinom apropiat. 
+ \begin{enumerate}[a)]
+\item Luam \(0< p < 1, q = 1-p\) si multimea \(mu = px_{1} + px_{2}\) unde \(x_{1} < x_{2}\).  Gasiti polinomul patratic unic \(Q\left ( x \right )\) astfel incat  \(Q\left ( x_{1} \right ) = f\left ( x_{1} \right ), Q\left ( x_{2} \right ) = f\left ( x_{2} \right )\) si \(Q\left ( \mu  \right ) = f\left ( \mu  \right )\). 
+\item Folosind faptul ca \(\Delta \left ( x \right ) =  f\left ( x \right ) - Q\left ( x \right )\) are trei zerouri distincte in \(\left [ a,b \right ]\) pentru a demosntra ca exista un \(x^{*}\) astfel incat \({\Delta }''\left ( x^{*} \right ) = 0\).
+\item In final, explicati cum \({f}''\left ( x \right ) \geq 0\) pentru orice \(x\in \left [ a,b \right ]\) si \({\Delta }''\left ( x^{*} \right ) = 0\) inplica faptul ca \(f\left ( px_{1} + qx_{2} \right ) - pf\left ( x_{1} \right ) - qf\left ( x_{2} \right ) \geq 0\). 
+\end{enumerate}
+
+Polinomul \(Q\left ( x \right )\) poate fi scris ca o suma de trei patrate simple : 
+\begin{displaymath}
+  \frac{\left ( x - x_{2} \right )\left ( x - \mu  \right )}{\left ( x_{1}  - x_{2}\right )\left ( x_{1} - \mu  \right )} f\left ( x_{1} \right ) + \frac{\left ( x - x_{1} \right )\left ( x - \mu  \right )}{\left ( x_{2}  - x_{1}\right )\left ( x_{2} - \mu  \right )}  f\left ( x_{2} \right ) +  \frac{\left ( x - x_{1} \right )\left ( x - x_{2}  \right )}{\left ( \mu   - x_{1}\right )\left (  \mu - x_{2} \right )}f\left ( \mu \right )
+\end{displaymath}
+
+Dupa ce plicam Teorem lui Rolle de doua ori observam faptul ca din \({Q}'\left ( x \right ) - {f}'\left ( x \right )\) avem zero in \(\left ( x_{1} , \mu \right )\) si un zero in \(\left ( \mu  , x_{2} \right )\), deci o a treia aplicare a Teoremei șui Rolle ne arata ca exista un \(x^{*}\) intre aceste zerouri pentru care avem \(0 = {Q}''\left ( x \right ) - {f}''\left ( x^{*} \right )\). Prin urmare o sa avem \({Q}''\left ( x^{*}  \right ) = {f}''\left ( x^{*} \right )\geq 0\), dar, 
+\begin{displaymath}
+  {Q}''\left ( x^{*}  \right ) = \frac{2f\left ( x_{1} \right )}{\left ( x_{1} - x_{2} \right )\left ( x_{1} - \mu  \right )} +  \frac{2f\left ( x_{2} \right )}{\left ( x_{2} - x_{1} \right )\left ( x_{2} - \mu  \right )} +  \frac{2f\left (\mu  \right )}{\left ( \mu  - x_{1} \right )\left ( \mu  - x_{2} \right )}
+\end{displaymath}
+
+Deci, luand  
+\begin{displaymath}
+  p = \frac{\left ( x_{2} - \mu  \right )}{\left ( x_{2} - x_{1}\right )}
+\end{displaymath}
+si 
+\begin{displaymath}
+  q = \frac{\left ( \mu  - x_{1} \right )}{\left ( x_{2} - x_{1} \right )}
+\end{displaymath}
+   si simplificand, se constata ca ultima inegalitate se reduce la definitia convexitatii lui f.
+
+Problema 14
+
+Transformarea pentru a atinge convexitatea 
+
+Aratati ca pentru numere positive \(a , b si c\) astfel incat \(a + b = c = abc\), obtinem
+\begin{displaymath}
+  \frac{1}{\sqrt{1 + a^{2}}} + \frac{1}{\sqrt{1 + b^{2}}} + \frac{1}{\sqrt{1 + c^{2}}} \leq \frac{3}{2}
+\end{displaymath}
+
+Aceasta problema din Olimpiada Nationala din Koreea sin 1998 nu este usoara, chiar si cu indicatia oferita de titlul exercitiului.Cineva, care este norocos, poate stabili o legatura intre  ipoteza \(a + b + c = abc\) si binecunoscutul lucru ca un triunghi etichetat ca in figura Fig 5 
+ are 
+ \begin{displaymath}
+   \tan\left ( \alpha  \right ) + \tan\left ( \beta   \right ) + \tan\left ( \gamma   \right ) = \tan\left ( \alpha  \right )\tan\left ( \beta   \right )\tan\left ( \gamma   \right ). 
+ \end{displaymath}
+
+Aceasta identitate este usor de verificat aplicand formula de adaugare pentru tangenta sumei \(\gamma  = \pi  - \left ( \alpha  - \beta  \right )\), dar este cu siguranta mai usor sa ne amintim decat sa descoperim pe loc. 
+
+
+Fig 5
+Figura 5  Unghiul de vizualizare \(2\psi\) al corpului convex al setyului de radacini \(r_{1} , r_{2} , ........., r_{n}\) al lui \(P\left ( z \right )\) determina parametrul \(\psi\) pe care il gasim in rafinarea cantitativa a lui Wilf a Teoremei Gauss-Lucas. 
+
+Avand in vedere indiciul, evident vrem sa luam in considerare variabilele,  \(\alpha  = \tan^{-1}\left ( a \right )\), \(\beta = \tan ^{-1}\left ( b \right )\) si \(\gamma  = \tan ^{-1}\left ( c \right )\). Conditiile \(a> 0\), \(b> 0\), \(c> 0\), si \(a+b+c =\) abc acum ne arata ca \(\alpha > 0 \), \(\beta > 0 \), \(\gamma > 0\), si \(\alpha + \beta + \gamma  = \pi\). Inegalitatea tinta devine de asemenea \(\cos \alpha  + \cos \beta  + \cos \gamma  \leq \frac{3}{2}\), si acest lucru rezulta direct din Inegalitatea lui Jensen  in vederea concavitatii cosinusului pe \(\left [ 0 , \pi  \right ]\)  si a evaluarii \(\cos \left ( \frac{\pi }{3} \right ) = \frac{1}{2}\). 
+
+Problema 15 
+
+Teorema Gauss-Lucas
+Sa se arate ca pentru orice polinom complex \(P\left ( z \right ) = a_{0} + a_{1}z + ..... +a_{n}z^{n}\) radacinile derivatei \({P}'\left ( z \right )\) sunt cuprinse in corpul convex \(H\) al radacinilor lui \(P\left ( z \right )\). 
+
+Daca scriem 
+\begin{displaymath}
+  P\left ( z \right ) = a_{n}\left ( z - r_{1} \right )^{m_{1}}\left ( z - r_{2} \right )^{m_{2}}\cdots \left ( z - r_{n} \right )^{m_{k}},
+\end{displaymath}
+unde  \(r_{1} , r_{2}, ......, r_{k}\) sunt radacinile distincte ale lui \(P\left ( z \right )\), si \(m_{1} , m_{2}, ......, m_{k}\) sunt multiplicitatile corespunzatoare, apoi compararea lui \({P}'\left ( z \right )\) si \( P\left ( z \right )\) ne ofera formula familiara
+\begin{displaymath}
+  \frac{{P}'\left ( z \right ) }{P\left ( z \right )} = \frac{m_{1}}{z - r_{1}} + \frac{m_{2}}{z - r_{2}}+ .......+ \frac{m_{k}}{z - r_{n}} . 
+\end{displaymath}
+Acum daca \(z_{0}\) este o radacina a lui \({P}'\left ( z \right )\) care este de asemenea o radacina a lui \(P\left ( z \right )\), atunci \(z_{0}\) este automat in \(H\) , deci fara pierderea generalitatii, putem presupune ca \(z_{0}\)  este o radacina a lui  \({P}'\left ( z \right )\) care nu este o radacina a lui \(P\left ( z \right )\), caz in care gasim 
+\begin{displaymath}
+  0 = \frac{m_{1}}{z_{0} - r_{1}} + \frac{m_{2}}{z_{0} - r_{2}} +....+ \frac{m_{k}}{z_{0} - r_{k}} = \frac{m_{1}\left (\bar{z_{0}} - \bar{r_{1}}\right )}{\left | z_{0}  - r_{1}\right |^{2}} + \frac{m_{2}\left (\bar{z_{0}} - \bar{r_{2}}\right )}{\left | z_{0}  - r_{2}\right |^{2}} + ....+ \frac{m_{k}\left (\bar{z_{0}} - \bar{r_{k}}\right )}{\left | z_{0}  - r_{k}\right |^{2}}. 
+\end{displaymath}
+Daca luam 
+
+\begin{displaymath}
+  \omega _{k} =\frac{ m_{k}}{\left | z_{0}  - r_{k}\right |^{2}},
+\end{displaymath} atunci putem scrie aceasta identitate ca 
+\begin{displaymath}
+  z_{0} = \frac{\omega _{1}r_{1} +\omega _{2}r{_2}+....+ \omega _{k}r{_k} }{\omega _{1} + \omega _{2} + .... + \omega _{k}}, 
+\end{displaymath}
+care ne arata ca \(z_{0}\) este o combinatie convexa a radacinilor lui \(P\left ( z \right )\). 
+
+
+Problema 16 
+
+Inegalitatea lui Wilf 
+
+Aratati ca daca \(H\) este invelisul complex al radacinilor polinomului complex \(P = a_{0} + a_{1}z + ..... +a_{n}z^{n}\), atunci avem 
+\begin{displaymath}
+  \left | \frac{a_{n}}{P\left ( z \right )} \right |^{\frac{1}{n}}\leq \frac{1}n\cos{\psi }\left | \frac{{P}'\left ( z \right )}{P\left ( z \right )} \right |
+\end{displaymath}
+ pentru orice \(z\notin H\), (2.16.1)
+
+unde unghiul \(\psi\) este definit de figura Fig 5. Aceasta inegalitate ne ofera in acelasi timp si o noua dovada si o rafinare cantitativa  a Teoremei clasice Gauss- Lucas de la problema 15. 
+
+Scriem \(r_{1} , r_{2} ,.....,r_{n}\) pentru radacinile lui \(P\) repetate in functie de multiplicitatea lor si pentru un \(z\) care se afla in afara corpului convex \(H\) scriem \(z - r_{j}\) in forma polara \(z - r_{j} = \rho _{j}e^{i\theta j}\). Atunci avem 
+\begin{displaymath}
+  \frac{1}{z - r_{j}} = \rho _{j}^{-1}e^{-\theta ji} , 1 \leq  j \leq  n,
+\end{displaymath}
+si raspandirea in argumente \(\theta _{j}, 1 \leq j\leq n\) nu este mai mare decat \(2\psi\). Astfel, din Inegalitatea complexa AM-GM una are limita 
+\begin{displaymath}
+  \left ( \cos\psi  \right )\left | \frac{1}{z - r_{1}} \frac{1}{z - r_{2}}\cdots \frac{1}{z - r_{n}} \right|^{\frac{1}{n}} \leq  \frac{1}{n} \left | \sum_{j = 1}^{n}\frac{1}{z - r_{j}} \right |
+\end{displaymath}
+si, in termeni de \(P\) si \({P}'\), asta ne spune simplu ca 
+\begin{displaymath}
+   \left | \frac{a_{n}}{P\left ( z \right )} \right |^{\frac{1}{n}}\leq \frac{1}{n\cos\psi }\left | \frac{{P}'\left ( z \right )}{P\left ( z \right )} \right |,
+\end{displaymath}
+ pentru orice \(z \notin H\), (2.16.1) ceea ce si speram sa demonstram . 
+
+Problema 17
+
+O limita inferioara a polinomului 
+
+Avand in vedere faptul ca zerourile polinomului \(P\left ( z \right ) = a_{n}z^{n} =.....+a_{1}z + a_{0}\) sunt continute in discul unitar \(U= \left \{ z: \left | z \right |\leq 1 \right \}\), arata ca unul are
+\begin{displaymath}
+    n\left | a_{n} \right |^{\frac{1}{n}}\left | P\left ( z \right ) \right |^{\frac{\left ( n-1 \right )}{n}}\sqrt{1 - \left | z \right |^{-2}}\leq \left | {P}'\left ( z \right ) \right |
+\end{displaymath}
+pentru orice \(z\notin U\). (2.17.1)
+
+Daca \(2\psi\) este unghiul de vizualizare determinat de \(U\) cand este privit din \(z \notin U\), atunci avem \(1 = \left | z \right |\sin\psi\), deci Teorema lui Pitagora ne spune ca \(\cos\psi = \left ( 1 - \left | z \right |^{-2} \right )^{\frac{1}{2}}\). Inegalitatea tinta (2.17.1) urmeaza apoi direct din limita lui Wilf. (2.16.1)
+
+Problema 18 
+
+O Teorema complexa a produsului mediu 
+
+Aratati ca daca \(0 < r < 1\) si daca numerele complexe \(z_{1}, z_{2},...,z_{n}\) au in discul \(D = \left \{ z: \left | z \right | \leq r\right \}\), atunci exista \(z_{0} \in D\) astfel incat 
+\begin{displaymath}
+    \prod_{j = 1}^{n}\left ( 1 + z_{j} \right ) = \left ( 1 + z_{0} \right )^{n}. (2.18.1)
+\end{displaymath}
+
+Discul \(D_{0} = \left \{ z : \left | 1 - z \right |\leq 1 \right \}\) scris in coordonate polare este 
+\begin{displaymath}
+    \left \{ re^{i\theta } : 0 \leq r\leq 2\cos\theta , -\frac{\pi }{2}< \theta  < \frac{\pi }{2} \right \},
+\end{displaymath}
+deci pentru fiecare \(j\) putem scrie \(1 + z_{j}\) ca \(r_{j}e^{i\theta _{j}}\) unde \(-\frac{\pi }{2}< \theta  < \frac{\pi }{2}\) si \( r_{j}\leq 2\cos\theta _{j}\). Rezulta imediat ca \(z_{0} = -1 + \left ( r_{1} r_{2}\cdots r_{n}\right )^{\frac{1}{n}}exp\left ( i\frac{\left ( \theta _{1} + \theta _{2} +....+ \theta _{n} \right )}{n} \right )\) rezolva ecuatia lui Nievergelt (2.18.1), si pentru a demonstra ca \(z_{0}\in D \)este suficient sa aratam ca \(1 + z_{0}\in D_{0}\), echivalent, trebuie sa aratam ca 
+\begin{displaymath}
+    \left ( r_{1} r_{2} \cdots r_{n}\right )^{\frac{1}{n}}\leq 2\cos\left ( \frac{\theta _{1} + \theta _{2}+.....+\theta _{n}}{n} \right ) (2.18.2). 
+\end{displaymath}
+Cum \(\left ( r_{1} r_{2} \cdots r_{n}\right )^{\frac{1}{n}}\) este marginita de \(\left ( \left (2\cos\theta _{1}  \right )\left ( 2\cos\theta _{2} \right )\cdots \left (2\cos\theta _{n}  \right ) \right )^{\frac{1}{n}}\), este deci suficient sa aratam ca 
+\begin{displaymath}
+    \left ( \left (\cos\theta _{1}  \right )\left ( \cos\theta _{2} \right )\cdots \left (\cos\theta _{n}  \right ) \right )^{\frac{1}{n}}\leq \cos\left ( \frac{\theta _{1} + \theta _{2}+.....+\theta _{n}}{n} \right )
+\end{displaymath}
+si aceasta rezulta din concavitatea lui \(f\left ( x \right ) = \log \left ( \cos x \right ) pe -\frac{\pi }{2}< \theta < \pi\) impreuna cu inegalitatea lui Jensen. 
+
+
+Problema 19 
+
+Inegalitatea sumei ciclice a lui Shapiro
+
+Aratati ca daca pentru numere pozitive
+ \(a_{1} , a_{2} , a_{3}\)  si \(  a_{4}\), avem limita
+ \begin{displaymath}
+     2\leq \frac{a_{1}}{a_{2} + a_{3}} + \frac{a_{2}}{a_{3} + a_{4}} + \frac{a_{3}}{a_{4} + a_{1}} + \frac{a_{4}}{a_{1} + a_{2}} (2.19.1)
+ \end{displaymath}
+De altfel, recenzia lui Bushell (1994) ne ofera o multime de informati despre inegalitatile formei.
+\begin{displaymath}
+    \frac{n}{2} \leq \frac{x_{1}}{x_{2} + x_{3}} + \frac{x_{2}}{x_{3} + x_{4}} + ....+ \frac{x_{n - 1}}{x_{n} + x_{1}} + \frac{x_{n}}{x_{1} + x_{2}}
+\end{displaymath}
+Se stie ca aceasta limita esueaza pentru  \(n\geq 25\), totusi multimea precisa de n pentru care este valabil, nu a fost inca determinata. 
+
+O solutie frumoasa folosind inegalitatea lui Jensen pentru \(f\left ( x \right ) = \frac{1}{x}\) a fost data de Robert Israel in grupui de stiri sci.math in 1999. Daca luam multimea \(S = a_{1} + a_{2} + a_{3} + a_{4}\) si \(C\) reprezinta suma limitei la dreapta (2.19.1), atunci Inegalitatea lui Jensen cu \(p_{j} = \frac{a_{j}}{S}\) si \(x_{1} = a_{2} + a_{3}, x_{2} = a_{3} + a_{4} , x_{3} = a_{4} + a_{1} si x_{4} = a_{1} + a_{2}\) ne ofera \(\frac{C}{S} \geq \left \{ \frac{D}{S} \right \}^{-1}\) sau \(C \geq \frac{S^{2}}{D}\), unde avem ,multimea 
+\begin{displaymath}
+    D = a_{1}\left ( a_{2} + a_{3} \right ) + a_{2}\left ( a_{3} + a_{4} \right ) + a_{3}\left ( a_{4} + a_{1} \right ) + a_{4}\left ( a_{1} + a_{2} \right ).
+\end{displaymath}
+Acum, este simplu sa verificam ca 
+\begin{displaymath}
+    S^{2} - 2D = \left ( a_{1} - a_{3} \right )^{2} + \left ( a_{2} - a_{4} \right )^{2}> 0, 
+\end{displaymath}
+Si acest lucru este suficient pentru a completa solutia. 
+
+
+Problema 20 
+	
+Lema celor trei coarde 
+
+Aratati ca daca \(f : \left [ a,b \right ]  \to \mathbb{R}\) este convexa si daca \(a <  x < b\), atunci avem
+\begin{displaymath}
+    \frac{f\left ( x \right ) - f\left ( a \right )}{x - a} \leq \frac{f\left ( b \right ) - f\left ( a \right )}{b - a} \leq  \frac{f\left ( b \right ) - f\left ( x \right )}{b - x}   ( 2.20.1)
+\end{displaymath}
+Asa cum ne sugereaza urmatoarele doua exercitii, aceasta limita este cheia pentru cateva dintre cele mai de baza proprietati de regularitate ale functiilor convexe. 
+
+Prin interpolare si convexitate avem
+\begin{displaymath}
+    x = \frac{b - x}{b - a}a + \frac{x - a}{b - a }b \Rightarrow f\left ( x \right ) \leq \frac{b - x}{b - a}f\left ( a \right ) + \frac{x - a}{b - a }f\left ( b \right )
+\end{displaymath}
+ deci, dupa scaderea lui \(f\left ( a \right )\), avem
+ \begin{displaymath}
+     f\left ( x \right ) - f\left ( a \right )\leq \frac{x - a}{b - a }\left \{ f\left ( b \right ) - f\left ( a \right ) \right \}. (2.20.2)
+ \end{displaymath}
+Aceasta ne ga a doua inegalitate a ( 2.20.1) iar cea de a doua este demonstrata in acelasi mod. 
+
+
+Problema 21
+
+Aproape diferentiabilitatea functiilor convexe 
+
+Folosind Lema celor trei coarde pentru a arata ca pentru functia convexa \(f : \left [ a,b \right ]  \to \mathbb{R}\) si \(a< x< b\) exista limite finite
+\begin{displaymath}
+    {f}'_{+} + \left ( x \right ) = \lim_{h  \to 0}\frac{f\left ( x + h \right ) - f\left ( x \right )}{h} 
+\end{displaymath}
+si 
+\begin{displaymath}
+    {f}'_{-} + \left ( x \right ) = \lim_{h  \to 0}\frac{f\left ( x - h \right ) - f\left ( x \right )}{h}.
+\end{displaymath}
+Fie 
+\begin{displaymath}
+    g\left ( h \right ) = \frac{\left \{ f\left ( x + h \right ) - f\left ( x \right ) \right \}}{h}
+\end{displaymath}
+ si verificam de la Lema celor trei coarde ca pentru \(0 < h_{1} < h_{2}\) avem \(g\left ( h_{1} \right )\leq g\left ( h_{2} \right )\). Mai departe luam \(y\) cu \(a <  y < x \) si folosim Lema celor trei coarde pentru a verifica ca
+ \begin{displaymath}
+    -\infty < \frac{\left \{ f\left ( x \right ) - f\left ( y \right ) \right \}}{x - y}\geq g\left ( h \right )
+ \end{displaymath}
+ pentru orice \(h> 0\). Monotonitatea si marginirea \(g\left ( h \right )\) garanteaza faptul ca \(g\left ( h \right )\) are limita finita in \(h \to 0\). Acest lucru ne ofera prima jumatae a problemei, iar cea de a doua aproape identic. 
+
+Problema 22
+
+Limitele de raport si minorantii liniari 
+
+Pentru functiile convexe \(f : \left [ a,b \right ]  \to \mathbb{R}\) si \(a< x<y< b\), aratati ca exista 
+\begin{displaymath}
+   {f}'_{-}\left ( x \right ) \leq  {f}'_{+}\left ( x \right ) \leq  \frac{f\left ( y \right ) - f\left ( x \right )}{y - x} \leq  {f}'_{-}\left ( y \right ) \leq  {f}'_{+}\left ( y \right )(2.22.1)
+\end{displaymath}
+
+In particular, observam ca pentru orice
+\begin{displaymath}
+   \theta \in \left [ {f}'_{-}\left ( x \right ), {f}'_{+}\left ( x \right ) \right ],
+\end{displaymath}
+ avem limita \(f\left ( y \right ) \geq  f\left ( x \right ) + \left ( y - x \right )\theta\) pentru orice \(y\in \left [ a,b \right ]\). (2.22.2)
+Limita inferioara liniara (2.22.2) este mai eficienta decat sugereaza simplitatea sa si are cateva consecinte notabile. 
+Aceasta este doar o lucrare mai la indemana a Teoremei celor trei coarde care ne da pentru \(0< s\) si \(0< t\) cu \(y - s \in I\) si \(y + t  \in I\) faptul ca 
+\begin{displaymath}
+   \frac{f\left ( y \right ) - f\left ( y - s \right )}{s}\leq \frac{f\left ( y + t \right ) - f\left ( y \right )}{t}.
+\end{displaymath}
+ De la exercitiul 21 avem acele limite finite ca \(s,t \to 0\), si aceste limite sunt \({f}'_{-}\left ( y \right )\) si respectiv \({f}'_{+}\left ( y \right )\). Acest lucru ne ofera faptul ca \({f}'_{-}\left ( y \right )\leq {f}'_{+}\left ( y \right )\) si celelalte limite nu sunt mai grele. Identic, limita \({f}'_{-}\left ( y \right )\leq {f}'_{+}\left ( y \right )\) poate fi privita ca o versiune infima a Lemei celor trei coarde. 
+Pentru \(a < x \leq s\leq t\leq y<  b\) si \( M = max\left \{ \left | {f}'_{+} \left ( x \right )\right |,\left | {f}'_{-} \left ( y \right )\right |  \right \}\) limita (2.22.1) ne ofera \(\left | f\left ( t \right ) - f\left ( s \right ) \right |\leq M\left | t - s \right |\), care este mai mult decat aveam nevoie pentru a spune ca f este conutinua. 
 
 
 

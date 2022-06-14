@@ -39,6 +39,7 @@
 
 \pagenumbering{roman}
 \tableofcontents
+\listoffigures
 
 \newpage
 \pagenumbering{arabic}
@@ -132,10 +133,11 @@ Astfel inegalitatea \ref{eq:1.1} este echivalent\u{a} cu:
 \end{displaymath}
 pentru orice \(x\in \left [  u, v\right ]\), \c{s}i \(u, v \in I, u < v\).
 
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{fig1.1.png}
-  \\ Fig 1.1 Func\c{t}ii convexe: graficul este sub coarda
-\end{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig1.1.png}
+	\caption{Figura 1.1. Func\c{t}ii convexe: graficul este sub coarda}
+\end{figure}
 
 Aceast\u{a} remarc\u{a} arat\u{a} faptul ca func\c{t}iile convexe sunt majorate de func\c{t}iile afine pe orice subinterval compact.
 
@@ -438,10 +440,12 @@ Presupunem c\u{a} \(f: \left [ 0,\infty  \right ) \rightarrow \left [ 0,\infty  
 \end{displaymath}
 pentru orice \(u,v\geq 0\) cu egalitate dac\u{a} \c{s}i numai dac\u{a} \( v = f\left ( u \right )\).
 \end{theorem}
-\begin{center}
-  \includegraphics[width=1.0\textwidth]{fig1.2.png}
-  \\ Fig 1.2 Aria  de unire a celor doua triunghiuri curbilinii dep\u{a}\c{s}e\c{s}te aria dreptunghiului cu laturile u \c{s}i v
-\end{center}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{fig1.2.png}
+	\caption{Figura 1.2. Aria  de unire a celor doua triunghiuri curbilinii dep\u{a}\c{s}e\c{s}te aria dreptunghiului cu laturile u \c{s}i v}
+\end{figure}
 
 \begin{proof}
 Folosind defini\c{t}ia derivatei se poate demonstra cu usurin\c{t}\u{a} c\u{a} func\c{t}ia
@@ -627,10 +631,11 @@ pentru orice \(< x< b\) \^{i}n I, vezi figura 1.3. \^{I}n mod evient acest\u{a} 
 
 Foarte aproape de aceast\u{a} observa\c{t}ie este caracterizarea convexit\u{a}\c{t}ii, a lui Galvani.
 
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{fig1.3.png}
-    \\ Fig 1.3 panta PQ \(\leq\) panta PR \(\leq \)QR
-\end{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig1.3.png}
+	\caption{Figura 1.3. panta PQ \(\leq\) panta PR \(\leq \)QR}
+\end{figure}
 
 
 \begin{remark}
@@ -874,9 +879,12 @@ Multe dintre func\c{t}iile uzuale ale trigonometriei \c{s}i geometriei au propri
 \begin{displaymath}
   A = \frac{1}{2}ab \sin\gamma = \frac{1}{2}ac \sin \beta = \frac{1}{2}bc \sin \alpha.
 \end{displaymath}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{fig2.1.png}
-\end{center}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig2.1.png}
+	\caption{}
+\end{figure}
 
 Fig. 1  Toate func\c{t}iile trigonometrice sunt convexe (sau concave) dac\u{a}
 argumentele lor sunt limitate la un domeniu adecvat \c{s}i, \^{i}n consecin\c{t}\u{a},
@@ -990,10 +998,11 @@ pentru orice $x, y, z$ astfel \^{i}nc\^{a}t \(\exp\left ( x + y + z \right )\geq
 
 Pentru a vedea dac\u{a} putem aplica inegalitatea lui Jensen, trebuie s\u{a} evalu\u{a}m convexitatea lui f. \^{I}ntr-adevar, avem
 
-\begin{center}
-  \includegraphics[width=1.0\textwidth]{fig_pb3.png}
-  \\ Fig 1.3 Utilizarea eficient\u{a} a inegalit\u{a}\c{t}ii lui Jensen necesit\u{a} g\u{a}sirea unei func\c{t}ii care este convex\u{a} pe \(\left [ 0, \infty  \right )\)  \c{s}i care nu este niciodat\u{a} mai mare dec\^{a}t f.
-\end{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig_pb3.png}
+	\caption{Figura 1.3. Utilizarea eficient\u{a} a inegalit\u{a}\c{t}ii lui Jensen necesit\u{a} g\u{a}sirea unei func\c{t}ii care este convex\u{a} pe \(\left [ 0, \infty  \right )\)  \c{s}i care nu este niciodat\u{a} mai mare dec\^{a}t f.}
+\end{figure}
 
 \begin{displaymath}
   {f}'\left ( x \right ) = -\frac{e^{x}}{2 \left ( 1 + e^{x} \right )^{\frac{3}{2}}}
@@ -1127,10 +1136,13 @@ f\biggl(\frac{1}{3}(x+y+z)\biggr)=f\biggl(\frac{1}{3}\biggr)<\frac{1}{3}f(x)+\fr
 
 Figura 4 sugereaz\u{a} c\u{a}  dintre toate poligoanele convexe cu n laturi care pot fi \^{i}nscrise \^{i}ntr-un cerc, numai n-gonul regulat are aria maxim\u{a}. Poate inegalitatea lui Jensen s\u{a} fie folosit\u{a} pentru a confirma aceast\u{a} afirma\c{t}ie?
 
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{fig_pb6.png}
-  \\ Fig 4 Dac\u{a} un poligon convex cu n laturi este \^{i}nscris \^{i}n cercul unitar, imagina\c{t}ia noastr\u{a} vizual\u{a} sugereaz\u{a} c\u{a} aria este maximizat\u{a} doar de un poligon regulat. Aceast\u{a} presupunere poate fi dovedit\u{a} prin metode care le-ar fi fost familiare lui Euclid, dar o demonstra\c{t}ie mai modern\u{a} prin convexitate este mai u\c{s}oar\u{a}.
-\end{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig_pb6.png}
+	\caption{Figura 4. Dac\u{a} un poligon convex cu n laturi este \^{i}nscris \^{i}n cercul unitar, imagina\c{t}ia noastr\u{a} vizual\u{a} sugereaz\u{a} c\u{a} aria este maximizat\u{a} doar de un poligon regulat. Aceast\u{a} presupunere poate fi dovedit\u{a} prin metode care le-ar fi fost familiare lui Euclid, dar o demonstra\c{t}ie mai modern\u{a} prin convexitate este mai u\c{s}oar\u{a}.}
+\end{figure}
+
+
 \end{problem}
 \begin{proof}
 Din figura geometric\u{a} precizat\u{a}, dac\u{a} presupunem f\u{a}r\u{a} a restrange generalitatea c\u{a} raza cercului este 1, aria A a unui poligon \^{i}nscris cu n laturi poate fi scris\u{a} ca
@@ -1428,10 +1440,12 @@ Ar\u{a}ta\c{t}i c\u{a} dac\u{a} \(H\) este acoperirea convex\u{a} a r\u{a}d\u{a}
   \left | \frac{a_{n}}{P\left ( z \right )} \right |^{\frac{1}{n}}\leq \frac{1}n\cos{\psi }\left | \frac{{P}'\left ( z \right )}{P\left ( z \right )} \right | , \text{pentru orice } z\notin H, \label{eq:2.16} \tag{2.16}
 \end{displaymath}
 unde unghiul \(\psi\) este definit de figura 5. Aceast\u{a} inegalitate ne ofer\u{a} \^{i}n acela\c{s}i timp \c{s}i o nou\u{a} dovad\u{a} \c{s}i o rafinare cantitativ\u{a}  a Teoremei clasice Gauss- Lucas de la problema anterioar\u{a}.
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{fig_pb14.png}
-  \\ Figura 5  Unghiul de vizualizare \(2\psi\) al acoperirii convexe a mul\c{t}imii r\u{a}d\u{a}cinilor \(r_{1} , r_{2} , \cdots, r_{n}\)  lui \(P\left ( z \right )\), determin\u{a} parametrul \(\psi\) pe care \^{i}l g\u{a}sim \^{i}n rafinarea cantitativ\u{a} a lui Wilf a Teoremei Gauss-Lucas.
-\end{center}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig_pb14.png}
+	\caption{Figura 5. Unghiul de vizualizare \(2\psi\) al acoperirii convexe a mul\c{t}imii r\u{a}d\u{a}cinilor \(r_{1} , r_{2} , \cdots, r_{n}\)  lui \(P\left ( z \right )\), determin\u{a} parametrul \(\psi\) pe care \^{i}l g\u{a}sim \^{i}n rafinarea cantitativ\u{a} a lui Wilf a Teoremei Gauss-Lucas.}
+\end{figure}
 
 \end{problem}
 \begin{proof}

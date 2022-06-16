@@ -829,7 +829,7 @@ Dac\u{a} f este convex\u{a}, atunci, \^{i}n mod clar \(\overline{ \mathcal{D}}^{
 
 Acum, presupunem c\u{a} \(\overline{ \mathcal{D}}^{2}f > 0\) pe I. Dac\u{a} f nu este convex\u{a}, atunci, putem g\u{a}si un punct \(x_{0}\), astfel \^{i}nc\^{a}t \(\overline{ \mathcal{D}}^{2}f \left ( x_{0} \right )\leq 0\), ceea ce ar fi o contradic\c{t}ie. 
 
-De fapt, \^{i}n acest caz, exist\u{a} un subinterval \(I_{0} = \left [ a_{0}, b_{0} \right ]\) astfel \^{i}nc\^{a}t \(f\left ( \frac{a_{0} + b_{0}}{2} \right )> \frac{f\left ( a_{0} \right ) + f\left ( b_{0} \right )}{2}.\) Dac\u{a} ne uit\u{a}m cu aten\c{t}ie, observ\u{a}m faptul c\u{a} unul dintre intervale \(\left [ a_{0}, \frac{a_{0}+b_{0}}{2} \right ], \left [ \frac{\left ( 3a_{0}+b_{0} \right )}{4},\frac{\left ( a_{0}+3b_{0} \right )}{4} \right ],\left [\frac{a_{0}+b_{0}}{2}, b_{0} \right ]\) pot fi alese pentru a \^{i}nlocui intervalul \(I_{0}\) cu un interval mai mic \(I_{1}= \left [ a_{1}, b_{1} \right ], cu  b_{1} -  a_{1}= \frac{b_{0}+ a_{0}}{2}\) \c{s}i \(f\left ( \frac{a_{1}+b_{1}}{2} \right ) > \frac{f\left ( a_{1} \right ) + f\left ( b_{1} \right )}{2}.\) 
+De fapt, \^{i}n acest caz, exist\u{a} un subinterval \(I_{0} = \left [ a_{0}, b_{0} \right ]\) astfel \^{i}nc\^{a}t \(f\left ( \frac{a_{0} + b_{0}}{2} \right )> \frac{f\left ( a_{0} \right ) + f\left ( b_{0} \right )}{2}.\) Dac\u{a} ne uit\u{a}m cu aten\c{t}ie, observ\u{a}m faptul c\u{a} unul dintre intervale \newline \(\left [ a_{0}, \frac{a_{0}+b_{0}}{2} \right ], \left [ \frac{\left ( 3a_{0}+b_{0} \right )}{4},\frac{\left ( a_{0}+3b_{0} \right )}{4} \right ],\left [\frac{a_{0}+b_{0}}{2}, b_{0} \right ]\) pot fi alese pentru a \^{i}nlocui intervalul \(I_{0}\) cu un interval mai mic \(I_{1}= \left [ a_{1}, b_{1} \right ], cu  b_{1} -  a_{1}= \frac{b_{0}+ a_{0}}{2}\) \c{s}i \(f\left ( \frac{a_{1}+b_{1}}{2} \right ) > \frac{f\left ( a_{1} \right ) + f\left ( b_{1} \right )}{2}.\) 
 
 Cu ajutorul induc\c{t}iei, vom  putea aplica principiul intervalelor incluse \c{s}i ob\c{t}inem punctul \(x_{0}.\)
 
@@ -879,6 +879,7 @@ Multe dintre func\c{t}iile uzuale ale trigonometriei \c{s}i geometriei au propri
 \begin{displaymath}
   A = \frac{1}{2}ab \sin\gamma = \frac{1}{2}ac \sin \beta = \frac{1}{2}bc \sin \alpha.
 \end{displaymath}
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{fig2.1.png}
@@ -887,8 +888,7 @@ argumentele lor sunt limitate la un domeniu adecvat \c{s}i, ca o consecin\c{t}\u
 exist\u{a} multe consecin\c{t}e geometrice interesante ale inegalit\u{a}\c{t}ii lui Jensen.}
 \end{figure}
 
-
-
+\newpage
 
 Acum, dac\u{a} facem media acestor reprezent\u{a}ri ale ariei, vom ob\c{t}ine c\u{a}:
 \begin{displaymath}
@@ -952,11 +952,14 @@ h\left ( x \right ) = f\left ( x \right ) - \frac{1}{2}mx^{2}
 \end{displaymath}
 sunt dou\u{a} func\c{t}ii convexe.
 Aceast\u{a} observa\c{t}ie ne \^{i}ndeamn\u{a} s\u{a} ne \^{i}ntreb\u{a}m ce spune inegalitatea lui Jensen despre aceste func\c{t}ii.\\
+
 Pentru \(g\left ( x \right )\), inegalitatea lui Jensen ne d\u{a} m\u{a}rginirea
 \begin{displaymath}
   \frac{1}{2}M\bar{x}^{2} - f\left ( \bar{x} \right )\leq \sum_{k = 1}^{n}p_{k}\left \{ \frac{1}{2}Mx_{k}^{2} - f\left ( x_{k} \right )\right \}
 \end{displaymath}
+
 unde am notat \(\bar{x} = p_{1}x_{1}+ p_{2}x_{2}+ \cdots + p_{n}x_{n}\) \c{s}i aceast\u{a} inegalitate este u\c{s}or de rearanjat  pentru a ob\c{t}ine
+
 \begin{displaymath}
   \left \{ \sum_{k = 1}^{n} p_{k}f\left ( x_{k} \right )\right \} - f\left (\bar{x}  \right )\leq \frac{1}{2}M\left \{ \left ( \sum_{k=1}^{n} p_{k}x_{k}^{2}\right ) - \bar{x}^{2} \right \} = \frac{1}{2}M\sum_{k = 1}^{n}p_{k}\left ( x_{k} - \bar{x} \right )^{2}.
 \end{displaymath}
@@ -971,6 +974,7 @@ Un calcul analog pentru  \(h\left ( x \right )\) ne ofer\u{a} o limit\u{a} infer
 \end{displaymath}
 care se poate verifica usor prin calcul direct folosind defini\c{t}ia lui \(\bar{x}\).
 \end{proof}
+
 Convexitatea \c{s}i inegalitatea lui Jensen ofer\u{a} solu\c{t}ii simple pentru multe probleme.
   Urm\u{a}toarea problem\u{a} vine din celebra sec\c{t}iune cu probleme a ”American Mathematical Monthly” \c{s}i ofer\u{a} un exemplu clasic al acestei afirma\c{t}ii.
   La \^{i}nceput problema pare destul de u\c{s}oar\u{a}, dar, cur\^{a}nd, \^{i}ntampin\u{a}m dificult\u{a}\c{t}i.
@@ -1018,10 +1022,13 @@ Dificultatea cu care ne confrunt\u{a}m aici este c\u{a} ipoteza problemei  ne sp
 Exist\u{a} multe idei pe care le-am putea \^{i}ncerca, dar inainte de a merge prea departe,  ar trebui s\u{a} lu\u{a}m \^{i}n considerare graficul lui \(f\left ( x \right )\). Ceea ce  g\u{a}sim  din graficul  reprezentat \^{i}n figura 3 este c\u{a} \(f\left ( x \right ) \) arat\u{a} convex\u{a} pe interval \(\left [ 0, 10 \right ]  \), \^{i}n ciuda faptului c\u{a} calculul care arat\u{a} c\u{a} \(f\left ( x \right ) \) este concav\u{a} pe \(\left [ 0, \log _{} 2\right ] \) \c{s}i convex\u{a} pe \(\left [ \log _{} 2 , \infty \right ) \). Astfel, graficul nostru ofer\u{a} o noua speran\c{t}\u{a}; poate c\u{a} o mica modificare a lui \(f\) ar putea conduce la convexitatea de care noi avem nevoie pentru a rezolva problema.
 
 C\^{a}nd ne gandim la modul \^{i}n care am sperat s\u{a} folosim \(f\) cu inegalitatea lui Jensen, \^{i}n cur\^{a}nd ne d\u{a}m seama c\u{a} ne putem u\c{s}ura pu\c{t}in sarcina. S\u{a} presupunem, de exemplu, c\u{a} putem gasi o func\c{t}ie convex\u{a} \(g : \left [ 0 , \infty  \right ) \to \mathbb{R}\) astfel \^{i}nc\^{a}t s\u{a} avem  condi\c{t}iile:
+
 \begin{displaymath}
   g\left ( x \right ) \leq  f\left ( x  \right ),~~ \text{pentru orice}~~ x \in  \left [ 0 , \infty  \right )    \label{eq:2.9} \tag{2.9}
 \end{displaymath}
+
 \c{s}i condi\c{t}ia complementar\u{a}
+
 \begin{displaymath}
   g \left ( x \right ) = f \left ( x \right ), ~~ \text{pentru orice }~~  x\geq 3 \log 2. \label{eq:2.10} \tag{2.10}
 \end{displaymath}
@@ -1048,12 +1055,15 @@ Trei observa\c{t}ii simple sunt acum suficiente pentru a demonstra c\u{a} \(g\le
 Cea de a doua observa\c{t}ie, pentru \(\log 2 \leq  x \leq  3\log 2\) avem  \(g( x )\leq f\left ( x \right ) \) pentru c\u{a} aici  \(g\left ( x \right )\) are valoarea unei drepte tangente la \((f\left ( x \right )\) \c{s}i din convexitatea lui f pe \(\log 2 \leq  3 \leq 3\log 2\) dreapta tangent\u{a} este sub f.
 
 Cea de a treia observa\c{t}ie; \^{i}n regiunea critic\u{a} \(0\leq  x \leq \log2\), avem \(g\left ( x \right ) \leq  f\left ( x \right )\) deoarece,
+
 \begin{enumerate}
   \item f este concav\u{a},
   \item g este liniar\u{a},
   \item f este mai mare dec\^{a}t \(g\) la capetele intervalului \(\left [ 0 , \log 2 \right ]\).
 \end{enumerate}
+
 Mai precis, avem
+
 \begin{displaymath}
   g\left ( 0 \right ) = 0.641\cdots \leq f\left ( 0 \right ) = \frac{1}{\sqrt{2}} = 0.707\cdots,
 \end{displaymath}
@@ -1171,13 +1181,17 @@ unde
 \end{displaymath}
 De asemenea explica\c{t}i de ce aceaste inegalit\u{a}\c{t}i  pot fi vazute ca un rafinament al inegalit\u{a}\c{t}ii MA-MG.
 \end{problem}
+
 \begin{proof}
 Evident, inegalitatea din dreapta rezult\u{a} imediat dac\u{a} aplic\u{a}m inegalitatea MA-MG pentru
+
 \begin{displaymath}
   a_{k} = 1 + r_{k},~ k =1,2,\cdots, n.
 \end{displaymath}
+
 Pentru inegalitatea din partea st\^{a}ng\u{a} aplic\u{a}m inegalitatea lui Jensen aplicat\u{a} func\c{t}iei convexe
 \[x \mapsto \ln\left ( 1 + e^{x} \right ).\]
+
 Evident, dac\u{a} not\u{a}m cu $f$ aceast\u{a} func\c{t}ie, observ\u{a}m c\u{a}
 \[
 f''(x)=\frac{e^x}{(1+e^x)^2}>0,
@@ -1243,6 +1257,7 @@ pentru orice
 Vom aplica tehnica pe care Cauchy a folosit-o pentru a demonstra inegalitatea mediilor. Astfel, pentru \^{i}nceput presupunem c\u{a} \(n = 2^{k}, k=1,2,….,\) \c{s}i demonstr\u{a}m \ref{eq:2.15} \^{i}n acest caz.
 
 \^{I}ntr-adevar, dac\u{a} lu\u{a}m \^{i}n \ref{eq:2.14} $x=(x_1+x_2)/2$ si $y=(x_3+x_4)/2$ vom ob\c{t}ine c\u{a}
+
 \begin{equation} \nonumber
 \begin{split}
    f\left ( \frac{x_1 + x_2+x_3+x_4}{4} \right ) &    \leq \frac{f\left ( \frac{x_1 + x_2}{2} \right) + f\left(\frac{x_3 + x_4}{2} \right )}{2} \\ &   \leq \frac{f\left (x_1) + f\left (x_2 \right )+f\left (x_3 \right )+f\left (x_4 \right ) \right)}{4} \\ &   ~~ \text{pentru orice } ~~ x_1, \cdots, x_4 \in \left [ a, b \right ]
@@ -1250,13 +1265,17 @@ Vom aplica tehnica pe care Cauchy a folosit-o pentru a demonstra inegalitatea me
 \end{equation}
 
 Repet\^{a}nd procedeul ob\c{t}inem \ref{eq:2.15} pentru orice $n=2^k,~k\geq 1.$\\
+
  Pentru a demonstra acum \^{i}n cazul \^{i}n care $n$ nu e de forma anterioar\u{a}, alegem  \(k\) astfel \^{i}nc\^{a}t \(n< 2^{k}\) \c{s}i aplic\u{a}m rezultatul pentru \(2^{k}\) \c{s}irului de valori \(y_{j} , 1\leq j\leq 2^{k}\) lu\^{a}nd \(y_{j} = x_{j}\) pentru \(1\leq j\leq n \) si \(y_{j} = \frac{\left ( x_{1} + x_{2} + ....+ x_{n} \right )}{n}=\overline{x}\) pentru \(n< j\leq 2^{k}\), astfel vom avea
+ 
  \begin{equation} \nonumber
      \begin{split}
          f\left ( \frac{x_1 + \cdots+x_n}{2^k}+\frac{x}{2^k}+\cdots+\frac{x}{2^k} \right ) &  =f\left( \frac{n \overline{x}}{2^k}+\frac{(2^k-n) \overline{x}}{2^k}\right) \\ &  =f(\overline{x}) \\ & \leq \frac{ f(x_1)}{2^k}+\cdots+\frac{ f(x_n)}{2^k}+\frac{(2^k-n)}{2^k}f(\overline{x}) \\ & =\frac{ f(x_1)}{2^k}+\cdots+\frac{ f(x_n)}{2^k}+ (1-\frac{n}{2^k})f(\overline{x})
      \end{split}
  \end{equation}
+ 
 care va implica
+ 
  \[
  f(\overline{x})=  f\left ( \frac{x_1 + \cdots+x_n}{n} \right )\leq f\left ( \frac{x_1}{n} \right )+\cdots+f\left ( \frac{x_n}{n} \right ),
  \]
@@ -1367,13 +1386,17 @@ Este cunoscut faptul c\u{a} dac\u{a} \({f}'' \geq 0\) pentru orice \(x\in \left 
 \end{problem}
 \begin{proof}
 Polinomul \(Q\left ( x \right )\) poate fi scris astfel:
+
 \begin{displaymath}
   \frac{\left ( x - x_{2} \right )\left ( x - \mu  \right )}{\left ( x_{1}  - x_{2}\right )\left ( x_{1} - \mu  \right )} f\left ( x_{1} \right ) + \frac{\left ( x - x_{1} \right )\left ( x - \mu  \right )}{\left ( x_{2}  - x_{1}\right )\left ( x_{2} - \mu  \right )}  f\left ( x_{2} \right ) +  \frac{\left ( x - x_{1} \right )\left ( x - x_{2}  \right )}{\left ( \mu   - x_{1}\right )\left (  \mu - x_{2} \right )}f\left ( \mu \right ).
 \end{displaymath}
+
 Dup\u{a} ce aplic\u{a}m Teorema lui Rolle de doua ori observ\u{a}m faptul c\u{a}  \({Q}'\left ( x \right ) - {f}'\left ( x \right )\) are un zero \^{i}n \(\left ( x_{1} , \mu \right )\) \c{s}i un alt zero \^{i}n \(\left ( \mu  , x_{2} \right )\), deci o a treia aplicare a Teoremei lui Rolle ne arat\u{a} c\u{a} exist\u{a} un \(x^{*}\) \^{i}ntre aceste zerouri pentru care avem \(0 = {Q}''\left ( x \right ) - {f}''\left ( x^{*} \right )\). Prin urmare o s\u{a} avem \({Q}''\left ( x^{*}  \right ) = {f}''\left ( x^{*} \right )\geq 0\). Dar
+
 \begin{displaymath}
   {Q}''\left ( x^{*}  \right ) = \frac{2f\left ( x_{1} \right )}{\left ( x_{1} - x_{2} \right )\left ( x_{1} - \mu  \right )} +  \frac{2f\left ( x_{2} \right )}{\left ( x_{2} - x_{1} \right )\left ( x_{2} - \mu  \right )} +  \frac{2f\left (\mu  \right )}{\left ( \mu  - x_{1} \right )\left ( \mu  - x_{2} \right )}
 \end{displaymath}
+
 Deci, lu\^{a}nd
 \begin{displaymath}
   p = \frac{\left ( x_{2} - \mu  \right )}{\left ( x_{2} - x_{1}\right )}
